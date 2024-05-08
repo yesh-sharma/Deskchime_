@@ -7,6 +7,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
@@ -17,14 +18,18 @@ public class Applaud {
 	@Test
 	public void applaud() throws InterruptedException {
 
-		WebDriver driver = new ChromeDriver();
+		WebDriver driver = new EdgeDriver();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
 		
 		driver.manage().window().maximize();
 
 		Login login = new Login(driver);
 		login.Goto();
+		
+		
 		login.loginApplication("yesh@zasyasolutions.com", "Yesh255198@");
+		
+		
 //		 explicit wait
 			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 			try {

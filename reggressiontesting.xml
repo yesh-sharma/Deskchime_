@@ -19,7 +19,7 @@
 		<classes>  
 			
 			
-			<class name="feedbackspagetesting.Feedbackpage" />
+			<class name="feedbackspagetesting.TestingOfFeedbackPage" />
 			
 		</classes>
 	</test> <!--Test -->

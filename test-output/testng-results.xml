@@ -2,34 +2,34 @@
 <testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-05-04T14:54:29 IST" name="Default suite" finished-at="2024-05-04T14:55:15 IST" duration-ms="46620">
+  <suite started-at="2024-05-08T12:18:33 IST" name="Default suite" finished-at="2024-05-08T12:18:57 IST" duration-ms="24569">
     <groups>
     </groups>
-    <test started-at="2024-05-04T14:54:29 IST" name="Default test" finished-at="2024-05-04T14:55:15 IST" duration-ms="46620">
-      <class name="feedbackspagetesting.TestingOfFeedbackPage">
-        <test-method signature="templateCreation()[pri:0, instance:feedbackspagetesting.TestingOfFeedbackPage@434a63ab]" started-at="2024-05-04T14:54:29 IST" name="templateCreation" finished-at="2024-05-04T14:55:15 IST" duration-ms="46556" status="FAIL">
+    <test started-at="2024-05-08T12:18:33 IST" name="Default test" finished-at="2024-05-08T12:18:57 IST" duration-ms="24569">
+      <class name="applaudpagetesting.Applaud">
+        <test-method signature="applaud()[pri:0, instance:applaudpagetesting.Applaud@201a4587]" started-at="2024-05-08T12:18:33 IST" name="applaud" finished-at="2024-05-08T12:18:57 IST" duration-ms="24499" status="FAIL">
           <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
-              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"/html/body/div[1]/div/div/main/div/div[1]/div[2]/button[1]"}
-  (Session info: chrome=124.0.6367.119)
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"/html/body/div/div/aside/div/div/div[2]/ul/li[5]"}
+  (Session info: MicrosoftEdge=124.0.2478.80)
 For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: '4.20.0', revision: '866c76ca80'
 System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.10'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [588a66b49d6745bf81ba6d991f9523af, findElement {using=xpath, value=/html/body/div[1]/div/div/main/div/div[1]/div[2]/button[1]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 124.0.6367.119, chrome: {chromedriverVersion: 124.0.6367.91 (51df0e5e17a8..., userDataDir: C:\Users\Zasya\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57906}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57906/devtoo..., se:cdpVersion: 124.0.6367.119, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 588a66b49d6745bf81ba6d991f9523af]]>
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [cd8cbeae48874a3dcea4c277d2a75858, findElement {using=xpath, value=/html/body/div/div/aside/div/div/div[2]/ul/li[5]}]
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 124.0.2478.80, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:54357}, msedge: {msedgedriverVersion: 124.0.2478.80 (b05b378d1705..., userDataDir: C:\Users\Zasya\AppData\Loca...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54357/devtoo..., se:cdpVersion: 124.0.2478.80, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: cd8cbeae48874a3dcea4c277d2a75858]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"/html/body/div[1]/div/div/main/div/div[1]/div[2]/button[1]"}
-  (Session info: chrome=124.0.6367.119)
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"/html/body/div/div/aside/div/div/div[2]/ul/li[5]"}
+  (Session info: MicrosoftEdge=124.0.2478.80)
 For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: '4.20.0', revision: '866c76ca80'
 System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.10'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [588a66b49d6745bf81ba6d991f9523af, findElement {using=xpath, value=/html/body/div[1]/div/div/main/div/div[1]/div[2]/button[1]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 124.0.6367.119, chrome: {chromedriverVersion: 124.0.6367.91 (51df0e5e17a8..., userDataDir: C:\Users\Zasya\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57906}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57906/devtoo..., se:cdpVersion: 124.0.6367.119, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 588a66b49d6745bf81ba6d991f9523af
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [cd8cbeae48874a3dcea4c277d2a75858, findElement {using=xpath, value=/html/body/div/div/aside/div/div/div[2]/ul/li[5]}]
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 124.0.2478.80, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:54357}, msedge: {msedgedriverVersion: 124.0.2478.80 (b05b378d1705..., userDataDir: C:\Users\Zasya\AppData\Loca...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54357/devtoo..., se:cdpVersion: 124.0.2478.80, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: cd8cbeae48874a3dcea4c277d2a75858
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -46,7 +46,7 @@ at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(Elemen
 at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
 at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
 at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
-at feedbackspagetesting.TestingOfFeedbackPage.templateCreation(TestingOfFeedbackPage.java:43)
+at applaudpagetesting.Applaud.applaud(Applaud.java:44)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -80,8 +80,8 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- templateCreation -->
-      </class> <!-- feedbackspagetesting.TestingOfFeedbackPage -->
+        </test-method> <!-- applaud -->
+      </class> <!-- applaudpagetesting.Applaud -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

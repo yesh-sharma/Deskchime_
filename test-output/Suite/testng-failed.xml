@@ -19,4 +19,27 @@
       </class> <!-- goalpagetesting.Goalpage -->
     </classes>
   </test> <!-- goalpagetesting(failed) -->
+  <test thread-count="5" parallel="tests" name="loginpagetesting(failed)">
+    <classes>
+      <class name="loginpagetesting.Testingofloginpage">
+        <methods>
+          <include name="userlogout"/>
+          <include name="validcredendetials" invocation-numbers="1"/>
+        </methods>
+      </class> <!-- loginpagetesting.Testingofloginpage -->
+    </classes>
+  </test> <!-- loginpagetesting(failed) -->
+  <test thread-count="5" parallel="tests" name="feedbackpagetesting(failed)">
+    <classes>
+      <class name="feedbackspagetesting.TestingOfFeedbackPage">
+        <methods>
+          <include name="saveandEdittemplate"/>
+          <include name="userCanShortAndFilterFeedbackByPending"/>
+          <include name="usersCanSeeAllTheFeedbackTheyHaveReceived"/>
+          <include name="userCanAskForFeedbackFromSpecificTeamMember"/>
+          <include name="userCanMaKEUseOfPreMadeFeedbackTemplate"/>
+        </methods>
+      </class> <!-- feedbackspagetesting.TestingOfFeedbackPage -->
+    </classes>
+  </test> <!-- feedbackpagetesting(failed) -->
 </suite> <!-- Failed suite [Suite] -->
