@@ -1,45 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite parallel="tests" name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" parallel="tests" name="applaudpagetesting(failed)">
-    <classes>
-      <class name="applaudpagetesting.Applaud">
-        <methods>
-          <include name="applaud"/>
-        </methods>
-      </class> <!-- applaudpagetesting.Applaud -->
-    </classes>
-  </test> <!-- applaudpagetesting(failed) -->
-  <test thread-count="5" parallel="tests" name="goalpagetesting(failed)">
-    <classes>
-      <class name="goalpagetesting.Goalpage">
-        <methods>
-          <include name="goalpage"/>
-        </methods>
-      </class> <!-- goalpagetesting.Goalpage -->
-    </classes>
-  </test> <!-- goalpagetesting(failed) -->
-  <test thread-count="5" parallel="tests" name="loginpagetesting(failed)">
-    <classes>
-      <class name="loginpagetesting.Testingofloginpage">
-        <methods>
-          <include name="userlogout"/>
-          <include name="validcredendetials" invocation-numbers="1"/>
-        </methods>
-      </class> <!-- loginpagetesting.Testingofloginpage -->
-    </classes>
-  </test> <!-- loginpagetesting(failed) -->
   <test thread-count="5" parallel="tests" name="feedbackpagetesting(failed)">
     <classes>
       <class name="feedbackspagetesting.TestingOfFeedbackPage">
         <methods>
-          <include name="saveandEdittemplate"/>
-          <include name="userCanShortAndFilterFeedbackByPending"/>
-          <include name="usersCanSeeAllTheFeedbackTheyHaveReceived"/>
-          <include name="userCanAskForFeedbackFromSpecificTeamMember"/>
           <include name="userCanMaKEUseOfPreMadeFeedbackTemplate"/>
         </methods>
       </class> <!-- feedbackspagetesting.TestingOfFeedbackPage -->
     </classes>
   </test> <!-- feedbackpagetesting(failed) -->
+  <test thread-count="5" parallel="tests" name="applaudpagetesting(failed)">
+    <classes>
+      <class name="applaudpagetesting.Applaud">
+        <methods>
+          <include name="useMonthFilter"/>
+        </methods>
+      </class> <!-- applaudpagetesting.Applaud -->
+    </classes>
+  </test> <!-- applaudpagetesting(failed) -->
+  <test thread-count="5" parallel="tests" name="loginpagetesting(failed)">
+    <classes>
+      <class name="loginpagetesting.Testingofloginpage">
+        <methods>
+          <include name="userlogout"/>
+        </methods>
+      </class> <!-- loginpagetesting.Testingofloginpage -->
+    </classes>
+  </test> <!-- loginpagetesting(failed) -->
 </suite> <!-- Failed suite [Suite] -->
