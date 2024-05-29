@@ -30,11 +30,16 @@ public class Testingofloginpage {
 	@Test(dataProvider = "getData")
 	public void validcredendetials(HashMap<String, String> input) throws InterruptedException {
 		WebDriver driver = new ChromeDriver();
+<<<<<<< HEAD
 		driver.manage().window().maximize();
 
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
 		Login log = new Login(driver);
 	
+=======
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
+		Login log = new Login(driver);
+>>>>>>> e5d21e30503e221b73adac729abd347fd9d185f5
 		log.Goto();
 
 		driver.findElement(By.cssSelector("a[data-testid='login-btn']")).click();
@@ -169,7 +174,19 @@ public class Testingofloginpage {
             Login login =new Login(driver);
             login.avoidFeedbackpopup();
 
+<<<<<<< HEAD
 	
+=======
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
+		try {
+			WebElement feedbackPopup = wait.until(
+					ExpectedConditions.presenceOfElementLocated(By.xpath("//span[normalize-space()='Feedbacks']")));
+			feedbackPopup.click();
+		} catch (Exception e) {
+			e.printStackTrace();
+			System.out.println("here the error" + e);
+		}
+>>>>>>> e5d21e30503e221b73adac729abd347fd9d185f5
 		driver.findElement(By.xpath(
 				"//button[@class='rounded-lg w-fit tracking-[0.5px] font-medium flex items-center gap-2 justify-center transition-all duration-200 ease-in-out disabled:cursor-default text-slate-600 hover:text-teal-500 active:text-teal-600 disabled:text-zinc-400 h-12 p-3 text-base relative']//div[1]"))
 				.click();

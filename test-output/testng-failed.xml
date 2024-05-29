@@ -3,11 +3,19 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
+<<<<<<< HEAD
       <class name="followupspagetesting.Followuppage">
         <methods>
           <include name="followuppage"/>
         </methods>
       </class> <!-- followupspagetesting.Followuppage -->
+=======
+      <class name="settingpagetesting.Settingpage">
+        <methods>
+          <include name="testingOfSettingPage"/>
+        </methods>
+      </class> <!-- settingpagetesting.Settingpage -->
+>>>>>>> e5d21e30503e221b73adac729abd347fd9d185f5
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

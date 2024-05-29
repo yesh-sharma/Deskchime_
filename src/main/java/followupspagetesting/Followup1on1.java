@@ -1,5 +1,6 @@
 package followupspagetesting;
 
+<<<<<<< HEAD
 import java.time.Duration;
 
 import org.openqa.selenium.By;
@@ -29,3 +30,9 @@ public class Followup1on1 {
 
 }
 }
+=======
+public class Followup1on1 {
+	
+
+}
+>>>>>>> e5d21e30503e221b73adac729abd347fd9d185f5

@@ -27,7 +27,10 @@ public class TestingOfFeedbackPage {
 		Login login = new Login(driver);
 		login.Goto();
 		login.loginApplication("yeshsharma516032@gmail.com", "Yesh12345");
+<<<<<<< HEAD
 		
+=======
+>>>>>>> e5d21e30503e221b73adac729abd347fd9d185f5
 		login.avoidFeedbackpopup();
 
 		driver.findElement(By.xpath("//span[text()='Feedbacks']")).click();
@@ -78,7 +81,10 @@ public class TestingOfFeedbackPage {
 		Login login = new Login(driver);
 		login.Goto();
 		login.loginApplication("yeshsharma516032@gmail.com", "Yesh12345");
+<<<<<<< HEAD
 		
+=======
+>>>>>>> e5d21e30503e221b73adac729abd347fd9d185f5
 		login.avoidFeedbackpopup();
 		driver.findElement(By.xpath("//span[text()='Feedbacks']")).click();
 		Thread.sleep(2000);
@@ -110,7 +116,10 @@ public class TestingOfFeedbackPage {
 		Login login = new Login(driver);
 		login.Goto();
 		login.loginApplication("yeshsharma516032@gmail.com", "Yesh12345");
+<<<<<<< HEAD
 		
+=======
+>>>>>>> e5d21e30503e221b73adac729abd347fd9d185f5
 		login.avoidFeedbackpopup();
 		driver.findElement(By.xpath("//span[text()='Feedbacks']")).click();
 		Thread.sleep(2000);
@@ -146,7 +155,10 @@ public class TestingOfFeedbackPage {
 		Login login = new Login(driver);
 		login.Goto();
 		login.loginApplication("yeshsharma516032@gmail.com", "Yesh12345");
+<<<<<<< HEAD
 		
+=======
+>>>>>>> e5d21e30503e221b73adac729abd347fd9d185f5
 		login.avoidFeedbackpopup();
 		driver.findElement(By.xpath("//span[text()='Feedbacks']")).click();
 		Thread.sleep(2000);
@@ -178,7 +190,10 @@ public class TestingOfFeedbackPage {
 		Login login = new Login(driver);
 		login.Goto();
 		login.loginApplication("yeshsharma516032@gmail.com", "Yesh12345");
+<<<<<<< HEAD
 		
+=======
+>>>>>>> e5d21e30503e221b73adac729abd347fd9d185f5
 		login.avoidFeedbackpopup();
 		driver.findElement(By.xpath("//span[text()='Feedbacks']")).click();
 		driver.findElement(By.xpath("//span[text()='Received']")).click();
@@ -195,7 +210,10 @@ public class TestingOfFeedbackPage {
 		Login login = new Login(driver);
 		login.Goto();
 		login.loginApplication("yeshsharma516032@gmail.com", "Yesh12345");
+<<<<<<< HEAD
 		
+=======
+>>>>>>> e5d21e30503e221b73adac729abd347fd9d185f5
 		login.avoidFeedbackpopup();
 
 		driver.findElement(By.xpath("//span[text()='Feedbacks']")).click();
@@ -216,7 +234,10 @@ public class TestingOfFeedbackPage {
 		Login login = new Login(driver);
 		login.Goto();
 		login.loginApplication("yeshsharma516032@gmail.com", "Yesh12345");
+<<<<<<< HEAD
 		
+=======
+>>>>>>> e5d21e30503e221b73adac729abd347fd9d185f5
 		login.avoidFeedbackpopup();
 		driver.findElement(By.xpath("//span[text()='Feedbacks']")).click();
 

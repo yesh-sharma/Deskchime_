@@ -12,10 +12,17 @@ import org.testng.annotations.Test;
 
 import loginpagetesting.Login;
 
+@Test
 public class Applaud {
+<<<<<<< HEAD
 @Test
 	public void sendApplaud() throws InterruptedException {
 
+=======
+
+	public void sendApplaud() throws InterruptedException {
+
+>>>>>>> e5d21e30503e221b73adac729abd347fd9d185f5
 		WebDriver driver = new ChromeDriver();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
 
@@ -25,7 +32,10 @@ public class Applaud {
 		login.Goto();
 
 		login.loginApplication("yesh@zasyasolutions.com", "Yesh255198@");
+<<<<<<< HEAD
 		
+=======
+>>>>>>> e5d21e30503e221b73adac729abd347fd9d185f5
 		login.avoidFeedbackpopup();
 
 		driver.findElement(By.xpath("//span[normalize-space()='Applaud']")).click();
@@ -60,14 +70,20 @@ public class Applaud {
 		login.Goto();
 
 		login.loginApplication("yesh@zasyasolutions.com", "Yesh255198@");
+<<<<<<< HEAD
 		
+=======
+>>>>>>> e5d21e30503e221b73adac729abd347fd9d185f5
 		login.avoidFeedbackpopup();
 
 		driver.findElement(By.xpath("//span[normalize-space()='Applaud']")).click();
 		driver.findElement(By.cssSelector("input[placeholder='Select month']")).click();
 		driver.findElement(By.xpath("//div[text()='Apr']")).click();
 		System.out.println(driver.findElement(By.xpath("//div[text()='Apr 22, 2024']")).getText());
+<<<<<<< HEAD
 		driver.close();
+=======
+>>>>>>> e5d21e30503e221b73adac729abd347fd9d185f5
 	}
 
 	public void seeReceivedApplauds() throws InterruptedException {
@@ -80,7 +96,10 @@ public class Applaud {
 		login.Goto();
 
 		login.loginApplication("yesh@zasyasolutions.com", "Yesh255198@");
+<<<<<<< HEAD
 		
+=======
+>>>>>>> e5d21e30503e221b73adac729abd347fd9d185f5
 		login.avoidFeedbackpopup();
 
 		driver.findElement(By.xpath("//span[normalize-space()='Applaud']")).click();
@@ -98,11 +117,17 @@ public class Applaud {
 		login.Goto();
 
 		login.loginApplication("yesh@zasyasolutions.com", "Yesh255198@");
+<<<<<<< HEAD
 		
 		login.avoidFeedbackpopup();
 
 		driver.findElement(By.xpath("//span[normalize-space()='Applaud']")).click();
 	
+=======
+		login.avoidFeedbackpopup();
+
+		driver.findElement(By.xpath("//span[normalize-space()='Applaud']")).click();
+>>>>>>> e5d21e30503e221b73adac729abd347fd9d185f5
 		driver.findElement(By.xpath("//span[text()='Sent']")).click();
 		driver.close();
 
