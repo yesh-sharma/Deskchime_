@@ -26,7 +26,7 @@
 <test thread-count="5" name="goalpagetesting">
 		<classes>
 		
-			<class name="goalpagetesting.Goalpage" />
+			<class name="goalpagetesting.TestingOfGoalpage" />
 		
 		</classes>
 	</test> <!--Test -->
@@ -37,7 +37,12 @@
 		</classes>
 	</test> <!--Test -->
 
-
+<test thread-count="5" name="settingpagetesting">
+		<classes>
+		
+			<class name="settingpagetesting.Settingpage" />
+		</classes>
+	</test> <!--Test -->
 </suite> <!--Suite -->
 
  

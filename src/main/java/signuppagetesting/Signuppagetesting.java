@@ -8,7 +8,6 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 @Test
@@ -56,7 +55,7 @@ public class Signuppagetesting {
 				driver.findElement(By.xpath("//div[contains(text(),'Please enter your company name!')]")).getText());
 		System.out.println(driver
 				.findElement(By.xpath("//div[contains(text(),'Please enter your company subdomain!')]")).getText());
-
+		driver.close();
 	}
 
 	public void invalidemailformat() throws InterruptedException {
@@ -143,7 +142,7 @@ public class Signuppagetesting {
 
 		}
 	}
-@BeforeTest
+
 	public void passwordconfirmation() throws InterruptedException {
 
 		WebDriver driver = new ChromeDriver();

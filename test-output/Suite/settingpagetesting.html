@@ -1,6 +1,6 @@
 <html>
 <head>
-<title>TestNG:  loginpagetesting</title>
+<title>TestNG:  settingpagetesting</title>
 <link href="../testng.css" rel="stylesheet" type="text/css" />
 <link href="../my-testng.css" rel="stylesheet" type="text/css" />
 
@@ -53,13 +53,13 @@ function toggleAllBoxes() {
 
 </head>
 <body>
-<h2 align='center'>loginpagetesting</h2><table border='1' align="center">
+<h2 align='center'>settingpagetesting</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>7/1/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Tue May 28 14:19:59 IST 2024</td>
+<td>Started on:</td><td>Tue May 28 14:21:15 IST 2024</td>
 </tr>
-<tr><td>Total time:</td><td>259 seconds (259455 ms)</td>
+<tr><td>Total time:</td><td>67 seconds (67131 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,16 +75,16 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='loginpagetesting.Testingofloginpage.userlogout()'><b>userlogout</b><br>Test class: loginpagetesting.Testingofloginpage</td>
-<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//button[@class=&apos;rounded-lg w-fit tracking-[0.5px] font-medium flex items-center gap-2 justify-center transition-all duration-200 ease-in-out disabled:cursor-default text-slate-600 hover:text-teal-500 active:text-teal-600 disabled:text-zinc-400 h-12 p-3 text-base relative&apos;]//div[1]&quot;}
+<td title='settingpagetesting.Settingpage.userCreatedAndDeletedSuccessfully()'><b>userCreatedAndDeletedSuccessfully</b><br>Test class: settingpagetesting.Settingpage</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//span[text()=&apos;Settings&apos;]&quot;}
   (Session info: chrome=125.0.6422.112)
 For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: &apos;4.20.0&apos;, revision: &apos;866c76ca80&apos;
 System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.10&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [c2c7782d39bb853ab4abfa9064c69ea9, findElement {using=xpath, value=//button[@class=&apos;rounded-lg w-fit tracking-[0.5px] font-medium flex items-center gap-2 justify-center transition-all duration-200 ease-in-out disabled:cursor-default text-slate-600 hover:text-teal-500 active:text-teal-600 disabled:text-zinc-400 h-12 p-3 text-base relative&apos;]//div[1]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 125.0.6422.112, chrome: {chromedriverVersion: 125.0.6422.78 (14db42ec38ad..., userDataDir: C:\Users\Zasya\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54949}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54949/devtoo..., se:cdpVersion: 125.0.6422.112, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: c2c7782d39bb853ab4abfa9064c69ea9
+Command: [a3f4e2a7f455754b39b0985990db51c1, findElement {using=xpath, value=//span[text()=&apos;Settings&apos;]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 125.0.6422.112, chrome: {chromedriverVersion: 125.0.6422.78 (14db42ec38ad..., userDataDir: C:\Users\Zasya\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54754}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54754/devtoo..., se:cdpVersion: 125.0.6422.112, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: a3f4e2a7f455754b39b0985990db51c1
 	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
@@ -96,23 +96,24 @@ Session ID: c2c7782d39bb853ab4abfa9064c69ea9
 	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
-	at loginpagetesting.Testingofloginpage.userlogout(Testingofloginpage.java:173)
+	at settingpagetesting.Settingpage.userCreatedAndDeletedSuccessfully(Settingpage.java:32)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
 	at java.base/java.lang.Thread.run(Thread.java:840)
-... Removed 22 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1784201883", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1784201883'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//button[@class=&apos;rounded-lg w-fit tracking-[0.5px] font-medium flex items-center gap-2 justify-center transition-all duration-200 ease-in-out disabled:cursor-default text-slate-600 hover:text-teal-500 active:text-teal-600 disabled:text-zinc-400 h-12 p-3 text-base relative&apos;]//div[1]&quot;}
+... Removed 23 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace595305544", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace595305544'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//span[text()=&apos;Settings&apos;]&quot;}
   (Session info: chrome=125.0.6422.112)
 For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: &apos;4.20.0&apos;, revision: &apos;866c76ca80&apos;
 System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.10&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [c2c7782d39bb853ab4abfa9064c69ea9, findElement {using=xpath, value=//button[@class=&apos;rounded-lg w-fit tracking-[0.5px] font-medium flex items-center gap-2 justify-center transition-all duration-200 ease-in-out disabled:cursor-default text-slate-600 hover:text-teal-500 active:text-teal-600 disabled:text-zinc-400 h-12 p-3 text-base relative&apos;]//div[1]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 125.0.6422.112, chrome: {chromedriverVersion: 125.0.6422.78 (14db42ec38ad..., userDataDir: C:\Users\Zasya\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54949}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54949/devtoo..., se:cdpVersion: 125.0.6422.112, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: c2c7782d39bb853ab4abfa9064c69ea9
-	at jdk.internal.reflect.GeneratedConstructorAccessor35.newInstance(Unknown Source)
+Command: [a3f4e2a7f455754b39b0985990db51c1, findElement {using=xpath, value=//span[text()=&apos;Settings&apos;]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 125.0.6422.112, chrome: {chromedriverVersion: 125.0.6422.78 (14db42ec38ad..., userDataDir: C:\Users\Zasya\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54754}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54754/devtoo..., se:cdpVersion: 125.0.6422.112, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: a3f4e2a7f455754b39b0985990db51c1
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
 	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
 	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
@@ -127,7 +128,7 @@ Session ID: c2c7782d39bb853ab4abfa9064c69ea9
 	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
-	at loginpagetesting.Testingofloginpage.userlogout(Testingofloginpage.java:173)
+	at settingpagetesting.Settingpage.userCreatedAndDeletedSuccessfully(Settingpage.java:32)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -152,51 +153,8 @@ Session ID: c2c7782d39bb853ab4abfa9064c69ea9
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
 	at java.base/java.lang.Thread.run(Thread.java:840)
 </pre></div></td>
-<td>50</td>
-<td>loginpagetesting.Testingofloginpage@273e7444</td></tr>
-</table><p>
-<table width='100%' border='1' class='invocation-passed'>
-<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
-<tr><td><b>Test method</b></td>
-<td width="30%"><b>Exception</b></td>
-<td width="10%"><b>Time (seconds)</b></td>
-<td><b>Instance</b></td>
-</tr>
-<tr>
-<td title='loginpagetesting.Testingofloginpage.validcredendetials()'><b>validcredendetials</b><br>Test class: loginpagetesting.Testingofloginpage<br>Parameters: {password=Yesh1234, email=yeshsharma516032@gmail.com}</td>
-<td></td>
-<td>20</td>
-<td>loginpagetesting.Testingofloginpage@273e7444</td></tr>
-<tr>
-<td title='loginpagetesting.Testingofloginpage.validcredendetials()'><b>validcredendetials</b><br>Test class: loginpagetesting.Testingofloginpage<br>Parameters: {password=Yesh255198@, email=yesh@zasyasolutions.com}</td>
-<td></td>
-<td>27</td>
-<td>loginpagetesting.Testingofloginpage@273e7444</td></tr>
-<tr>
-<td title='loginpagetesting.Testingofloginpage.passwordresetlink()'><b>passwordresetlink</b><br>Test class: loginpagetesting.Testingofloginpage</td>
-<td></td>
-<td>41</td>
-<td>loginpagetesting.Testingofloginpage@273e7444</td></tr>
-<tr>
-<td title='loginpagetesting.Testingofloginpage.emptypasswordfield()'><b>emptypasswordfield</b><br>Test class: loginpagetesting.Testingofloginpage</td>
-<td></td>
-<td>34</td>
-<td>loginpagetesting.Testingofloginpage@273e7444</td></tr>
-<tr>
-<td title='loginpagetesting.Testingofloginpage.emptyusernamefield()'><b>emptyusernamefield</b><br>Test class: loginpagetesting.Testingofloginpage</td>
-<td></td>
-<td>21</td>
-<td>loginpagetesting.Testingofloginpage@273e7444</td></tr>
-<tr>
-<td title='loginpagetesting.Testingofloginpage.invalidcredentials1()'><b>invalidcredentials1</b><br>Test class: loginpagetesting.Testingofloginpage</td>
-<td></td>
-<td>42</td>
-<td>loginpagetesting.Testingofloginpage@273e7444</td></tr>
-<tr>
-<td title='loginpagetesting.Testingofloginpage.invalidcredentials2()'><b>invalidcredentials2</b><br>Test class: loginpagetesting.Testingofloginpage</td>
-<td></td>
-<td>21</td>
-<td>loginpagetesting.Testingofloginpage@273e7444</td></tr>
+<td>67</td>
+<td>settingpagetesting.Settingpage@68c9133c</td></tr>
 </table><p>
 </body>
 </html>
