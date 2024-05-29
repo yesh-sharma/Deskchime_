@@ -29,10 +29,7 @@ public class Followuppage {
 		login.Goto();
 
 		login.loginApplication("yeshsharma516032@gmail.com", "Yesh12345");
-<<<<<<< HEAD
-	
-=======
->>>>>>> e5d21e30503e221b73adac729abd347fd9d185f5
+
 		login.avoidFeedbackpopup();
 
 		driver.findElement(By.xpath("//span[normalize-space()='Follow Ups']")).click();
@@ -146,9 +143,9 @@ public class Followuppage {
 
 		login.loginApplication("yeshsharma516032@gmail.com", "Yesh12345");
 		// explicit wait
-<<<<<<< HEAD
+
 		login.avoidFeedbackpopup();
-=======
+
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
 		try {
 			WebElement feedbackPopup = wait
@@ -158,7 +155,7 @@ public class Followuppage {
 			e.printStackTrace();
 			System.out.println("here the error :" + e);
 		}
->>>>>>> e5d21e30503e221b73adac729abd347fd9d185f5
+
 		// click on follow up
 		driver.findElement(By.xpath("//span[normalize-space()='Follow Ups']")).click();
 		driver.findElement(By.cssSelector("a[data-testid='create-follow-up-button']")).click();

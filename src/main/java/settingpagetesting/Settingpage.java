@@ -1,7 +1,7 @@
 package settingpagetesting;
 
 import java.time.Duration;
-<<<<<<< HEAD
+
 import java.util.Iterator;
 import java.util.Set;
 
@@ -12,21 +12,21 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.WindowType;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
-=======
+
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
->>>>>>> e5d21e30503e221b73adac729abd347fd9d185f5
+
 import org.testng.annotations.Test;
 
 import loginpagetesting.Login;
 
 public class Settingpage {
 	@Test
-<<<<<<< HEAD
+
 	public void userCreatedAndDeletedSuccessfully() throws InterruptedException {
 		WebDriver driver = new ChromeDriver();
 
@@ -77,8 +77,7 @@ public class Settingpage {
 //		driver.findElement(By.cssSelector("button[class='ant-btn ant-btn-primary ant-btn-sm'] span")).click();
 //		driver.close();
 	}
-}
-=======
+
 public void testingOfSettingPage() throws InterruptedException {
 	WebDriver driver = new ChromeDriver();
 
@@ -92,7 +91,7 @@ public void testingOfSettingPage() throws InterruptedException {
 	Thread.sleep(2000);
 	driver.findElement(By.xpath("//span[text()='Settings']")).click();
 	driver.findElement(By.xpath("//span[text()='Users']")).click();
-}
+
 }
 
->>>>>>> e5d21e30503e221b73adac729abd347fd9d185f5
+}

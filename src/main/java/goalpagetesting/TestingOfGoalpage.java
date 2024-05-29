@@ -26,10 +26,7 @@ public class TestingOfGoalpage {
 		login.Goto();
 
 		login.loginApplication("yesh@zasyasolutions.com", "Yesh255198@");
-<<<<<<< HEAD
-		
-=======
->>>>>>> e5d21e30503e221b73adac729abd347fd9d185f5
+
 		login.avoidFeedbackpopup();
 		driver.findElement(By.xpath("//body/div[@id='__next']/div[1]/aside[1]/div[1]/div[1]/div[2]/ul[1]/li[3]"))
 				.click();
@@ -39,10 +36,9 @@ public class TestingOfGoalpage {
 		driver.findElement(By.cssSelector("p[data-placeholder='Type something to clarify your goal intentions ...']"))
 				.sendKeys("abc");
 		driver.findElement(By.cssSelector("button[data-testid='goal-submit-btn']")).click();
-<<<<<<< HEAD
+
 		driver.close();
-=======
->>>>>>> e5d21e30503e221b73adac729abd347fd9d185f5
+
 	}
 
 	public void usersCanMarkAGoalAsCompleted() throws InterruptedException {
@@ -56,17 +52,17 @@ public class TestingOfGoalpage {
 		login.Goto();
 
 		login.loginApplication("yesh@zasyasolutions.com", "Yesh255198@");
-<<<<<<< HEAD
-		
+
+	
 		login.avoidFeedbackpopup();
 		driver.findElement(By.xpath("//body/div[@id='__next']/div[1]/aside[1]/div[1]/div[1]/div[2]/ul[1]/li[3]"))
 				.click();
 		driver.close();
-=======
+
 		login.avoidFeedbackpopup();
 		driver.findElement(By.xpath("//body/div[@id='__next']/div[1]/aside[1]/div[1]/div[1]/div[2]/ul[1]/li[3]"))
 				.click();
 
->>>>>>> e5d21e30503e221b73adac729abd347fd9d185f5
+
 	}
 }
