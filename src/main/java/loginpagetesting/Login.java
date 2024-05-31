@@ -56,7 +56,7 @@ public class Login {
 
 	public void avoidFeedbackpopup() {
 		try {
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
 		
 	
 			WebElement FeedbackPopup1 = wait

@@ -9,7 +9,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import org.openqa.selenium.interactions.Actions;
-
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 
 import loginpagetesting.Login;
@@ -29,25 +30,29 @@ public class TestingOfFeedbackPage {
 		login.loginApplication("yeshsharma516032@gmail.com", "Yesh12345");
 
 		login.avoidFeedbackpopup();
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
 
-		driver.findElement(By.xpath("//span[text()='Feedbacks']")).click();
+        WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[text()='Feedbacks']")));
+		element.click();
 
 		// templates
-		Thread.sleep(2000);
-		driver.findElement(By.cssSelector("a[data-testid='feedback-templates-btn']")).click();
+		WebElement element2 = wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("a[data-testid='feedback-templates-btn']")));
+		element2.click();
 
 		// create from scratch
-
-		driver.findElement(By.cssSelector(
-				"button[data-testid='create-template']"))
-				.click();
-
+		WebElement element3 = wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("button[data-testid='create-template']")));
+				element3.click();
+		
 		// add title
-		driver.findElement(By.id("template_name")).sendKeys("TEST");
+				
+				WebElement element4 = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("template_name")));
+		element4.sendKeys("TEST");
 		// add description
 		driver.findElement(By.id("template_description")).sendKeys("test the feebacksection");
 
 		// click
+		
+		
 		driver.findElement(By.cssSelector(
 				"button[class='rounded-lg w-fit tracking-[0.5px] font-medium flex items-center gap-2 justify-center transition-all duration-200 ease-in-out disabled:cursor-default bg-teal-500 text-white hover:bg-teal-400 active:bg-teal-300 disabled:bg-zinc-400 h-10 px-3 py-2 text-sm relative']"))
 				.click();
@@ -64,7 +69,9 @@ public class TestingOfFeedbackPage {
 		driver.findElement(By.cssSelector(
 				"button[class='rounded-lg w-fit tracking-[0.5px] font-medium flex items-center gap-2 justify-center transition-all duration-200 ease-in-out disabled:cursor-default bg-teal-500 text-white hover:bg-teal-400 active:bg-teal-300 disabled:bg-zinc-400 h-10 px-3 py-2 text-sm relative'] div[class='flex items-center gap-2 justify-center']"))
 				.click();
-		driver.findElement(By.xpath("//div[normalize-space()='Submit']")).click();
+		WebElement element5 = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[normalize-space()='Submit']")));
+		element5.click();
+		
 		driver.close();
 
 	}
@@ -80,24 +87,33 @@ public class TestingOfFeedbackPage {
 		login.loginApplication("yeshsharma516032@gmail.com", "Yesh12345");
 
 		login.avoidFeedbackpopup();
-		driver.findElement(By.xpath("//span[text()='Feedbacks']")).click();
-		Thread.sleep(2000);
-		driver.findElement(By.cssSelector("a[data-testid='feedback-templates-btn']")).click();
-		driver.findElement(By.xpath("//span[text()='Default Template']")).click();
-		driver.findElement(By.cssSelector("div[class='flex flex-1 justify-center'] ")).click();
-		driver.findElement(By.xpath("//div[text()='Use Template']")).click();
-		driver.findElement(By.xpath("//button[@data-testid='feedback-scratch-next-btn']")).click();
-		driver.findElement(By.xpath("//button[@data-testid='question-next-btn']")).click();
-		Thread.sleep(2000);
-		driver.findElement(By.cssSelector("div[data-testid='feedback-team-select']")).click();
-		driver.findElement(By.cssSelector(".ant-select-item-option-content")).click();
-		Actions actions1 = new Actions(driver);
-		WebElement element = driver.findElement(By.cssSelector("button[data-testid='feedback-permission-next-btn']"));
-		actions1.moveToElement(element);
-		actions1.perform();
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
+		WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[text()='Feedbacks']")));
 		element.click();
 
-		driver.findElement(By.cssSelector("button[data-testid='feedback-preview-submit-btn']")).click();
+		WebElement element1 = wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("a[data-testid='feedback-templates-btn']")));
+		element1.click();
+		
+		driver.findElement(By.xpath("//span[text()='Default Template']")).click();
+		driver.findElement(By.cssSelector("div[class='flex flex-1 justify-center'] ")).click();
+		
+		
+		driver.findElement(By.xpath("//div[text()='Use Template']")).click();
+		WebElement element2 = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[@data-testid='feedback-scratch-next-btn']")));
+		element2.click();
+
+		driver.findElement(By.xpath("//button[@data-testid='question-next-btn']")).click();
+		Thread.sleep(2000);
+		WebElement element3 = wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("div[data-testid='feedback-team-select']")));
+		element3.click();
+		driver.findElement(By.cssSelector(".ant-select-item-option-content")).click();
+		Actions actions1 = new Actions(driver);
+		WebElement element12 = driver.findElement(By.cssSelector("button[data-testid='feedback-permission-next-btn']"));
+		actions1.moveToElement(element12);
+		actions1.perform();
+		element12.click();
+		WebElement element4 = wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("button[data-testid='feedback-preview-submit-btn']")));
+		element4.click();
 		driver.close();
 	}
 
@@ -112,26 +128,37 @@ public class TestingOfFeedbackPage {
 		login.loginApplication("yeshsharma516032@gmail.com", "Yesh12345");
 
 		login.avoidFeedbackpopup();
-		driver.findElement(By.xpath("//span[text()='Feedbacks']")).click();
-		Thread.sleep(2000);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
+		WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[text()='Feedbacks']")));
+		element.click();
+		
+		WebElement element1 = wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("a[data-testid='feedback-templates-btn']")));
+		element1.click();
+		
 		driver.findElement(By.cssSelector("a[data-testid='feedback-templates-btn']")).click();
 		driver.findElement(By.xpath("//span[text()='Default Template']")).click();
 		driver.findElement(By.cssSelector("div[class='flex flex-1 justify-center'] ")).click();
+		
 		driver.findElement(By.xpath("//div[text()='Use Template']")).click();
-		driver.findElement(By.xpath("//button[@data-testid='feedback-scratch-next-btn']")).click();
+		WebElement element2 = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[@data-testid='feedback-scratch-next-btn']")));
+		element2.click();
+		
 		driver.findElement(By.xpath("//button[@data-testid='question-next-btn']")).click();
-		Thread.sleep(2000);
-		driver.findElement(By.cssSelector("div[data-testid='feedback-switch-teams-members']")).click();
+	
+		WebElement element3 = wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("div[data-testid='feedback-switch-teams-members']")));
+		
+		element3.click();
+		
 		driver.findElement(By.cssSelector(".ant-select-selection-overflow")).click();
 		driver.findElement(By.cssSelector("div[title='Yesh Sharma'] div[class='ant-select-item-option-content']"))
 				.click();
 		Actions actions1 = new Actions(driver);
-		WebElement element = driver.findElement(By.cssSelector("button[data-testid='feedback-permission-next-btn']"));
-		actions1.moveToElement(element);
+		WebElement element12 = driver.findElement(By.cssSelector("button[data-testid='feedback-permission-next-btn']"));
+		actions1.moveToElement(element12);
 		actions1.perform();
-		element.click();
-
-		driver.findElement(By.cssSelector("button[data-testid='feedback-preview-submit-btn']")).click();
+		element12.click();
+		WebElement element4 = wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("button[data-testid='feedback-preview-submit-btn']")));
+        element4.click();
 		driver.close();
 
 	}
@@ -148,11 +175,17 @@ public class TestingOfFeedbackPage {
 		login.loginApplication("yeshsharma516032@gmail.com", "Yesh12345");
 
 		login.avoidFeedbackpopup();
-		driver.findElement(By.xpath("//span[text()='Feedbacks']")).click();
-		Thread.sleep(2000);
-		driver.findElement(By.cssSelector("a[data-testid='feedback-templates-btn']")).click();
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
+		WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[text()='Feedbacks']")));
+		element.click();
+		
+		WebElement element1 = wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("a[data-testid='feedback-templates-btn']")));
+		element1.click();
+		
 		driver.findElement(By.xpath("//span[text()='Default Template']")).click();
 		driver.findElement(By.cssSelector("div[class='flex flex-1 justify-center'] ")).click();
+		
+		
 		driver.findElement(By.xpath("//div[text()='Use Template']")).click();
 		driver.findElement(By.xpath("//button[@data-testid='feedback-scratch-next-btn']")).click();
 		driver.findElement(By.xpath("//button[@data-testid='question-next-btn']")).click();
@@ -160,12 +193,13 @@ public class TestingOfFeedbackPage {
 		driver.findElement(By.cssSelector("div[data-testid='feedback-team-select']")).click();
 		driver.findElement(By.cssSelector(".ant-select-item-option-content")).click();
 		Actions actions1 = new Actions(driver);
-		WebElement element = driver.findElement(By.cssSelector("button[data-testid='feedback-permission-next-btn']"));
-		actions1.moveToElement(element);
+		WebElement element12 = driver.findElement(By.cssSelector("button[data-testid='feedback-permission-next-btn']"));
+		actions1.moveToElement(element12);
 		actions1.perform();
-		element.click();
-
-		driver.findElement(By.cssSelector("button[data-testid='feedback-preview-submit-btn']")).click();
+		element12.click();
+		WebElement element4 = wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("button[data-testid='feedback-preview-submit-btn']")));
+        element4.click();
+		
 		driver.close();
 	}
 
@@ -180,8 +214,11 @@ public class TestingOfFeedbackPage {
 		login.loginApplication("yeshsharma516032@gmail.com", "Yesh12345");
 
 		login.avoidFeedbackpopup();
-		driver.findElement(By.xpath("//span[text()='Feedbacks']")).click();
-		driver.findElement(By.xpath("//span[text()='Received']")).click();
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
+		WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[text()='Feedbacks']")));
+		element.click();
+		WebElement element1 = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[text()='Received']")));
+		element1.click();
 		driver.close();
 
 	}
@@ -198,11 +235,15 @@ public class TestingOfFeedbackPage {
 
 		login.avoidFeedbackpopup();
 
-		driver.findElement(By.xpath("//span[text()='Feedbacks']")).click();
-
-		driver.findElement(By.xpath("//span[text()='Received']")).click();
-		driver.findElement(By.cssSelector("span[title='All']")).click();
-		driver.findElement(By.cssSelector("div[title='Pending'] div[class='ant-select-item-option-content']")).click();
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
+		WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[text()='Feedbacks']")));
+		element.click();
+		WebElement element1 = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[text()='Received']")));
+		element1.click();
+		WebElement element3 = wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("span[title='All']")));
+		element3.click();
+		WebElement element4 = wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("div[title='Pending'] div[class='ant-select-item-option-content']")));
+		element4.click();
 		driver.close();
 
 	}
@@ -218,12 +259,19 @@ public class TestingOfFeedbackPage {
 		login.loginApplication("yeshsharma516032@gmail.com", "Yesh12345");
 
 		login.avoidFeedbackpopup();
-		driver.findElement(By.xpath("//span[text()='Feedbacks']")).click();
 
-		driver.findElement(By.xpath("//span[text()='Received']")).click();
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
+		WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[text()='Feedbacks']")));
+		element.click();
 
-		driver.findElement(By.cssSelector("span[title='All']")).click();
-		driver.findElement(By.cssSelector("div[title='Answered'] div[class='ant-select-item-option-content']")).click();
+	
+		WebElement element1 = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[text()='Received']")));
+		element1.click();
+		WebElement element3 = wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("span[title='All']")));
+		element3.click();
+		WebElement element4 = wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("div[title='Answered'] div[class='ant-select-item-option-content']")));
+		element4.click();
+		
 		driver.close();
 
 	}

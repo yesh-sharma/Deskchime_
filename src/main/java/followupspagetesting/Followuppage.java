@@ -15,9 +15,9 @@ import org.testng.annotations.Test;
 
 import loginpagetesting.Login;
 
-@Test
-public class Followuppage {
 
+public class Followuppage {
+@Test
 	public void followuppage() throws InterruptedException {
 
 		WebDriver driver = new ChromeDriver();
@@ -32,22 +32,34 @@ public class Followuppage {
 
 		login.avoidFeedbackpopup();
 		
-		driver.findElement(By.xpath("//span[normalize-space()='Follow Ups']")).click();
-		driver.findElement(By.cssSelector("a[data-testid='create-follow-up-button']")).click();
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
 
-		driver.findElement(By.cssSelector(
-				"body > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > main:nth-child(2) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > button:nth-child(2) > div:nth-child(1)"))
-				.click();
+        WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[normalize-space()='Follow Ups']")));
 
-		driver.findElement(By.cssSelector("#meeting_meeting_title")).sendKeys("followup functionality");
+		element.click();
+		
+		  WebElement element1= wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("a[data-testid='create-follow-up-button']")));
 
-		driver.findElement(
-				By.cssSelector("div[class='tiptap ProseMirror text-sm min-h-[80px] p-3 max-h-80 overflow-y-auto']"))
-				.sendKeys("user interface");
-		driver.findElement(By.cssSelector("button[type='submit'] div[class='flex items-center gap-2 justify-center']"))
-				.click();
-		driver.findElement(By.id("meeting_meeting_at")).click();
-		driver.findElement(By.cssSelector(".ant-picker-today-btn")).click();
+			element1.click();
+			
+			 WebElement element2= wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(
+						"body > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > main:nth-child(2) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > button:nth-child(2) > div:nth-child(1)")));
+			 element2.click();
+
+			  WebElement element3= wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("#meeting_meeting_title")));
+			  
+		element3.sendKeys("followup functionality");
+
+		  WebElement element4= wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("div[class='tiptap ProseMirror text-sm min-h-[80px] p-3 max-h-80 overflow-y-auto']")));
+          element4.sendKeys("user interface");
+          WebElement element5= wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("button[type='submit'] div[class='flex items-center gap-2 justify-center']")));
+		element5.click();
+		
+		 WebElement element6= wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("meeting_meeting_at")));
+		element6.click();
+		
+		 WebElement element7= wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".ant-picker-today-btn")));
+		element7.click();
 		Thread.sleep(2000);
 		// Get the current local time
 
@@ -116,18 +128,16 @@ public class Followuppage {
 		driver.findElement(By.cssSelector("button[type='submit'] div[class='flex items-center gap-2 justify-center']"))
 				.click();
 		Thread.sleep(2000);
-
-		driver.findElement(By.cssSelector("div[data-testid='memberList-0']")).click();
-		driver.findElement(By.cssSelector(
-				"div[class='relative space-y-2'] button[type='button'] div[class='flex items-center gap-2 justify-center']"))
-				.click();
-		driver.findElement(By.cssSelector(
-				"button[class='rounded-lg w-fit tracking-[0.5px] font-medium flex items-center gap-2 justify-center transition-all duration-200 ease-in-out disabled:cursor-default bg-teal-500 text-white hover:bg-teal-400 active:bg-teal-300 disabled:bg-zinc-400 h-10 px-3 py-2 text-sm relative'] div[class='flex items-center gap-2 justify-center']"))
-				.click();
-		driver.findElement(By.cssSelector(
-				"button[class='rounded-lg w-fit tracking-[0.5px] font-medium flex items-center gap-2 justify-center transition-all duration-200 ease-in-out disabled:cursor-default bg-teal-500 text-white hover:bg-teal-400 active:bg-teal-300 disabled:bg-zinc-400 h-10 px-3 py-2 text-sm relative'] div[class='flex items-center gap-2 justify-center']"))
-				.click();
-
+		 WebElement element8= wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("div[data-testid='memberList-0']")));
+		 element8.click();
+		
+		 WebElement element9= wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(
+					"div[class='relative space-y-2'] button[type='button'] div[class='flex items-center gap-2 justify-center']")));
+		 element9.click();
+		 WebElement element10= wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(
+					"button[class='rounded-lg w-fit tracking-[0.5px] font-medium flex items-center gap-2 justify-center transition-all duration-200 ease-in-out disabled:cursor-default bg-teal-500 text-white hover:bg-teal-400 active:bg-teal-300 disabled:bg-zinc-400 h-10 px-3 py-2 text-sm relative'] div[class='flex items-center gap-2 justify-center']")));
+		 element10.click();
+		
 		driver.close();
 	}
 
