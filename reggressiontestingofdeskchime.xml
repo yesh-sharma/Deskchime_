@@ -15,7 +15,7 @@
 		</classes>
 	</test> <!--Test -->
 	
-<test thread-count="5" name="feedbackpagetesting">
+<test thread-count="5" name="feedbackspagetesting">
 		<classes>  
 			
 			

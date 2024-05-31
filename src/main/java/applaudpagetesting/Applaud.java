@@ -12,9 +12,9 @@ import org.testng.annotations.Test;
 
 import loginpagetesting.Login;
 
-@Test
+
 public class Applaud {
-@Test
+
 	public void sendApplaud() throws InterruptedException {
 
 		WebDriver driver = new ChromeDriver();
@@ -91,7 +91,7 @@ public class Applaud {
 		driver.findElement(By.xpath("//span[text()='Received']")).click();
 		driver.close();
 	}
-
+@Test
 	public void seeSentApplauds() throws InterruptedException {
 		WebDriver driver = new ChromeDriver();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));

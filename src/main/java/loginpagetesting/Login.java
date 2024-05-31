@@ -55,15 +55,22 @@ public class Login {
 	}
 
 	public void avoidFeedbackpopup() {
-
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
 		try {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		
+	
 			WebElement FeedbackPopup1 = wait
 					.until(ExpectedConditions.elementToBeClickable(By.cssSelector("button[class='ant-modal-close']")));
-			Actions actions = new Actions(driver);
+			if( FeedbackPopup1.isDisplayed())
+			{	Actions actions = new Actions(driver);
 
 			// Move the mouse to the specific coordinates and perform click
 			actions.moveByOffset(0, 50).click().perform();
+			}
+			else {
+				System.out.println("No feedback popup shown");
+				
+			}
 		} catch (Exception e) {
 			e.printStackTrace();
 			System.out.println("here the error :" + e);

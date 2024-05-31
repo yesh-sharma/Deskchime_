@@ -39,7 +39,7 @@ public class TestingOfFeedbackPage {
 		// create from scratch
 
 		driver.findElement(By.cssSelector(
-				"button[class='text-white text-center px-4 py-2 rounded-md border-2 border-teal-500 bg-teal-500']"))
+				"button[data-testid='create-template']"))
 				.click();
 
 		// add title

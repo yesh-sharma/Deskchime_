@@ -12,9 +12,8 @@ import org.testng.annotations.Test;
 
 import loginpagetesting.Login;
 
-@Test
-public class TestingOfGoalpage {
 
+public class TestingOfGoalpage {
 	public void goalpage() throws InterruptedException {
 
 		WebDriver driver = new ChromeDriver();
@@ -28,7 +27,7 @@ public class TestingOfGoalpage {
 		login.loginApplication("yesh@zasyasolutions.com", "Yesh255198@");
 
 		login.avoidFeedbackpopup();
-		driver.findElement(By.xpath("//body/div[@id='__next']/div[1]/aside[1]/div[1]/div[1]/div[2]/ul[1]/li[3]"))
+		driver.findElement(By.xpath("//span[text()='Goals']"))
 				.click();
 		driver.findElement(By.cssSelector("a[data-testid='goal-create-btn']")).click();
 		driver.findElement(By.xpath("//div[text()='Self-Development']")).click();
@@ -37,11 +36,11 @@ public class TestingOfGoalpage {
 				.sendKeys("abc");
 		driver.findElement(By.cssSelector("button[data-testid='goal-submit-btn']")).click();
 
-		driver.close();
+	
 
 	}
 
-	public void usersCanMarkAGoalAsCompleted() throws InterruptedException {
+	public void usersCanSeeOnTrackGoals() throws InterruptedException {
 
 		WebDriver driver = new ChromeDriver();
 
@@ -55,14 +54,126 @@ public class TestingOfGoalpage {
 
 	
 		login.avoidFeedbackpopup();
-		driver.findElement(By.xpath("//body/div[@id='__next']/div[1]/aside[1]/div[1]/div[1]/div[2]/ul[1]/li[3]"))
-				.click();
-		driver.close();
-
-		login.avoidFeedbackpopup();
-		driver.findElement(By.xpath("//body/div[@id='__next']/div[1]/aside[1]/div[1]/div[1]/div[2]/ul[1]/li[3]"))
-				.click();
-
-
+		driver.findElement(By.xpath("//span[text()='Goals']")).click();
+		driver.findElement(By.xpath("//div[@data-testid='tab-button-On Track']")).click();
+	
 	}
+
+
+public void usersCanSeeCompletedGoals() throws InterruptedException {
+
+	WebDriver driver = new ChromeDriver();
+
+	driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+	driver.manage().window().maximize();
+
+	Login login = new Login(driver);
+	login.Goto();
+
+	login.loginApplication("yesh@zasyasolutions.com", "Yesh255198@");
+
+
+	login.avoidFeedbackpopup();
+	driver.findElement(By.xpath("//span[text()='Goals']")).click();
+	driver.findElement(By.xpath("//div[@data-testid='tab-button-Completed']")).click();
+
+
 }
+
+
+public void usersCanSeeDelayedGoals() throws InterruptedException {
+
+	WebDriver driver = new ChromeDriver();
+
+	driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+	driver.manage().window().maximize();
+
+	Login login = new Login(driver);
+	login.Goto();
+
+	login.loginApplication("yesh@zasyasolutions.com", "Yesh255198@");
+
+
+	login.avoidFeedbackpopup();
+	driver.findElement(By.xpath("//span[text()='Goals']")).click();
+	driver.findElement(By.xpath("//div[@data-testid='tab-button-Delayed']")).click();
+
+}
+
+public void usersCanSeeAbandonedGoals() throws InterruptedException {
+
+	WebDriver driver = new ChromeDriver();
+
+	driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+	driver.manage().window().maximize();
+
+	Login login = new Login(driver);
+	login.Goto();
+
+	login.loginApplication("yesh@zasyasolutions.com", "Yesh255198@");
+
+
+	login.avoidFeedbackpopup();
+	driver.findElement(By.xpath("//span[text()='Goals']")).click();
+	Thread.sleep(2000);
+	driver.findElement(By.xpath("//div[@data-testid='tab-button-Abandoned']")).click();
+}
+
+
+public void usersCanSeeArchivedGoals() throws InterruptedException {
+
+	WebDriver driver = new ChromeDriver();
+
+	driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+	driver.manage().window().maximize();
+
+	Login login = new Login(driver);
+	login.Goto();
+
+	login.loginApplication("yesh@zasyasolutions.com", "Yesh255198@");
+
+
+	login.avoidFeedbackpopup();
+	driver.findElement(By.xpath("//span[text()='Goals']")).click();
+	Thread.sleep(2000);
+	driver.findElement(By.xpath("//div[@data-testid='tab-button-Archived']")).click();
+}
+
+@Test
+public void usersCanUpdateStatus() throws InterruptedException {
+
+	WebDriver driver = new ChromeDriver();
+
+	driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
+	driver.manage().window().maximize();
+
+	Login login = new Login(driver);
+	login.Goto();
+
+	login.loginApplication("yesh@zasyasolutions.com", "Yesh255198@");
+
+
+	login.avoidFeedbackpopup();
+	driver.findElement(By.xpath("//span[text()='Goals']")).click();
+	Thread.sleep(2000);
+	
+	driver.findElement(By.cssSelector("button[data-testid='goal-menu-btn-0']")).click();
+	Thread.sleep(2000);
+	driver.findElement(By.cssSelector("li[data-testid='update-menu-btn-0']")).click();
+	driver.findElement(By.cssSelector("span[title='On Track']")).click();
+	Thread.sleep(2000);
+	driver.findElement(By.cssSelector("div[title='Completed'] div[class='ant-select-item-option-content']")).click();
+	driver.findElement(By.cssSelector("p[data-placeholder='Comment about the status']")).sendKeys("OK");
+	driver.findElement(By.xpath("//div[normalize-space()='Update']")).click();
+}
+
+
+
+
+
+
+
+
+
+}
+

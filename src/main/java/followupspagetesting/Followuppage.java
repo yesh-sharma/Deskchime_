@@ -31,7 +31,7 @@ public class Followuppage {
 		login.loginApplication("yeshsharma516032@gmail.com", "Yesh12345");
 
 		login.avoidFeedbackpopup();
-
+		
 		driver.findElement(By.xpath("//span[normalize-space()='Follow Ups']")).click();
 		driver.findElement(By.cssSelector("a[data-testid='create-follow-up-button']")).click();
 
@@ -146,15 +146,6 @@ public class Followuppage {
 
 		login.avoidFeedbackpopup();
 
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
-		try {
-			WebElement feedbackPopup = wait
-					.until(ExpectedConditions.elementToBeClickable(By.cssSelector("button[class='ant-modal-close']")));
-			feedbackPopup.click();
-		} catch (Exception e) {
-			e.printStackTrace();
-			System.out.println("here the error :" + e);
-		}
 
 		// click on follow up
 		driver.findElement(By.xpath("//span[normalize-space()='Follow Ups']")).click();
