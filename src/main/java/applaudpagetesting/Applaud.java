@@ -11,6 +11,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 
+import loginpagetesting.ChromeOptionsConfig;
 import loginpagetesting.Login;
 
 @Test
@@ -19,7 +20,7 @@ public class Applaud {
 
 	public void sendApplaud() throws InterruptedException {
 
-		WebDriver driver = new ChromeDriver();
+		WebDriver driver = new ChromeDriver(ChromeOptionsConfig.getChromeOptions());
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
 
 		driver.manage().window().maximize();
@@ -59,7 +60,7 @@ public class Applaud {
 	}
 
 	public void useMonthFilter() throws InterruptedException {
-		WebDriver driver = new ChromeDriver();
+		WebDriver driver = new ChromeDriver(ChromeOptionsConfig.getChromeOptions());
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
 
 		driver.manage().window().maximize();
@@ -86,7 +87,7 @@ public class Applaud {
 	}
 
 	public void seeReceivedApplauds() throws InterruptedException {
-		WebDriver driver = new ChromeDriver();
+		WebDriver driver = new ChromeDriver(ChromeOptionsConfig.getChromeOptions());
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
 
 		driver.manage().window().maximize();
@@ -107,7 +108,7 @@ public class Applaud {
 	}
 
 	public void seeSentApplauds() throws InterruptedException {
-		WebDriver driver = new ChromeDriver();
+		WebDriver driver = new ChromeDriver(ChromeOptionsConfig.getChromeOptions());
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
 
 		driver.manage().window().maximize();
@@ -125,7 +126,7 @@ public class Applaud {
 		
 		 WebElement element2 = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[text()='Sent']")));
 		
-element2.click();
+         element2.click();
 	
 		driver.close();
 

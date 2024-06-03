@@ -45,15 +45,11 @@ public class Login {
 		driver.manage().deleteAllCookies();
 		driver.get("https://deskchime.com/");
 		driver.findElement(By.cssSelector("a[data-testid='login-btn']")).click();
-		ChromeOptions option = new ChromeOptions();
-		option.setPageLoadStrategy(PageLoadStrategy.NONE);
-		option.addArguments("--disable-features=NetworkService");
-		option.addArguments("--dns-prefetch-disable");
-		option.addArguments("--disable-extensions");
-		option.addArguments("--blink-settings=imagesEnabled=false");
-
+		
 	}
-
+	 
+	
+	
 	public void avoidFeedbackpopup() {
 		try {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));

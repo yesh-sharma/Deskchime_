@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite parallel="tests" name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" parallel="tests" name="goalpagetesting(failed)">
+  <test thread-count="5" parallel="tests" name="signuppagetesting(failed)">
     <classes>
-      <class name="goalpagetesting.TestingOfGoalpage">
+      <class name="signuppagetesting.Signuppagetesting">
         <methods>
-          <include name="usersCanMarkAGoalAsCompleted"/>
+          <include name="successfulregistration"/>
+          <include name="emptyfields"/>
         </methods>
-      </class> <!-- goalpagetesting.TestingOfGoalpage -->
+      </class> <!-- signuppagetesting.Signuppagetesting -->
     </classes>
-  </test> <!-- goalpagetesting(failed) -->
+  </test> <!-- signuppagetesting(failed) -->
   <test thread-count="5" parallel="tests" name="settingpagetesting(failed)">
     <classes>
       <class name="settingpagetesting.Settingpage">
@@ -19,28 +20,20 @@
       </class> <!-- settingpagetesting.Settingpage -->
     </classes>
   </test> <!-- settingpagetesting(failed) -->
-  <test thread-count="5" parallel="tests" name="applaudpagetesting(failed)">
+  <test thread-count="5" parallel="tests" name="loginpagetesting(failed)">
     <classes>
-      <class name="applaudpagetesting.Applaud">
+      <class name="loginpagetesting.Testingofloginpage">
         <methods>
-          <include name="seeReceivedApplauds"/>
-          <include name="sendApplaud"/>
-          <include name="seeSentApplauds"/>
-          <include name="useMonthFilter"/>
+          <include name="userlogout"/>
         </methods>
-      </class> <!-- applaudpagetesting.Applaud -->
+      </class> <!-- loginpagetesting.Testingofloginpage -->
     </classes>
-  </test> <!-- applaudpagetesting(failed) -->
+  </test> <!-- loginpagetesting(failed) -->
   <test thread-count="5" parallel="tests" name="feedbackspagetesting(failed)">
     <classes>
       <class name="feedbackspagetesting.TestingOfFeedbackPage">
         <methods>
-          <include name="userCanShortAndFilterFeedbackByPending"/>
-          <include name="usersCanSeeAllTheFeedbackTheyHaveReceived"/>
-          <include name="templateCreation"/>
           <include name="userCanAskForFeedbackFromWholeTeam"/>
-          <include name="userCanAskForFeedbackFromSpecificTeamMember"/>
-          <include name="userCanShortAndFilterFeedbackByAnswered"/>
         </methods>
       </class> <!-- feedbackspagetesting.TestingOfFeedbackPage -->
     </classes>

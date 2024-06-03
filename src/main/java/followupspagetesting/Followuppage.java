@@ -15,9 +15,9 @@ import org.testng.annotations.Test;
 
 import loginpagetesting.Login;
 
-
-public class Followuppage {
 @Test
+public class Followuppage {
+
 	public void followuppage() throws InterruptedException {
 
 		WebDriver driver = new ChromeDriver();
@@ -125,6 +125,7 @@ public class Followuppage {
 			driver.findElement(By.xpath("//div[text()='07:30 PM']")).click();
 
 		}
+		
 		driver.findElement(By.cssSelector("button[type='submit'] div[class='flex items-center gap-2 justify-center']"))
 				.click();
 		Thread.sleep(2000);
@@ -145,42 +146,53 @@ public class Followuppage {
 
 		WebDriver driver = new ChromeDriver();
 
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
 		driver.manage().window().maximize();
 
 		Login login = new Login(driver);
 		login.Goto();
 
 		login.loginApplication("yeshsharma516032@gmail.com", "Yesh12345");
-		// explicit wait
 
 		login.avoidFeedbackpopup();
+		
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
 
+        WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[normalize-space()='Follow Ups']")));
 
-		// click on follow up
-		driver.findElement(By.xpath("//span[normalize-space()='Follow Ups']")).click();
-		driver.findElement(By.cssSelector("a[data-testid='create-follow-up-button']")).click();
+		element.click();
+		
+		  WebElement element1= wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("a[data-testid='create-follow-up-button']")));
 
-		driver.findElement(By.cssSelector(
-				"body > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > main:nth-child(2) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > button:nth-child(2) > div:nth-child(1)"))
-				.click();
+			element1.click();
+			
+			 WebElement element2= wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(
+						"body > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > main:nth-child(2) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > button:nth-child(2) > div:nth-child(1)")));
+			 element2.click();
 
-		driver.findElement(By.cssSelector("#meeting_meeting_title")).sendKeys("followup functionality");
+			  WebElement element3= wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("#meeting_meeting_title")));
+			  
+		element3.sendKeys("followup functionality");
 
-		driver.findElement(
-				By.cssSelector("div[class='tiptap ProseMirror text-sm min-h-[80px] p-3 max-h-80 overflow-y-auto']"))
-				.sendKeys("user interface");
-		driver.findElement(By.cssSelector("button[type='submit'] div[class='flex items-center gap-2 justify-center']"))
-				.click();
-		driver.findElement(By.id("meeting_meeting_at")).click();
-		driver.findElement(By.xpath("//div[text()='Close']")).click();
-		driver.findElement(By.cssSelector(
-				"button[class='rounded-lg w-fit tracking-[0.5px] font-medium flex items-center gap-2 justify-center transition-all duration-200 ease-in-out disabled:cursor-default bg-teal-500 text-white hover:bg-teal-400 active:bg-teal-300 disabled:bg-zinc-400 h-10 px-3 py-2 text-sm relative'] div[class='flex items-center gap-2 justify-center']"))
-				.click();
-		WebElement w1 = driver.findElement(By.xpath("//div[text()='Please select meeting time or members']"));
+		  WebElement element4= wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("div[class='tiptap ProseMirror text-sm min-h-[80px] p-3 max-h-80 overflow-y-auto']")));
+          element4.sendKeys("user interface");
+          WebElement element5= wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("button[type='submit'] div[class='flex items-center gap-2 justify-center']")));
+		element5.click();
+		
+		 WebElement element6= wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("meeting_meeting_at")));
+		element6.click();
+		
+		WebElement element7= wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[text()='Close']")));
+		element7.click();
+		
+		WebElement element8= wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[contains(text(),'Next')]")));
+		element8.click();
+		WebElement element9= wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".ant-notification-notice-message")));
+	
+		
 
-		if (w1.isDisplayed()) {
-			String dialogText = w1.getText();
+		if (element9.isDisplayed()) {
+			String dialogText = element9.getText();
 			System.out.println("Popup message: " + dialogText);
 			driver.close();
 
