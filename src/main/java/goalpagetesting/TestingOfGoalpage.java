@@ -13,9 +13,10 @@ import org.testng.annotations.Test;
 
 import loginpagetesting.ChromeOptionsConfig;
 import loginpagetesting.Login;
+
 @Test
 public class TestingOfGoalpage {
-	
+
 	public void goalpage() throws InterruptedException {
 
 		WebDriver driver = new ChromeDriver(ChromeOptionsConfig.getChromeOptions());
@@ -43,15 +44,15 @@ public class TestingOfGoalpage {
 		WebElement element3 = wait
 				.until(ExpectedConditions.visibilityOfElementLocated(By.id("goals_goals_headers_0_goal_title")));
 		element3.sendKeys("xyz");
-		
-		WebElement element4 = wait.until(
-				ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".is-empty.is-editor-empty")));
+
+		WebElement element4 = wait
+				.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".is-empty.is-editor-empty")));
 		element4.sendKeys("abc");
-		
+
 		WebElement element5 = wait.until(
 				ExpectedConditions.visibilityOfElementLocated(By.cssSelector("button[data-testid='goal-submit-btn']")));
 		element5.click();
-driver.close();
+		driver.close();
 	}
 
 	public void usersCanSeeOnTrackGoals() throws InterruptedException {
@@ -72,10 +73,10 @@ driver.close();
 		WebElement element = wait
 				.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[text()='Goals']")));
 		element.click();
-		WebElement element1 = wait
-				.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@data-testid='tab-button-On Track']")));
+		WebElement element1 = wait.until(
+				ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@data-testid='tab-button-On Track']")));
 		element1.click();
-		
+
 		driver.close();
 	}
 
@@ -97,13 +98,11 @@ driver.close();
 		WebElement element = wait
 				.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[text()='Goals']")));
 		element.click();
-		WebElement element1 = wait
-				.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@data-testid='tab-button-Completed']")));
+		WebElement element1 = wait.until(
+				ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@data-testid='tab-button-Completed']")));
 		element1.click();
-		
-		driver.close();
-		
 
+		driver.close();
 
 	}
 
@@ -120,24 +119,18 @@ driver.close();
 		login.loginApplication("yesh@zasyasolutions.com", "Yesh255198@");
 
 		login.avoidFeedbackpopup();
-		
-		
+
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
 
 		WebElement element = wait
 				.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[text()='Goals']")));
 		element.click();
-		WebElement element1 = wait
-				.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@data-testid='tab-button-Delayed']")));
+		WebElement element1 = wait.until(
+				ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@data-testid='tab-button-Delayed']")));
 		element1.click();
-		
+
 		driver.close();
-		
-		
-		
-		
-	
-	
+
 	}
 
 	public void usersCanSeeAbandonedGoals() throws InterruptedException {
@@ -153,20 +146,18 @@ driver.close();
 		login.loginApplication("yesh@zasyasolutions.com", "Yesh255198@");
 
 		login.avoidFeedbackpopup();
-		
-		
+
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
 
 		WebElement element = wait
 				.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[text()='Goals']")));
 		element.click();
-		WebElement element1 = wait
-				.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@data-testid='tab-button-Abandoned']")));
+		WebElement element1 = wait.until(
+				ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@data-testid='tab-button-Abandoned']")));
 		element1.click();
-		
-		
+
 		driver.close();
-	
+
 	}
 
 	public void usersCanSeeArchivedGoals() throws InterruptedException {
@@ -182,22 +173,19 @@ driver.close();
 		login.loginApplication("yesh@zasyasolutions.com", "Yesh255198@");
 
 		login.avoidFeedbackpopup();
-		
 
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
 
 		WebElement element = wait
 				.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[text()='Goals']")));
 		element.click();
-		WebElement element1 = wait
-				.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@data-testid='tab-button-Archived']")));
+		WebElement element1 = wait.until(
+				ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@data-testid='tab-button-Archived']")));
 		element1.click();
-		
-		
+
 		driver.close();
 	}
 
-	
 	public void usersCanUpdateStatus() throws InterruptedException {
 
 		WebDriver driver = new ChromeDriver(ChromeOptionsConfig.getChromeOptions());
@@ -216,28 +204,28 @@ driver.close();
 		WebElement element = wait
 				.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[text()='Goals']")));
 		element.click();
-		WebElement element1 = wait
-				.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("button[data-testid='goal-menu-btn-0']")));
+		WebElement element1 = wait.until(
+				ExpectedConditions.visibilityOfElementLocated(By.cssSelector("button[data-testid='goal-menu-btn-0']")));
 		element1.click();
-		WebElement element2 = wait
-				.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("li[data-testid='update-menu-btn-0']")));
+		WebElement element2 = wait.until(
+				ExpectedConditions.visibilityOfElementLocated(By.cssSelector("li[data-testid='update-menu-btn-0']")));
 		element2.click();
-		
+
 		WebElement element3 = wait
 				.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("span[title='On Track']")));
 		element3.click();
-		
-		WebElement element4 = wait
-				.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("div[title='Completed'] div[class='ant-select-item-option-content']")));
+
+		WebElement element4 = wait.until(ExpectedConditions.visibilityOfElementLocated(
+				By.cssSelector("div[title='Completed'] div[class='ant-select-item-option-content']")));
 		element4.click();
-	
-		WebElement element5 = wait
-				.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("p[data-placeholder='Comment about the status']")));
+
+		WebElement element5 = wait.until(ExpectedConditions
+				.visibilityOfElementLocated(By.cssSelector("p[data-placeholder='Comment about the status']")));
 		element5.sendKeys("Ok");
 		WebElement element6 = wait
 				.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[normalize-space()='Update']")));
 		element6.click();
-		
+       driver.close();
 	}
 
 }

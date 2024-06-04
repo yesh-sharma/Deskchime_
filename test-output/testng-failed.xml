@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="settingpagetesting.Settingpage">
+      <class name="loginpagetesting.Testingofloginpage">
         <methods>
-          <include name="userCreatedAndDeletedSuccessfully"/>
+          <include name="validcredendetials" invocation-numbers="0 1"/>
         </methods>
-      </class> <!-- settingpagetesting.Settingpage -->
+      </class> <!-- loginpagetesting.Testingofloginpage -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

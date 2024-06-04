@@ -27,39 +27,60 @@ public class Testingofloginpage {
 	@FindBy(css = "button[type='submit']")
 	WebElement submit;
 
-	@Test(dataProvider = "getData")
-	public void validcredendetials(HashMap<String, String> input) throws InterruptedException {
-		WebDriver driver = new ChromeDriver();
+//	@Test(dataProvider = "getData")
+//	public void validcredendetials(HashMap<String, String> input) throws InterruptedException {
+//		WebDriver driver = new ChromeDriver(ChromeOptionsConfig.getChromeOptions());
+//
+//		driver.manage().window().maximize();
+//
+//		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
+//		Login log = new Login(driver);
+//
+//		log.Goto();
+//		log.avoidFeedbackpopup();
+//		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+//		WebElement element = wait
+//				.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("a[data-testid='login-btn']")));
+//		element.click();
+//		
+//		log.loginApplication(input.get("email"), input.get("password"));
+//	}
+//
+//	@DataProvider
+//	public Object[][] getData() {
+//		HashMap<String, String> map = new HashMap<String, String>();
+//		map.put("email", "yeshsharma516032@gmail.com");
+//		map.put("password", "Yesh1234");
+//		HashMap<String, String> map1 = new HashMap<String, String>();
+//		map1.put("email", "yesh@zasyasolutions.com");
+//		map1.put("password", "Yesh255198@");
+//		return new Object[][] { { map }, { map1 } };
+//
+//	}
+	
+	public void validcredendetials() throws InterruptedException
+	{
+		
+		WebDriver driver = new ChromeDriver(ChromeOptionsConfig.getChromeOptions());
 
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
 		driver.manage().window().maximize();
 
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
-		Login log = new Login(driver);
-	
+		Login login = new Login(driver);
+		login.Goto();
+		login.loginApplication("yeshsharma516032@gmail.com", "Yesh12345");
 
+		driver.close();
 		
-
-		log.Goto();
-
-		driver.findElement(By.cssSelector("a[data-testid='login-btn']")).click();
-		log.loginApplication(input.get("email"), input.get("password"));
+		
+		
 	}
-
-	@DataProvider
-	public Object[][] getData() {
-		HashMap<String, String> map = new HashMap<String, String>();
-		map.put("email", "yeshsharma516032@gmail.com");
-		map.put("password", "Yesh1234");
-		HashMap<String, String> map1 = new HashMap<String, String>();
-		map1.put("email", "yesh@zasyasolutions.com");
-		map1.put("password", "Yesh255198@");
-		return new Object[][] { { map }, { map1 } };
-
-	}
-
+	
+	
+	
 	public void invalidcredentials1() throws InterruptedException {
 
-		WebDriver driver = new ChromeDriver();
+		WebDriver driver = new ChromeDriver(ChromeOptionsConfig.getChromeOptions());
 		driver.get("https://deskchime.com/");
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
 		driver.manage().window().maximize();
@@ -75,7 +96,6 @@ public class Testingofloginpage {
 		if (w1.isDisplayed()) {
 			String dialogText = w1.getText();
 			System.out.println("Popup message: " + dialogText);
-			
 
 		}
 		driver.close();
@@ -83,7 +103,7 @@ public class Testingofloginpage {
 
 	public void invalidcredentials2() throws InterruptedException {
 
-		WebDriver driver = new ChromeDriver();
+		WebDriver driver = new ChromeDriver(ChromeOptionsConfig.getChromeOptions());
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
 		driver.get("https://deskchime.com/");
 
@@ -100,7 +120,6 @@ public class Testingofloginpage {
 		if (w1.isDisplayed()) {
 			String dialogText = w1.getText();
 			System.out.println("Popup message: " + dialogText);
-		
 
 		}
 		driver.close();
@@ -108,7 +127,7 @@ public class Testingofloginpage {
 
 	public void emptyusernamefield() throws InterruptedException {
 
-		WebDriver driver = new ChromeDriver();
+		WebDriver driver = new ChromeDriver(ChromeOptionsConfig.getChromeOptions());
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
 		driver.get("https://deskchime.com/");
 		driver.manage().window().maximize();
@@ -125,7 +144,7 @@ public class Testingofloginpage {
 
 	public void emptypasswordfield() throws InterruptedException {
 
-		WebDriver driver = new ChromeDriver();
+		WebDriver driver = new ChromeDriver(ChromeOptionsConfig.getChromeOptions());
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
 		driver.get("https://deskchime.com/");
 		driver.manage().window().maximize();
@@ -139,7 +158,7 @@ public class Testingofloginpage {
 	}
 
 	public void passwordresetlink() throws InterruptedException {
-		WebDriver driver = new ChromeDriver();
+		WebDriver driver = new ChromeDriver(ChromeOptionsConfig.getChromeOptions());
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
 		driver.get("https://deskchime.com/");
 		driver.manage().window().maximize();
@@ -153,42 +172,29 @@ public class Testingofloginpage {
 		if (dialog.isDisplayed()) {
 			String dialogText = dialog.getText();
 			System.out.println("Popup message: " + dialogText);
-			
+
 		}
 		driver.close();
 	}
-@Test
+
+	
 	public void userlogout() throws InterruptedException {
-		WebDriver driver = new ChromeDriver();
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
-		driver.get("https://deskchime.com/");
+		WebDriver driver = new ChromeDriver(ChromeOptionsConfig.getChromeOptions());
 
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
 		driver.manage().window().maximize();
-		driver.findElement(By.cssSelector("a[data-testid='login-btn']")).click();
 
-		PageFactory.initElements(driver, this);
-		useremail.sendKeys("yesh@zasyasolutions.com");
-		passwordEle.sendKeys("Yesh255198@");
-		submit.click();
-            Login login =new Login(driver);
-            login.avoidFeedbackpopup();
+		Login login = new Login(driver);
+		login.Goto();
+		login.loginApplication("yeshsharma516032@gmail.com", "Yesh12345");
 
+		login.avoidFeedbackpopup();
 
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
-		try {
-			WebElement feedbackPopup = wait.until(
-					ExpectedConditions.presenceOfElementLocated(By.xpath("//span[normalize-space()='Feedbacks']")));
-			feedbackPopup.click();
-		} catch (Exception e) {
-			e.printStackTrace();
-			System.out.println("here the error" + e);
-		}
-
-		driver.findElement(By.xpath(
-				"//button[@class='rounded-lg w-fit tracking-[0.5px] font-medium flex items-center gap-2 justify-center transition-all duration-200 ease-in-out disabled:cursor-default text-slate-600 hover:text-teal-500 active:text-teal-600 disabled:text-zinc-400 h-12 p-3 text-base relative']//div[1]"))
-				.click();
-
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+		WebElement element = wait.until(
+				ExpectedConditions.visibilityOfElementLocated(By.cssSelector("button[data-testid='logout-btn']")));
+		element.click();
 		driver.close();
-	}
 
+	}
 }

@@ -34,7 +34,8 @@ public class Applaud {
 
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
 
-        WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[normalize-space()='Applaud']")));
+		WebElement element = wait
+				.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[normalize-space()='Applaud']")));
 
 		element.click();
 
@@ -42,7 +43,6 @@ public class Applaud {
 		WebElement element2 = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(
 				"//button[@class='rounded-lg w-fit tracking-[0.5px] font-medium flex items-center gap-2 justify-center transition-all duration-200 ease-in-out disabled:cursor-default bg-teal-500 text-white hover:bg-teal-400 active:bg-teal-300 disabled:bg-zinc-400 h-10 px-3 py-2 text-sm relative']")));
 		element2.click();
-		
 
 		// enter member name
 		driver.findElement(By.id("user_id")).click();
@@ -53,7 +53,8 @@ public class Applaud {
 				.click();
 		driver.findElement(By.xpath("/html/body/div[3]/div/div/div[2]/div[1]/div/div/div[5]/div/span")).click();
 		driver.findElement(By.id("comment")).sendKeys("xyz");
-		  WebElement element3 = wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("button[type='submit']")));
+		WebElement element3 = wait
+				.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("button[type='submit']")));
 		element3.click();
 		driver.close();
 
@@ -73,17 +74,19 @@ public class Applaud {
 		login.avoidFeedbackpopup();
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
 
-        WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[normalize-space()='Applaud']")));
+		WebElement element = wait
+				.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[normalize-space()='Applaud']")));
 		element.click();
-		   WebElement element2 = wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("input[placeholder='Select month']")));
+		WebElement element2 = wait.until(
+				ExpectedConditions.visibilityOfElementLocated(By.cssSelector("input[placeholder='Select month']")));
 		element2.click();
-		  WebElement element3 = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[text()='Apr']")));
+		WebElement element3 = wait
+				.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[text()='Apr']")));
 		element3.click();
 		System.out.println(driver.findElement(By.xpath("//div[text()='Apr 22, 2024']")).getText());
 
 		driver.close();
 
- 
 	}
 
 	public void seeReceivedApplauds() throws InterruptedException {
@@ -100,9 +103,11 @@ public class Applaud {
 		login.avoidFeedbackpopup();
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
 
-        WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[normalize-space()='Applaud']")));
+		WebElement element = wait
+				.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[normalize-space()='Applaud']")));
 		element.click();
-		   WebElement element2 = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[text()='Received']")));
+		WebElement element2 = wait
+				.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[text()='Received']")));
 		element2.click();
 		driver.close();
 	}
@@ -117,17 +122,19 @@ public class Applaud {
 		login.Goto();
 
 		login.loginApplication("yesh@zasyasolutions.com", "Yesh255198@");
-		
+
 		login.avoidFeedbackpopup();
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
 
-        WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[normalize-space()='Applaud']")));
+		WebElement element = wait
+				.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[normalize-space()='Applaud']")));
 		element.click();
-		
-		 WebElement element2 = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[text()='Sent']")));
-		
-         element2.click();
-	
+
+		WebElement element2 = wait
+				.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[text()='Sent']")));
+
+		element2.click();
+
 		driver.close();
 
 	}

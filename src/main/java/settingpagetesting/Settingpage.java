@@ -14,18 +14,13 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
 
 import org.testng.annotations.Test;
 
 import loginpagetesting.Login;
-
-public class Settingpage {
 @Test
+public class Settingpage {
+	
 	public void userCreatedAndDeletedSuccessfully() throws InterruptedException {
 		WebDriver driver = new ChromeDriver();
 
@@ -37,7 +32,7 @@ public class Settingpage {
 		login.loginApplication("yeshsharma516032@gmail.com", "Yesh12345");
 
 		login.avoidFeedbackpopup();
-		
+
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
 
 		WebElement element = wait
@@ -81,8 +76,9 @@ public class Settingpage {
 				.visibilityOfElementLocated(By.xpath("//div[@class='ant-select-selection-overflow']")));
 		element8.click();
 
-		WebElement element9 = wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("div[data-testid='select-user-role']")));
-				
+		WebElement element9 = wait.until(
+				ExpectedConditions.visibilityOfElementLocated(By.cssSelector("div[data-testid='select-user-role']")));
+
 		element9.click();
 
 		WebElement element10 = wait
@@ -97,12 +93,12 @@ public class Settingpage {
 				.visibilityOfElementLocated(By.cssSelector("button[data-testid='user-list-menu-button']")));
 		element12.click();
 
-		WebElement element13 = wait.until(ExpectedConditions
-				.visibilityOfElementLocated(By.xpath("//li[@data-testid='delete-user-button']")));
+		WebElement element13 = wait.until(
+				ExpectedConditions.visibilityOfElementLocated(By.xpath("//li[@data-testid='delete-user-button']")));
 		element13.click();
 
-		WebElement element14 = wait.until(ExpectedConditions
-				.visibilityOfElementLocated(By.xpath("//span[text()='Yes']")));
+		WebElement element14 = wait
+				.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[text()='Yes']")));
 		element14.click();
 
 		driver.close();
@@ -126,7 +122,7 @@ public class Settingpage {
 		WebElement element1 = wait
 				.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[text()='Users']")));
 		element1.click();
-
+		driver.close();
 
 	}
 

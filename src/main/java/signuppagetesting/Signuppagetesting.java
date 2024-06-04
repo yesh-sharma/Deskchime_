@@ -10,12 +10,14 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
 
+import loginpagetesting.ChromeOptionsConfig;
+
 @Test
 public class Signuppagetesting {
 
 	public void successfulregistration() throws InterruptedException {
 
-		WebDriver driver = new ChromeDriver();
+		WebDriver driver = new ChromeDriver(ChromeOptionsConfig.getChromeOptions());
 
 		driver.get("https://deskchime.com/");
 		Thread.sleep(3000);
@@ -36,7 +38,7 @@ public class Signuppagetesting {
 
 	public void emptyfields() throws InterruptedException {
 
-		WebDriver driver = new ChromeDriver();
+		WebDriver driver = new ChromeDriver(ChromeOptionsConfig.getChromeOptions());
 
 		driver.get("https://deskchime.com/");
 		Thread.sleep(3000);
@@ -59,7 +61,7 @@ public class Signuppagetesting {
 	}
 
 	public void invalidemailformat() throws InterruptedException {
-		WebDriver driver = new ChromeDriver();
+		WebDriver driver = new ChromeDriver(ChromeOptionsConfig.getChromeOptions());
 
 		driver.get("https://deskchime.com/");
 		Thread.sleep(3000);
@@ -90,7 +92,7 @@ public class Signuppagetesting {
 
 	public void existingemailaddress() throws InterruptedException {
 
-		WebDriver driver = new ChromeDriver();
+		WebDriver driver = new ChromeDriver(ChromeOptionsConfig.getChromeOptions());
 
 		driver.get("https://deskchime.com/");
 		Thread.sleep(3000);
@@ -111,13 +113,14 @@ public class Signuppagetesting {
 		if (W2.isDisplayed()) {
 			String text = W2.getText();
 			System.out.println("popup message " + text);
-			driver.close();
+
 		}
+		driver.close();
 	}
 
 	public void passwordstrength() throws InterruptedException {
 
-		WebDriver driver = new ChromeDriver();
+		WebDriver driver = new ChromeDriver(ChromeOptionsConfig.getChromeOptions());
 
 		driver.get("https://deskchime.com/");
 		Thread.sleep(3000);
@@ -138,14 +141,14 @@ public class Signuppagetesting {
 		if (W2.isDisplayed()) {
 			String text = W2.getText();
 			System.out.println("popup message " + text);
-			driver.close();
 
 		}
+		driver.close();
 	}
 
 	public void passwordconfirmation() throws InterruptedException {
 
-		WebDriver driver = new ChromeDriver();
+		WebDriver driver = new ChromeDriver(ChromeOptionsConfig.getChromeOptions());
 
 		driver.get("https://deskchime.com/");
 		Thread.sleep(3000);
@@ -166,7 +169,9 @@ public class Signuppagetesting {
 		if (W2.isDisplayed()) {
 			String text = W2.getText();
 			System.out.println("popup message " + text);
-			driver.close();
+
 		}
+		driver.close();
 	}
+
 }

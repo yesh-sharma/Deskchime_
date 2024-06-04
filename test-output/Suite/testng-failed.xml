@@ -5,12 +5,20 @@
     <classes>
       <class name="signuppagetesting.Signuppagetesting">
         <methods>
-          <include name="successfulregistration"/>
-          <include name="emptyfields"/>
+          <include name="passwordconfirmation"/>
         </methods>
       </class> <!-- signuppagetesting.Signuppagetesting -->
     </classes>
   </test> <!-- signuppagetesting(failed) -->
+  <test thread-count="5" parallel="tests" name="applaudpagetesting(failed)">
+    <classes>
+      <class name="applaudpagetesting.Applaud">
+        <methods>
+          <include name="seeSentApplauds"/>
+        </methods>
+      </class> <!-- applaudpagetesting.Applaud -->
+    </classes>
+  </test> <!-- applaudpagetesting(failed) -->
   <test thread-count="5" parallel="tests" name="settingpagetesting(failed)">
     <classes>
       <class name="settingpagetesting.Settingpage">
@@ -24,16 +32,25 @@
     <classes>
       <class name="loginpagetesting.Testingofloginpage">
         <methods>
-          <include name="userlogout"/>
+          <include name="validcredendetials" invocation-numbers="0 1"/>
         </methods>
       </class> <!-- loginpagetesting.Testingofloginpage -->
     </classes>
   </test> <!-- loginpagetesting(failed) -->
+  <test thread-count="5" parallel="tests" name="goalpagetesting(failed)">
+    <classes>
+      <class name="goalpagetesting.TestingOfGoalpage">
+        <methods>
+          <include name="usersCanUpdateStatus"/>
+        </methods>
+      </class> <!-- goalpagetesting.TestingOfGoalpage -->
+    </classes>
+  </test> <!-- goalpagetesting(failed) -->
   <test thread-count="5" parallel="tests" name="feedbackspagetesting(failed)">
     <classes>
       <class name="feedbackspagetesting.TestingOfFeedbackPage">
         <methods>
-          <include name="userCanAskForFeedbackFromWholeTeam"/>
+          <include name="userCanAskForFeedbackFromSpecificTeamMember"/>
         </methods>
       </class> <!-- feedbackspagetesting.TestingOfFeedbackPage -->
     </classes>
