@@ -8,11 +8,161 @@
 <body>
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
-<tr><th colspan="8">Default suite</th></tr>
-<tr><td><a href="#t0">Default test</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">13,549</td><td></td><td></td></tr>
+<tr><th colspan="8">Suite</th></tr>
+<tr><td><a href="#t0">signuppagetesting</a></td><td class="num">5</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">201,118</td><td></td><td></td></tr>
+<tr class="stripe"><td><a href="#t1">loginpagetesting</a></td><td class="num">7</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">201,313</td><td></td><td></td></tr>
+<tr><td><a href="#t2">applaudpagetesting</a></td><td class="num">4</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">286,778</td><td></td><td></td></tr>
+<tr class="stripe"><td><a href="#t3">goalpagetesting</a></td><td class="num">6</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">344,743</td><td></td><td></td></tr>
+<tr><td><a href="#t4">feedbackspagetesting</a></td><td class="num">5</td><td class="num">0</td><td class="num">0</td><td class="num attn">2</td><td class="num">438,607</td><td></td><td></td></tr>
+<tr class="stripe"><td><a href="#t5">settingpagetesting</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">274,096</td><td></td><td></td></tr>
+<tr><th>Total</th><th class="num">28</th><th class="num">0</th><th class="num">0</th><th class="num attn">5</th><th class="num">1,746,655</th><th colspan="2"></th></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">loginpagetesting.Testingofloginpage</td><td><a href="#m0">validcredendetials</a></td><td rowspan="1">1717486043561</td><td rowspan="1">13481</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">signuppagetesting &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">signuppagetesting.Signuppagetesting</td><td><a href="#m0">emptyfields</a></td><td rowspan="1">1717492172581</td><td rowspan="1">22693</td></tr><tr><th colspan="4">signuppagetesting &#8212; passed</th></tr><tr class="passedeven"><td rowspan="5">signuppagetesting.Signuppagetesting</td><td><a href="#m1">existingemailaddress</a></td><td rowspan="1">1717492195312</td><td rowspan="1">39215</td></tr><tr class="passedeven"><td><a href="#m2">invalidemailformat</a></td><td rowspan="1">1717492234530</td><td rowspan="1">43709</td></tr><tr class="passedeven"><td><a href="#m3">passwordconfirmation</a></td><td rowspan="1">1717492278241</td><td rowspan="1">36227</td></tr><tr class="passedeven"><td><a href="#m4">passwordstrength</a></td><td rowspan="1">1717492314470</td><td rowspan="1">34769</td></tr><tr class="passedeven"><td><a href="#m5">successfulregistration</a></td><td rowspan="1">1717492349241</td><td rowspan="1">24379</td></tr></tbody>
+<tbody id="t1"><tr><th colspan="4">loginpagetesting &#8212; passed</th></tr><tr class="passedeven"><td rowspan="7">loginpagetesting.Testingofloginpage</td><td><a href="#m6">emptypasswordfield</a></td><td rowspan="1">1717492172582</td><td rowspan="1">31224</td></tr><tr class="passedeven"><td><a href="#m7">emptyusernamefield</a></td><td rowspan="1">1717492203825</td><td rowspan="1">22802</td></tr><tr class="passedeven"><td><a href="#m8">invalidcredentials1</a></td><td rowspan="1">1717492226629</td><td rowspan="1">31365</td></tr><tr class="passedeven"><td><a href="#m9">invalidcredentials2</a></td><td rowspan="1">1717492258004</td><td rowspan="1">23875</td></tr><tr class="passedeven"><td><a href="#m10">passwordresetlink</a></td><td rowspan="1">1717492281891</td><td rowspan="1">20031</td></tr><tr class="passedeven"><td><a href="#m11">userlogout</a></td><td rowspan="1">1717492301925</td><td rowspan="1">52676</td></tr><tr class="passedeven"><td><a href="#m12">validcredendetials</a></td><td rowspan="1">1717492354608</td><td rowspan="1">19210</td></tr></tbody>
+<tbody id="t2"><tr><th colspan="4">applaudpagetesting &#8212; passed</th></tr><tr class="passedeven"><td rowspan="4">applaudpagetesting.Applaud</td><td><a href="#m13">seeReceivedApplauds</a></td><td rowspan="1">1717492172581</td><td rowspan="1">54616</td></tr><tr class="passedeven"><td><a href="#m14">seeSentApplauds</a></td><td rowspan="1">1717492227205</td><td rowspan="1">73554</td></tr><tr class="passedeven"><td><a href="#m15">sendApplaud</a></td><td rowspan="1">1717492300761</td><td rowspan="1">73215</td></tr><tr class="passedeven"><td><a href="#m16">useMonthFilter</a></td><td rowspan="1">1717492373982</td><td rowspan="1">85302</td></tr></tbody>
+<tbody id="t3"><tr><th colspan="4">goalpagetesting &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">goalpagetesting.TestingOfGoalpage</td><td><a href="#m17">usersCanUpdateStatus</a></td><td rowspan="1">1717492458251</td><td rowspan="1">58996</td></tr><tr><th colspan="4">goalpagetesting &#8212; passed</th></tr><tr class="passedeven"><td rowspan="6">goalpagetesting.TestingOfGoalpage</td><td><a href="#m18">goalpage</a></td><td rowspan="1">1717492172581</td><td rowspan="1">54381</td></tr><tr class="passedeven"><td><a href="#m19">usersCanSeeAbandonedGoals</a></td><td rowspan="1">1717492226964</td><td rowspan="1">60554</td></tr><tr class="passedeven"><td><a href="#m20">usersCanSeeArchivedGoals</a></td><td rowspan="1">1717492287521</td><td rowspan="1">37253</td></tr><tr class="passedeven"><td><a href="#m21">usersCanSeeCompletedGoals</a></td><td rowspan="1">1717492324786</td><td rowspan="1">59639</td></tr><tr class="passedeven"><td><a href="#m22">usersCanSeeDelayedGoals</a></td><td rowspan="1">1717492384434</td><td rowspan="1">34472</td></tr><tr class="passedeven"><td><a href="#m23">usersCanSeeOnTrackGoals</a></td><td rowspan="1">1717492418914</td><td rowspan="1">39335</td></tr></tbody>
+<tbody id="t4"><tr><th colspan="4">feedbackspagetesting &#8212; failed</th></tr><tr class="failedeven"><td rowspan="2">feedbackspagetesting.TestingOfFeedbackPage</td><td><a href="#m24">userCanAskForFeedbackFromSpecificTeamMember</a></td><td rowspan="1">1717492282127</td><td rowspan="1">72773</td></tr><tr class="failedeven"><td><a href="#m25">userCanAskForFeedbackFromWholeTeam</a></td><td rowspan="1">1717492354918</td><td rowspan="1">74051</td></tr><tr><th colspan="4">feedbackspagetesting &#8212; passed</th></tr><tr class="passedeven"><td rowspan="5">feedbackspagetesting.TestingOfFeedbackPage</td><td><a href="#m26">templateCreation</a></td><td rowspan="1">1717492172581</td><td rowspan="1">109542</td></tr><tr class="passedeven"><td><a href="#m27">userCanMaKEUseOfPreMadeFeedbackTemplate</a></td><td rowspan="1">1717492428972</td><td rowspan="1">65531</td></tr><tr class="passedeven"><td><a href="#m28">userCanShortAndFilterFeedbackByAnswered</a></td><td rowspan="1">1717492494511</td><td rowspan="1">32070</td></tr><tr class="passedeven"><td><a href="#m29">userCanShortAndFilterFeedbackByPending</a></td><td rowspan="1">1717492526592</td><td rowspan="1">53456</td></tr><tr class="passedeven"><td><a href="#m30">usersCanSeeAllTheFeedbackTheyHaveReceived</a></td><td rowspan="1">1717492580050</td><td rowspan="1">31059</td></tr></tbody>
+<tbody id="t5"><tr><th colspan="4">settingpagetesting &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">settingpagetesting.Settingpage</td><td><a href="#m31">userCreatedAndDeletedSuccessfully</a></td><td rowspan="1">1717492434382</td><td rowspan="1">213547</td></tr><tr><th colspan="4">settingpagetesting &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">settingpagetesting.Settingpage</td><td><a href="#m32">testingOfSettingPage</a></td><td rowspan="1">1717492373841</td><td rowspan="1">60539</td></tr></tbody>
 </table>
-<h2>Default test</h2><h3 id="m0">loginpagetesting.Testingofloginpage#validcredendetials</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>signuppagetesting</h2><h3 id="m0">signuppagetesting.Signuppagetesting#emptyfields</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;#email&quot;}
+  (Session info: chrome=125.0.6422.114)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.21.0&apos;, revision: &apos;79ed462ef4&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.10&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [d29746a01ec42a59c6aa807577466a94, findElement {value=email, using=id}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 125.0.6422.114, chrome: {chromedriverVersion: 125.0.6422.141 (4b1e8393712..., userDataDir: C:\Users\Zasya\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63764}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63764/devtoo..., se:cdpVersion: 125.0.6422.114, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: d29746a01ec42a59c6aa807577466a94
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:66)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
+	at signuppagetesting.Signuppagetesting.emptyfields(Signuppagetesting.java:45)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+... Removed 23 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">signuppagetesting.Signuppagetesting#existingemailaddress</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">signuppagetesting.Signuppagetesting#invalidemailformat</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">signuppagetesting.Signuppagetesting#passwordconfirmation</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m4">signuppagetesting.Signuppagetesting#passwordstrength</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m5">signuppagetesting.Signuppagetesting#successfulregistration</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>loginpagetesting</h2><h3 id="m6">loginpagetesting.Testingofloginpage#emptypasswordfield</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m7">loginpagetesting.Testingofloginpage#emptyusernamefield</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m8">loginpagetesting.Testingofloginpage#invalidcredentials1</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m9">loginpagetesting.Testingofloginpage#invalidcredentials2</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m10">loginpagetesting.Testingofloginpage#passwordresetlink</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m11">loginpagetesting.Testingofloginpage#userlogout</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m12">loginpagetesting.Testingofloginpage#validcredendetials</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>applaudpagetesting</h2><h3 id="m13">applaudpagetesting.Applaud#seeReceivedApplauds</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m14">applaudpagetesting.Applaud#seeSentApplauds</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m15">applaudpagetesting.Applaud#sendApplaud</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m16">applaudpagetesting.Applaud#useMonthFilter</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>goalpagetesting</h2><h3 id="m17">goalpagetesting.TestingOfGoalpage#usersCanUpdateStatus</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.cssSelector: span[title=&apos;On Track&apos;] (tried for 20 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.21.0&apos;, revision: &apos;79ed462ef4&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.10&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 125.0.6422.114, chrome: {chromedriverVersion: 125.0.6422.141 (4b1e8393712..., userDataDir: C:\Users\Zasya\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64605}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64605/devtoo..., se:cdpVersion: 125.0.6422.114, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 8e6e340602390c0a214d88299cabf76f
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at goalpagetesting.TestingOfGoalpage.usersCanUpdateStatus(TestingOfGoalpage.java:215)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+... Removed 18 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m18">goalpagetesting.TestingOfGoalpage#goalpage</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m19">goalpagetesting.TestingOfGoalpage#usersCanSeeAbandonedGoals</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m20">goalpagetesting.TestingOfGoalpage#usersCanSeeArchivedGoals</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m21">goalpagetesting.TestingOfGoalpage#usersCanSeeCompletedGoals</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m22">goalpagetesting.TestingOfGoalpage#usersCanSeeDelayedGoals</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m23">goalpagetesting.TestingOfGoalpage#usersCanSeeOnTrackGoals</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>feedbackspagetesting</h2><h3 id="m24">feedbackspagetesting.TestingOfFeedbackPage#userCanAskForFeedbackFromSpecificTeamMember</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;a[data-testid=&apos;feedback-templates-btn&apos;]&quot;}
+  (Session info: chrome=125.0.6422.114)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.21.0&apos;, revision: &apos;79ed462ef4&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.10&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [54c968813382a0e54ea74efc86077d43, findElement {value=a[data-testid=&apos;feedback-templates-btn&apos;], using=css selector}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 125.0.6422.114, chrome: {chromedriverVersion: 125.0.6422.141 (4b1e8393712..., userDataDir: C:\Users\Zasya\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64112}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64112/devtoo..., se:cdpVersion: 125.0.6422.114, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 54c968813382a0e54ea74efc86077d43
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
+	at feedbackspagetesting.TestingOfFeedbackPage.userCanAskForFeedbackFromSpecificTeamMember(TestingOfFeedbackPage.java:150)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+... Removed 23 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m25">feedbackspagetesting.TestingOfFeedbackPage#userCanAskForFeedbackFromWholeTeam</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.cssSelector: a[data-testid=&apos;feedback-templates-btn&apos;] (tried for 20 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.21.0&apos;, revision: &apos;79ed462ef4&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.10&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 125.0.6422.114, chrome: {chromedriverVersion: 125.0.6422.141 (4b1e8393712..., userDataDir: C:\Users\Zasya\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64346}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64346/devtoo..., se:cdpVersion: 125.0.6422.114, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 6882dd860003f116d03d9c2f7ee3ae31
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at feedbackspagetesting.TestingOfFeedbackPage.userCanAskForFeedbackFromWholeTeam(TestingOfFeedbackPage.java:208)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+... Removed 18 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m26">feedbackspagetesting.TestingOfFeedbackPage#templateCreation</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m27">feedbackspagetesting.TestingOfFeedbackPage#userCanMaKEUseOfPreMadeFeedbackTemplate</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m28">feedbackspagetesting.TestingOfFeedbackPage#userCanShortAndFilterFeedbackByAnswered</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m29">feedbackspagetesting.TestingOfFeedbackPage#userCanShortAndFilterFeedbackByPending</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m30">feedbackspagetesting.TestingOfFeedbackPage#usersCanSeeAllTheFeedbackTheyHaveReceived</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>settingpagetesting</h2><h3 id="m31">settingpagetesting.Settingpage#userCreatedAndDeletedSuccessfully</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.TimeoutException: java.util.concurrent.TimeoutException
+Build info: version: &apos;4.21.0&apos;, revision: &apos;79ed462ef4&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.10&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [6f798dad6c1d1a1985e20a690c863028, get {url=https://temp-mail.org/en/}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 125.0.6422.114, chrome: {chromedriverVersion: 125.0.6422.141 (4b1e8393712..., userDataDir: C:\Users\Zasya\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64543}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64543/devtoo..., se:cdpVersion: 125.0.6422.114, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 6f798dad6c1d1a1985e20a690c863028
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient.execute0(JdkHttpClient.java:399)
+	at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
+	at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:55)
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient.execute(JdkHttpClient.java:355)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:187)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:300)
+	at settingpagetesting.Settingpage.userCreatedAndDeletedSuccessfully(Settingpage.java:51)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+Caused by: java.util.concurrent.TimeoutException
+	at java.base/java.util.concurrent.CompletableFuture.timedGet(CompletableFuture.java:1960)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2095)
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient.execute0(JdkHttpClient.java:382)
+	... 32 more
+... Removed 18 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m32">settingpagetesting.Settingpage#testingOfSettingPage</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

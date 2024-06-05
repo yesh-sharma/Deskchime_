@@ -1,13 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="Default test(failed)">
+<suite parallel="tests" name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" parallel="tests" name="signuppagetesting(failed)">
     <classes>
-      <class name="loginpagetesting.Testingofloginpage">
+      <class name="signuppagetesting.Signuppagetesting">
         <methods>
-          <include name="validcredendetials" invocation-numbers="0 1"/>
+          <include name="emptyfields"/>
         </methods>
-      </class> <!-- loginpagetesting.Testingofloginpage -->
+      </class> <!-- signuppagetesting.Signuppagetesting -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- signuppagetesting(failed) -->
+  <test thread-count="5" parallel="tests" name="goalpagetesting(failed)">
+    <classes>
+      <class name="goalpagetesting.TestingOfGoalpage">
+        <methods>
+          <include name="usersCanUpdateStatus"/>
+        </methods>
+      </class> <!-- goalpagetesting.TestingOfGoalpage -->
+    </classes>
+  </test> <!-- goalpagetesting(failed) -->
+  <test thread-count="5" parallel="tests" name="feedbackspagetesting(failed)">
+    <classes>
+      <class name="feedbackspagetesting.TestingOfFeedbackPage">
+        <methods>
+          <include name="userCanAskForFeedbackFromWholeTeam"/>
+          <include name="userCanAskForFeedbackFromSpecificTeamMember"/>
+        </methods>
+      </class> <!-- feedbackspagetesting.TestingOfFeedbackPage -->
+    </classes>
+  </test> <!-- feedbackspagetesting(failed) -->
+  <test thread-count="5" parallel="tests" name="settingpagetesting(failed)">
+    <classes>
+      <class name="settingpagetesting.Settingpage">
+        <methods>
+          <include name="userCreatedAndDeletedSuccessfully"/>
+        </methods>
+      </class> <!-- settingpagetesting.Settingpage -->
+    </classes>
+  </test> <!-- settingpagetesting(failed) -->
+</suite> <!-- Failed suite [Suite] -->
