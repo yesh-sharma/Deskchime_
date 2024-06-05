@@ -1,0 +1,35 @@
+package followupspagetesting;
+
+
+import java.time.Duration;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.Test;
+
+import loginpagetesting.ChromeOptionsConfig;
+import loginpagetesting.Login;
+
+public class Followup1on1 {
+	@Test
+	public void followuppage1on1() throws InterruptedException {
+
+		WebDriver driver = new ChromeDriver(ChromeOptionsConfig.getChromeOptions());
+
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
+		driver.manage().window().maximize();
+
+		Login login = new Login(driver);
+		login.Goto();
+
+		login.loginApplication("yeshsharma516032@gmail.com", "Yesh12345");
+		login.avoidFeedbackpopup();
+		driver.findElement(By.xpath("//span[normalize-space()='1-on-1s']")).click();
+		driver.findElement(By.cssSelector("a[data-testid='create-follow-up-button']")).click();
+
+
+}
+}
+
+
