@@ -17,12 +17,14 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import org.testng.annotations.Test;
 
+import ch.qos.logback.core.joran.action.Action;
+import loginpagetesting.ChromeOptionsConfig;
 import loginpagetesting.Login;
-@Test
+
 public class Settingpage {
-	
+	@Test
 	public void userCreatedAndDeletedSuccessfully() throws InterruptedException {
-		WebDriver driver = new ChromeDriver();
+		WebDriver driver = new ChromeDriver(ChromeOptionsConfig.getChromeOptions());
 
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
 		driver.manage().window().maximize();
@@ -38,8 +40,11 @@ public class Settingpage {
 		WebElement element = wait
 				.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[text()='Settings']")));
 		element.click();
+		Actions action1=new Actions(driver);
 		WebElement element1 = wait
 				.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[text()='Users']")));
+		action1.moveToElement(element1);
+		action1.perform();
 		element1.click();
 
 		driver.switchTo().newWindow(WindowType.TAB);
@@ -61,17 +66,20 @@ public class Settingpage {
 		WebElement element5 = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("first_name")));
 		element5.sendKeys("ankit joseph");
 
-		WebElement ele = driver.findElement(By.id("email"));
+	
 
 		Actions actions = new Actions(driver);
-		actions.moveToElement(ele).click().keyDown(Keys.CONTROL).sendKeys(Keys.chord("v")).build().perform();
+		WebElement ele = driver.findElement(By.id("email"));
+		actions.moveToElement(ele).click().keyDown(Keys.COMMAND).sendKeys(Keys.chord("v")).build().perform();
 
 		WebElement element6 = wait.until(ExpectedConditions
 				.visibilityOfElementLocated(By.xpath("//div[@class='ant-select-selection-overflow']")));
 		element6.click();
+		
 		WebElement element7 = wait
 				.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("div[title='qa']")));
 		element7.click();
+		
 		WebElement element8 = wait.until(ExpectedConditions
 				.visibilityOfElementLocated(By.xpath("//div[@class='ant-select-selection-overflow']")));
 		element8.click();
@@ -105,7 +113,7 @@ public class Settingpage {
 	}
 
 	public void testingOfSettingPage() throws InterruptedException {
-		WebDriver driver = new ChromeDriver();
+		WebDriver driver = new ChromeDriver(ChromeOptionsConfig.getChromeOptions());
 
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
 		driver.manage().window().maximize();
@@ -115,12 +123,14 @@ public class Settingpage {
 		login.loginApplication("yeshsharma516032@gmail.com", "Yesh12345");
 		login.avoidFeedbackpopup();
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
-
 		WebElement element = wait
 				.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[text()='Settings']")));
 		element.click();
+		Actions action1=new Actions(driver);
 		WebElement element1 = wait
 				.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[text()='Users']")));
+		action1.moveToElement(element1);
+		action1.perform();
 		element1.click();
 		driver.close();
 

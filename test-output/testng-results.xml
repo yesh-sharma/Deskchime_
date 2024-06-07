@@ -1,58 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="4" passed="3" failed="1" skipped="0">
+<testng-results ignored="0" total="8" passed="7" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-06-05T12:40:38 IST" name="Default suite" finished-at="2024-06-05T12:42:44 IST" duration-ms="125520">
+  <suite started-at="2024-06-07T11:50:30 IST" name="Default suite" finished-at="2024-06-07T11:58:04 IST" duration-ms="453237">
     <groups>
     </groups>
-    <test started-at="2024-06-05T12:40:38 IST" name="Default test" finished-at="2024-06-05T12:42:44 IST" duration-ms="125520">
-      <class name="applaudpagetesting.Applaud">
-        <test-method signature="seeReceivedApplauds()[pri:0, instance:applaudpagetesting.Applaud@2dc54ad4]" started-at="2024-06-05T12:40:38 IST" name="seeReceivedApplauds" finished-at="2024-06-05T12:41:10 IST" duration-ms="31257" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- seeReceivedApplauds -->
-        <test-method signature="seeSentApplauds()[pri:0, instance:applaudpagetesting.Applaud@2dc54ad4]" started-at="2024-06-05T12:41:10 IST" name="seeSentApplauds" finished-at="2024-06-05T12:41:35 IST" duration-ms="24929" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- seeSentApplauds -->
-        <test-method signature="sendApplaud()[pri:0, instance:applaudpagetesting.Applaud@2dc54ad4]" started-at="2024-06-05T12:41:35 IST" name="sendApplaud" finished-at="2024-06-05T12:42:14 IST" duration-ms="39795" status="FAIL">
-          <exception class="org.openqa.selenium.ElementNotInteractableException">
+    <test started-at="2024-06-07T11:50:30 IST" name="Default test" finished-at="2024-06-07T11:58:04 IST" duration-ms="453237">
+      <class name="feedbackspagetesting.TestingOfFeedbackPage">
+        <test-method signature="templateCreation()[pri:0, instance:feedbackspagetesting.TestingOfFeedbackPage@d9345cd]" started-at="2024-06-07T11:50:30 IST" name="templateCreation" finished-at="2024-06-07T11:51:44 IST" duration-ms="73146" status="FAIL">
+          <exception class="org.openqa.selenium.TimeoutException">
             <message>
-              <![CDATA[element not interactable: element has zero size
-  (Session info: chrome=125.0.6422.141)
+              <![CDATA[Expected condition failed: waiting for visibility of element located by By.cssSelector: a[data-testid='feedback-templates-btn'] (tried for 20 second(s) with 500 milliseconds interval)
 Build info: version: '4.21.0', revision: '79ed462ef4'
-System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '14.4', java.version: '17.0.11'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '14.5', java.version: '17.0.11'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [0cdd1dab0c862e7cb072dcbd6fd25ebe, clickElement {id=f.51E1A78066B529BF49765FD7CD2668BF.d.0AFEFFA1C6DAAB4D1340FE1464F4F88A.e.99}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 125.0.6422.141, chrome: {chromedriverVersion: 125.0.6422.141 (4b1e8393712..., userDataDir: /var/folders/x9/xxt7kvhx1v7...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50315}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:50315/devtoo..., se:cdpVersion: 125.0.6422.141, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on mac (0cdd1dab0c862e7cb072dcbd6fd25ebe)] -> xpath: /html/body/div[3]/div/div/div[2]/div[1]/div/div/div[5]/div/span]
-Session ID: 0cdd1dab0c862e7cb072dcbd6fd25ebe]]>
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 125.0.6422.142, chrome: {chromedriverVersion: 125.0.6422.141 (4b1e8393712..., userDataDir: /var/folders/x9/xxt7kvhx1v7...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52022}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:52022/devtoo..., se:cdpVersion: 125.0.6422.142, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 1efcdcfc7200bf63ff77a2f6d6d96943]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.ElementNotInteractableException: element not interactable: element has zero size
-  (Session info: chrome=125.0.6422.141)
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.cssSelector: a[data-testid='feedback-templates-btn'] (tried for 20 second(s) with 500 milliseconds interval)
 Build info: version: '4.21.0', revision: '79ed462ef4'
-System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '14.4', java.version: '17.0.11'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '14.5', java.version: '17.0.11'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [0cdd1dab0c862e7cb072dcbd6fd25ebe, clickElement {id=f.51E1A78066B529BF49765FD7CD2668BF.d.0AFEFFA1C6DAAB4D1340FE1464F4F88A.e.99}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 125.0.6422.141, chrome: {chromedriverVersion: 125.0.6422.141 (4b1e8393712..., userDataDir: /var/folders/x9/xxt7kvhx1v7...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50315}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:50315/devtoo..., se:cdpVersion: 125.0.6422.141, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on mac (0cdd1dab0c862e7cb072dcbd6fd25ebe)] -> xpath: /html/body/div[3]/div/div/div[2]/div[1]/div/div/div[5]/div/span]
-Session ID: 0cdd1dab0c862e7cb072dcbd6fd25ebe
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
-at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
-at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
-at applaudpagetesting.Applaud.sendApplaud(Applaud.java:54)
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 125.0.6422.142, chrome: {chromedriverVersion: 125.0.6422.141 (4b1e8393712..., userDataDir: /var/folders/x9/xxt7kvhx1v7...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52022}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:52022/devtoo..., se:cdpVersion: 125.0.6422.142, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 1efcdcfc7200bf63ff77a2f6d6d96943
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+at feedbackspagetesting.TestingOfFeedbackPage.templateCreation(TestingOfFeedbackPage.java:43)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -83,15 +57,39 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.ElementNotInteractableException -->
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- sendApplaud -->
-        <test-method signature="useMonthFilter()[pri:0, instance:applaudpagetesting.Applaud@2dc54ad4]" started-at="2024-06-05T12:42:14 IST" name="useMonthFilter" finished-at="2024-06-05T12:42:44 IST" duration-ms="29525" status="PASS">
+        </test-method> <!-- templateCreation -->
+        <test-method signature="userCanAskForFeedbackByExternalLink()[pri:0, instance:feedbackspagetesting.TestingOfFeedbackPage@d9345cd]" started-at="2024-06-07T11:51:44 IST" name="userCanAskForFeedbackByExternalLink" finished-at="2024-06-07T11:52:37 IST" duration-ms="53394" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- useMonthFilter -->
-      </class> <!-- applaudpagetesting.Applaud -->
+        </test-method> <!-- userCanAskForFeedbackByExternalLink -->
+        <test-method signature="userCanAskForFeedbackFromSpecificTeamMember()[pri:0, instance:feedbackspagetesting.TestingOfFeedbackPage@d9345cd]" started-at="2024-06-07T11:52:37 IST" name="userCanAskForFeedbackFromSpecificTeamMember" finished-at="2024-06-07T11:53:51 IST" duration-ms="74266" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- userCanAskForFeedbackFromSpecificTeamMember -->
+        <test-method signature="userCanAskForFeedbackFromWholeTeam()[pri:0, instance:feedbackspagetesting.TestingOfFeedbackPage@d9345cd]" started-at="2024-06-07T11:53:51 IST" name="userCanAskForFeedbackFromWholeTeam" finished-at="2024-06-07T11:55:10 IST" duration-ms="78920" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- userCanAskForFeedbackFromWholeTeam -->
+        <test-method signature="userCanMaKEUseOfPreMadeFeedbackTemplate()[pri:0, instance:feedbackspagetesting.TestingOfFeedbackPage@d9345cd]" started-at="2024-06-07T11:55:10 IST" name="userCanMaKEUseOfPreMadeFeedbackTemplate" finished-at="2024-06-07T11:55:49 IST" duration-ms="39211" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- userCanMaKEUseOfPreMadeFeedbackTemplate -->
+        <test-method signature="userCanShortAndFilterFeedbackByAnswered()[pri:0, instance:feedbackspagetesting.TestingOfFeedbackPage@d9345cd]" started-at="2024-06-07T11:55:49 IST" name="userCanShortAndFilterFeedbackByAnswered" finished-at="2024-06-07T11:56:23 IST" duration-ms="33701" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- userCanShortAndFilterFeedbackByAnswered -->
+        <test-method signature="userCanShortAndFilterFeedbackByPending()[pri:0, instance:feedbackspagetesting.TestingOfFeedbackPage@d9345cd]" started-at="2024-06-07T11:56:23 IST" name="userCanShortAndFilterFeedbackByPending" finished-at="2024-06-07T11:57:11 IST" duration-ms="48397" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- userCanShortAndFilterFeedbackByPending -->
+        <test-method signature="usersCanSeeAllTheFeedbackTheyHaveReceived()[pri:0, instance:feedbackspagetesting.TestingOfFeedbackPage@d9345cd]" started-at="2024-06-07T11:57:11 IST" name="usersCanSeeAllTheFeedbackTheyHaveReceived" finished-at="2024-06-07T11:58:04 IST" duration-ms="52174" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- usersCanSeeAllTheFeedbackTheyHaveReceived -->
+      </class> <!-- feedbackspagetesting.TestingOfFeedbackPage -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

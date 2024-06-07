@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>3/1/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>7/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Wed Jun 05 12:40:38 IST 2024</td>
+<td>Started on:</td><td>Fri Jun 07 11:50:30 IST 2024</td>
 </tr>
-<tr><td>Total time:</td><td>125 seconds (125520 ms)</td>
+<tr><td>Total time:</td><td>453 seconds (453237 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,31 +75,16 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='applaudpagetesting.Applaud.sendApplaud()'><b>sendApplaud</b><br>Test class: applaudpagetesting.Applaud</td>
-<td><div><pre>org.openqa.selenium.ElementNotInteractableException: element not interactable: element has zero size
-  (Session info: chrome=125.0.6422.141)
+<td title='feedbackspagetesting.TestingOfFeedbackPage.templateCreation()'><b>templateCreation</b><br>Test class: feedbackspagetesting.TestingOfFeedbackPage</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.cssSelector: a[data-testid=&apos;feedback-templates-btn&apos;] (tried for 20 second(s) with 500 milliseconds interval)
 Build info: version: &apos;4.21.0&apos;, revision: &apos;79ed462ef4&apos;
-System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;aarch64&apos;, os.version: &apos;14.4&apos;, java.version: &apos;17.0.11&apos;
+System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;aarch64&apos;, os.version: &apos;14.5&apos;, java.version: &apos;17.0.11&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [0cdd1dab0c862e7cb072dcbd6fd25ebe, clickElement {id=f.51E1A78066B529BF49765FD7CD2668BF.d.0AFEFFA1C6DAAB4D1340FE1464F4F88A.e.99}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 125.0.6422.141, chrome: {chromedriverVersion: 125.0.6422.141 (4b1e8393712..., userDataDir: /var/folders/x9/xxt7kvhx1v7...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50315}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:50315/devtoo..., se:cdpVersion: 125.0.6422.141, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on mac (0cdd1dab0c862e7cb072dcbd6fd25ebe)] -&gt; xpath: /html/body/div[3]/div/div/div[2]/div[1]/div/div/div[5]/div/span]
-Session ID: 0cdd1dab0c862e7cb072dcbd6fd25ebe
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
-	at applaudpagetesting.Applaud.sendApplaud(Applaud.java:54)
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 125.0.6422.142, chrome: {chromedriverVersion: 125.0.6422.141 (4b1e8393712..., userDataDir: /var/folders/x9/xxt7kvhx1v7...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52022}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:52022/devtoo..., se:cdpVersion: 125.0.6422.142, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 1efcdcfc7200bf63ff77a2f6d6d96943
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at feedbackspagetesting.TestingOfFeedbackPage.templateCreation(TestingOfFeedbackPage.java:43)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -128,31 +113,16 @@ Session ID: 0cdd1dab0c862e7cb072dcbd6fd25ebe
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-</pre></div><a href='#' onClick='toggleBox("stack-trace873168630", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace873168630'><pre>org.openqa.selenium.ElementNotInteractableException: element not interactable: element has zero size
-  (Session info: chrome=125.0.6422.141)
+</pre></div><a href='#' onClick='toggleBox("stack-trace426288284", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace426288284'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.cssSelector: a[data-testid=&apos;feedback-templates-btn&apos;] (tried for 20 second(s) with 500 milliseconds interval)
 Build info: version: &apos;4.21.0&apos;, revision: &apos;79ed462ef4&apos;
-System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;aarch64&apos;, os.version: &apos;14.4&apos;, java.version: &apos;17.0.11&apos;
+System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;aarch64&apos;, os.version: &apos;14.5&apos;, java.version: &apos;17.0.11&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [0cdd1dab0c862e7cb072dcbd6fd25ebe, clickElement {id=f.51E1A78066B529BF49765FD7CD2668BF.d.0AFEFFA1C6DAAB4D1340FE1464F4F88A.e.99}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 125.0.6422.141, chrome: {chromedriverVersion: 125.0.6422.141 (4b1e8393712..., userDataDir: /var/folders/x9/xxt7kvhx1v7...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50315}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:50315/devtoo..., se:cdpVersion: 125.0.6422.141, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on mac (0cdd1dab0c862e7cb072dcbd6fd25ebe)] -&gt; xpath: /html/body/div[3]/div/div/div[2]/div[1]/div/div/div[5]/div/span]
-Session ID: 0cdd1dab0c862e7cb072dcbd6fd25ebe
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
-	at applaudpagetesting.Applaud.sendApplaud(Applaud.java:54)
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 125.0.6422.142, chrome: {chromedriverVersion: 125.0.6422.141 (4b1e8393712..., userDataDir: /var/folders/x9/xxt7kvhx1v7...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52022}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:52022/devtoo..., se:cdpVersion: 125.0.6422.142, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 1efcdcfc7200bf63ff77a2f6d6d96943
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at feedbackspagetesting.TestingOfFeedbackPage.templateCreation(TestingOfFeedbackPage.java:43)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -182,8 +152,8 @@ Session ID: 0cdd1dab0c862e7cb072dcbd6fd25ebe
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 </pre></div></td>
-<td>39</td>
-<td>applaudpagetesting.Applaud@2dc54ad4</td></tr>
+<td>73</td>
+<td>feedbackspagetesting.TestingOfFeedbackPage@d9345cd</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
@@ -193,20 +163,40 @@ Session ID: 0cdd1dab0c862e7cb072dcbd6fd25ebe
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='applaudpagetesting.Applaud.seeSentApplauds()'><b>seeSentApplauds</b><br>Test class: applaudpagetesting.Applaud</td>
+<td title='feedbackspagetesting.TestingOfFeedbackPage.userCanAskForFeedbackFromSpecificTeamMember()'><b>userCanAskForFeedbackFromSpecificTeamMember</b><br>Test class: feedbackspagetesting.TestingOfFeedbackPage</td>
 <td></td>
-<td>24</td>
-<td>applaudpagetesting.Applaud@2dc54ad4</td></tr>
+<td>74</td>
+<td>feedbackspagetesting.TestingOfFeedbackPage@d9345cd</td></tr>
 <tr>
-<td title='applaudpagetesting.Applaud.useMonthFilter()'><b>useMonthFilter</b><br>Test class: applaudpagetesting.Applaud</td>
+<td title='feedbackspagetesting.TestingOfFeedbackPage.userCanShortAndFilterFeedbackByAnswered()'><b>userCanShortAndFilterFeedbackByAnswered</b><br>Test class: feedbackspagetesting.TestingOfFeedbackPage</td>
 <td></td>
-<td>29</td>
-<td>applaudpagetesting.Applaud@2dc54ad4</td></tr>
+<td>33</td>
+<td>feedbackspagetesting.TestingOfFeedbackPage@d9345cd</td></tr>
 <tr>
-<td title='applaudpagetesting.Applaud.seeReceivedApplauds()'><b>seeReceivedApplauds</b><br>Test class: applaudpagetesting.Applaud</td>
+<td title='feedbackspagetesting.TestingOfFeedbackPage.usersCanSeeAllTheFeedbackTheyHaveReceived()'><b>usersCanSeeAllTheFeedbackTheyHaveReceived</b><br>Test class: feedbackspagetesting.TestingOfFeedbackPage</td>
 <td></td>
-<td>31</td>
-<td>applaudpagetesting.Applaud@2dc54ad4</td></tr>
+<td>52</td>
+<td>feedbackspagetesting.TestingOfFeedbackPage@d9345cd</td></tr>
+<tr>
+<td title='feedbackspagetesting.TestingOfFeedbackPage.userCanAskForFeedbackByExternalLink()'><b>userCanAskForFeedbackByExternalLink</b><br>Test class: feedbackspagetesting.TestingOfFeedbackPage</td>
+<td></td>
+<td>53</td>
+<td>feedbackspagetesting.TestingOfFeedbackPage@d9345cd</td></tr>
+<tr>
+<td title='feedbackspagetesting.TestingOfFeedbackPage.userCanMaKEUseOfPreMadeFeedbackTemplate()'><b>userCanMaKEUseOfPreMadeFeedbackTemplate</b><br>Test class: feedbackspagetesting.TestingOfFeedbackPage</td>
+<td></td>
+<td>39</td>
+<td>feedbackspagetesting.TestingOfFeedbackPage@d9345cd</td></tr>
+<tr>
+<td title='feedbackspagetesting.TestingOfFeedbackPage.userCanShortAndFilterFeedbackByPending()'><b>userCanShortAndFilterFeedbackByPending</b><br>Test class: feedbackspagetesting.TestingOfFeedbackPage</td>
+<td></td>
+<td>48</td>
+<td>feedbackspagetesting.TestingOfFeedbackPage@d9345cd</td></tr>
+<tr>
+<td title='feedbackspagetesting.TestingOfFeedbackPage.userCanAskForFeedbackFromWholeTeam()'><b>userCanAskForFeedbackFromWholeTeam</b><br>Test class: feedbackspagetesting.TestingOfFeedbackPage</td>
+<td></td>
+<td>78</td>
+<td>feedbackspagetesting.TestingOfFeedbackPage@d9345cd</td></tr>
 </table><p>
 </body>
 </html>

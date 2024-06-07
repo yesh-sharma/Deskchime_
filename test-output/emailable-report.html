@@ -9,34 +9,19 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">Default suite</th></tr>
-<tr><td><a href="#t0">Default test</a></td><td class="num">3</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">125,520</td><td></td><td></td></tr>
+<tr><td><a href="#t0">Default test</a></td><td class="num">7</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">453,237</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">applaudpagetesting.Applaud</td><td><a href="#m0">sendApplaud</a></td><td rowspan="1">1717571495067</td><td rowspan="1">39795</td></tr><tr><th colspan="4">Default test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="3">applaudpagetesting.Applaud</td><td><a href="#m1">seeReceivedApplauds</a></td><td rowspan="1">1717571438879</td><td rowspan="1">31257</td></tr><tr class="passedeven"><td><a href="#m2">seeSentApplauds</a></td><td rowspan="1">1717571470137</td><td rowspan="1">24929</td></tr><tr class="passedeven"><td><a href="#m3">useMonthFilter</a></td><td rowspan="1">1717571534863</td><td rowspan="1">29525</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">feedbackspagetesting.TestingOfFeedbackPage</td><td><a href="#m0">templateCreation</a></td><td rowspan="1">1717741230859</td><td rowspan="1">73146</td></tr><tr><th colspan="4">Default test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="7">feedbackspagetesting.TestingOfFeedbackPage</td><td><a href="#m1">userCanAskForFeedbackByExternalLink</a></td><td rowspan="1">1717741304008</td><td rowspan="1">53394</td></tr><tr class="passedeven"><td><a href="#m2">userCanAskForFeedbackFromSpecificTeamMember</a></td><td rowspan="1">1717741357404</td><td rowspan="1">74266</td></tr><tr class="passedeven"><td><a href="#m3">userCanAskForFeedbackFromWholeTeam</a></td><td rowspan="1">1717741431672</td><td rowspan="1">78920</td></tr><tr class="passedeven"><td><a href="#m4">userCanMaKEUseOfPreMadeFeedbackTemplate</a></td><td rowspan="1">1717741510594</td><td rowspan="1">39211</td></tr><tr class="passedeven"><td><a href="#m5">userCanShortAndFilterFeedbackByAnswered</a></td><td rowspan="1">1717741549806</td><td rowspan="1">33701</td></tr><tr class="passedeven"><td><a href="#m6">userCanShortAndFilterFeedbackByPending</a></td><td rowspan="1">1717741583509</td><td rowspan="1">48397</td></tr><tr class="passedeven"><td><a href="#m7">usersCanSeeAllTheFeedbackTheyHaveReceived</a></td><td rowspan="1">1717741631907</td><td rowspan="1">52174</td></tr></tbody>
 </table>
-<h2>Default test</h2><h3 id="m0">applaudpagetesting.Applaud#sendApplaud</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.ElementNotInteractableException: element not interactable: element has zero size
-  (Session info: chrome=125.0.6422.141)
+<h2>Default test</h2><h3 id="m0">feedbackspagetesting.TestingOfFeedbackPage#templateCreation</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.cssSelector: a[data-testid=&apos;feedback-templates-btn&apos;] (tried for 20 second(s) with 500 milliseconds interval)
 Build info: version: &apos;4.21.0&apos;, revision: &apos;79ed462ef4&apos;
-System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;aarch64&apos;, os.version: &apos;14.4&apos;, java.version: &apos;17.0.11&apos;
+System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;aarch64&apos;, os.version: &apos;14.5&apos;, java.version: &apos;17.0.11&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [0cdd1dab0c862e7cb072dcbd6fd25ebe, clickElement {id=f.51E1A78066B529BF49765FD7CD2668BF.d.0AFEFFA1C6DAAB4D1340FE1464F4F88A.e.99}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 125.0.6422.141, chrome: {chromedriverVersion: 125.0.6422.141 (4b1e8393712..., userDataDir: /var/folders/x9/xxt7kvhx1v7...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50315}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:50315/devtoo..., se:cdpVersion: 125.0.6422.141, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on mac (0cdd1dab0c862e7cb072dcbd6fd25ebe)] -&gt; xpath: /html/body/div[3]/div/div/div[2]/div[1]/div/div/div[5]/div/span]
-Session ID: 0cdd1dab0c862e7cb072dcbd6fd25ebe
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
-	at applaudpagetesting.Applaud.sendApplaud(Applaud.java:54)
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 125.0.6422.142, chrome: {chromedriverVersion: 125.0.6422.141 (4b1e8393712..., userDataDir: /var/folders/x9/xxt7kvhx1v7...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52022}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:52022/devtoo..., se:cdpVersion: 125.0.6422.142, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 1efcdcfc7200bf63ff77a2f6d6d96943
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at feedbackspagetesting.TestingOfFeedbackPage.templateCreation(TestingOfFeedbackPage.java:43)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -66,8 +51,12 @@ Session ID: 0cdd1dab0c862e7cb072dcbd6fd25ebe
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 </div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">applaudpagetesting.Applaud#seeReceivedApplauds</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m2">applaudpagetesting.Applaud#seeSentApplauds</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m3">applaudpagetesting.Applaud#useMonthFilter</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">feedbackspagetesting.TestingOfFeedbackPage#userCanAskForFeedbackByExternalLink</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">feedbackspagetesting.TestingOfFeedbackPage#userCanAskForFeedbackFromSpecificTeamMember</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">feedbackspagetesting.TestingOfFeedbackPage#userCanAskForFeedbackFromWholeTeam</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m4">feedbackspagetesting.TestingOfFeedbackPage#userCanMaKEUseOfPreMadeFeedbackTemplate</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m5">feedbackspagetesting.TestingOfFeedbackPage#userCanShortAndFilterFeedbackByAnswered</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m6">feedbackspagetesting.TestingOfFeedbackPage#userCanShortAndFilterFeedbackByPending</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m7">feedbackspagetesting.TestingOfFeedbackPage#usersCanSeeAllTheFeedbackTheyHaveReceived</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

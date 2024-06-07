@@ -5,37 +5,20 @@
     <classes>
       <class name="signuppagetesting.Signuppagetesting">
         <methods>
-          <include name="emptyfields"/>
+          <include name="invalidemailformat"/>
         </methods>
       </class> <!-- signuppagetesting.Signuppagetesting -->
     </classes>
   </test> <!-- signuppagetesting(failed) -->
-  <test thread-count="5" parallel="tests" name="goalpagetesting(failed)">
+  <test thread-count="5" parallel="tests" name="applaudpagetesting(failed)">
     <classes>
-      <class name="goalpagetesting.TestingOfGoalpage">
+      <class name="applaudpagetesting.Applaud">
         <methods>
-          <include name="usersCanUpdateStatus"/>
+          <include name="seeReceivedApplauds"/>
+          <include name="sendApplaud"/>
+          <include name="useMonthFilter"/>
         </methods>
-      </class> <!-- goalpagetesting.TestingOfGoalpage -->
+      </class> <!-- applaudpagetesting.Applaud -->
     </classes>
-  </test> <!-- goalpagetesting(failed) -->
-  <test thread-count="5" parallel="tests" name="feedbackspagetesting(failed)">
-    <classes>
-      <class name="feedbackspagetesting.TestingOfFeedbackPage">
-        <methods>
-          <include name="userCanAskForFeedbackFromWholeTeam"/>
-          <include name="userCanAskForFeedbackFromSpecificTeamMember"/>
-        </methods>
-      </class> <!-- feedbackspagetesting.TestingOfFeedbackPage -->
-    </classes>
-  </test> <!-- feedbackspagetesting(failed) -->
-  <test thread-count="5" parallel="tests" name="settingpagetesting(failed)">
-    <classes>
-      <class name="settingpagetesting.Settingpage">
-        <methods>
-          <include name="userCreatedAndDeletedSuccessfully"/>
-        </methods>
-      </class> <!-- settingpagetesting.Settingpage -->
-    </classes>
-  </test> <!-- settingpagetesting(failed) -->
+  </test> <!-- applaudpagetesting(failed) -->
 </suite> <!-- Failed suite [Suite] -->
