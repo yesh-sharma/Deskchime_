@@ -1,19 +1,19 @@
 package goalpagetesting;
 
-import java.io.File;
+
 import java.io.IOException;
 import java.time.Duration;
+import java.time.LocalTime;
 
-import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
+
 import org.openqa.selenium.Keys;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
+
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
@@ -237,7 +237,7 @@ public class TestingOfGoalpage {
 	@Test
 	public void userCanSetUpFollowupForGoal() throws InterruptedException, IOException {
 
-		WebDriver driver = new ChromeDriver(ChromeOptionsConfig.getChromeOptions());
+		WebDriver driver = new ChromeDriver();
 
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
 		driver.manage().window().maximize();
@@ -291,25 +291,103 @@ public class TestingOfGoalpage {
 				ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[contains(text(),'Add a Follow up')]")));
 		element8.click();
 
-		WebElement element9 = wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(
+	WebElement element9 = wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(
 				"button[class='rounded-lg w-fit tracking-[0.5px] font-medium flex items-center gap-2 justify-center transition-all duration-200 ease-in-out disabled:cursor-default bg-teal-500 text-white hover:bg-teal-400 active:bg-teal-300 disabled:bg-zinc-400 h-10 px-3 py-2 text-sm border-2 border-teal-500 disabled:border-gray-400 relative'] div[class='flex items-center gap-2 justify-center']")));
 		element9.click();
 
-		WebElement element10 = wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(
-				"button[class='rounded-lg w-fit tracking-[0.5px] font-medium flex items-center gap-2 justify-center transition-all duration-200 ease-in-out disabled:cursor-default bg-teal-500 text-white hover:bg-teal-400 active:bg-teal-300 disabled:bg-zinc-400 h-10 px-3 py-2 text-sm border-2 border-teal-500 disabled:border-gray-400 relative'] div[class='flex items-center gap-2 justify-center']")));
-		element10.click();
+		WebElement element10 = wait
+				.until(ExpectedConditions.visibilityOfElementLocated(By.id("agenda-next")));
+		 element10.click();
 
-		WebElement element11 = wait
-				.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[@type='submit']")));
-		element11.click();
 
-		WebElement element12 = wait.until(
-				ExpectedConditions.visibilityOfElementLocated(By.cssSelector("div[class='flex justify-center md:justify-end'] button[type='submit']")));
-		element12.click();
+			WebElement element11 = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("meeting_meeting_at")));
+			element11.click();
 
-				
-	
+			WebElement element12 = wait
+					.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".ant-picker-today-btn")));
+			element12.click();
+			Thread.sleep(2000);
+			// Get the current local time
 
+			LocalTime currentTime = LocalTime.now();
+			// Extract hour and minute components
+			int hour = currentTime.getHour();
+			int minute = currentTime.getMinute();
+			System.out.println(hour);
+			System.out.println(minute);
+			// Print the hour and minute
+
+			if (hour == 10 && minute >= 1 && minute <= 29) {
+
+				driver.findElement(By.xpath("//div[text()='11:00 M']")).click();
+
+			} else if (hour == 10 && minute >= 30 && minute <= 59) {
+				driver.findElement(By.xpath("//div[text()='11:30 PM']")).click();
+
+			} else if (hour == 11 && minute >= 1 && minute < 29) {
+				driver.findElement(By.xpath("//div[text()='12:00 PM']")).click();
+
+			} else if (hour == 11 && minute >= 30 && minute < 59) {
+
+				driver.findElement(By.xpath("//div[text()='12:30 PM']")).click();
+
+			} else if (hour == 12 && minute >= 1 && minute < 29) {
+
+				driver.findElement(By.xpath("//div[text()='01:00 PM']")).click();
+			} else if (hour == 12 && minute >= 30 && minute < 59) {
+				driver.findElement(By.xpath("//div[text()='01:30 PM']")).click();
+			} else if (hour == 13 && minute >= 1 && minute < 29) {
+
+				driver.findElement(By.xpath("//div[text()='02:00 PM']")).click();
+
+			} else if (hour == 13 && minute >= 30 && minute < 59) {
+
+				driver.findElement(By.xpath("//div[text()='02:50 PM']")).click();
+			} else if (hour == 14 && minute >= 1 && minute < 29) {
+				driver.findElement(By.xpath("//div[text()='03:00 PM']")).click();
+
+			} else if (hour == 14 && minute >= 30 && minute < 59) {
+				driver.findElement(By.xpath("//div[text()='03:30 PM']")).click();
+
+			} else if (hour == 15 && minute >= 1 && minute < 29) {
+				driver.findElement(By.xpath("//div[text()='04:00 PM']")).click();
+			} else if (hour == 15 && minute >= 30 && minute < 59) {
+				driver.findElement(By.xpath("//div[text()='04:30 PM']")).click();
+
+			} else if (hour == 16 && minute >= 1 && minute < 29) {
+				driver.findElement(By.xpath("//div[text()='05:00 PM']")).click();
+
+			} else if (hour == 16 && minute >= 30 && minute < 59) {
+
+				driver.findElement(By.xpath("//div[text()='05:30 PM']")).click();
+			} else if (hour == 17 && minute >= 1 && minute < 29) {
+				driver.findElement(By.xpath("//div[text()='06:00 PM']")).click();
+			} else if (hour == 17 && minute >= 30 && minute < 59) {
+				driver.findElement(By.xpath("//div[text()='06:30 PM']")).click();
+			} else if (hour == 18 && minute >= 1 && minute < 29) {
+				driver.findElement(By.xpath("//div[text()='07:00 PM']")).click();
+
+			} else if (hour == 18 && minute >= 30 && minute < 59) {
+				driver.findElement(By.xpath("//div[text()='07:30 PM']")).click();
+
+			}
+
+			driver.findElement(By.cssSelector("button[type='submit'] div[class='flex items-center gap-2 justify-center']"))
+					.click();
+			Thread.sleep(2000);
+
+			WebElement element13 = wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(
+					"div[class='relative space-y-2'] button[type='button'] div[class='flex items-center gap-2 justify-center']")));
+			element13.click();
+			
+			WebElement element14 = wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(
+					"button[class='rounded-lg w-fit tracking-[0.5px] font-medium flex items-center gap-2 justify-center transition-all duration-200 ease-in-out disabled:cursor-default bg-teal-500 text-white hover:bg-teal-400 active:bg-teal-300 disabled:bg-zinc-400 h-10 px-3 py-2 text-sm relative'] div[class='flex items-center gap-2 justify-center']")));
+			element14.click();
+
+			WebElement element15 = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id(
+					"meeting-save")));
+			element15.click();
+			
 	}
 
 }
