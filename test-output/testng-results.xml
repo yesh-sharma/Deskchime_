@@ -1,32 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="8" passed="7" failed="1" skipped="0">
+<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-06-07T11:50:30 IST" name="Default suite" finished-at="2024-06-07T11:58:04 IST" duration-ms="453237">
+  <suite started-at="2024-06-25T15:06:32 IST" name="Default suite" finished-at="2024-06-25T15:07:33 IST" duration-ms="61024">
     <groups>
     </groups>
-    <test started-at="2024-06-07T11:50:30 IST" name="Default test" finished-at="2024-06-07T11:58:04 IST" duration-ms="453237">
-      <class name="feedbackspagetesting.TestingOfFeedbackPage">
-        <test-method signature="templateCreation()[pri:0, instance:feedbackspagetesting.TestingOfFeedbackPage@d9345cd]" started-at="2024-06-07T11:50:30 IST" name="templateCreation" finished-at="2024-06-07T11:51:44 IST" duration-ms="73146" status="FAIL">
+    <test started-at="2024-06-25T15:06:32 IST" name="Default test" finished-at="2024-06-25T15:07:33 IST" duration-ms="61024">
+      <class name="goalpagetesting.TestingOfGoalpage">
+        <test-method signature="userCanSetUpFollowupForGoal()[pri:0, instance:goalpagetesting.TestingOfGoalpage@4b0d79fc]" started-at="2024-06-25T15:06:32 IST" name="userCanSetUpFollowupForGoal" finished-at="2024-06-25T15:07:33 IST" duration-ms="61006" status="FAIL">
           <exception class="org.openqa.selenium.TimeoutException">
             <message>
-              <![CDATA[Expected condition failed: waiting for visibility of element located by By.cssSelector: a[data-testid='feedback-templates-btn'] (tried for 20 second(s) with 500 milliseconds interval)
+              <![CDATA[Expected condition failed: waiting for visibility of element located by By.cssSelector: button[class='rounded-lg w-fit tracking-[0.5px] font-medium flex items-center gap-2 justify-center transition-all duration-200 ease-in-out disabled:cursor-default bg-teal-500 text-white hover:bg-teal-400 active:bg-teal-300 disabled:bg-zinc-400 h-10 px-3 py-2 text-sm border-2 border-teal-500 disabled:border-gray-400 relative'] div[class='flex items-center gap-2 justify-center'] (tried for 20 second(s) with 500 milliseconds interval)
 Build info: version: '4.21.0', revision: '79ed462ef4'
 System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '14.5', java.version: '17.0.11'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 125.0.6422.142, chrome: {chromedriverVersion: 125.0.6422.141 (4b1e8393712..., userDataDir: /var/folders/x9/xxt7kvhx1v7...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52022}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:52022/devtoo..., se:cdpVersion: 125.0.6422.142, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 1efcdcfc7200bf63ff77a2f6d6d96943]]>
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 126.0.6478.115, chrome: {chromedriverVersion: 126.0.6478.126 (d36ace6122e..., userDataDir: /var/folders/x9/xxt7kvhx1v7...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52436}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:52436/devtoo..., se:cdpVersion: 126.0.6478.115, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 4ce6782f14d8842605685588c6736a60]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.cssSelector: a[data-testid='feedback-templates-btn'] (tried for 20 second(s) with 500 milliseconds interval)
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.cssSelector: button[class='rounded-lg w-fit tracking-[0.5px] font-medium flex items-center gap-2 justify-center transition-all duration-200 ease-in-out disabled:cursor-default bg-teal-500 text-white hover:bg-teal-400 active:bg-teal-300 disabled:bg-zinc-400 h-10 px-3 py-2 text-sm border-2 border-teal-500 disabled:border-gray-400 relative'] div[class='flex items-center gap-2 justify-center'] (tried for 20 second(s) with 500 milliseconds interval)
 Build info: version: '4.21.0', revision: '79ed462ef4'
 System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '14.5', java.version: '17.0.11'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 125.0.6422.142, chrome: {chromedriverVersion: 125.0.6422.141 (4b1e8393712..., userDataDir: /var/folders/x9/xxt7kvhx1v7...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52022}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:52022/devtoo..., se:cdpVersion: 125.0.6422.142, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 1efcdcfc7200bf63ff77a2f6d6d96943
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 126.0.6478.115, chrome: {chromedriverVersion: 126.0.6478.126 (d36ace6122e..., userDataDir: /var/folders/x9/xxt7kvhx1v7...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52436}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:52436/devtoo..., se:cdpVersion: 126.0.6478.115, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 4ce6782f14d8842605685588c6736a60
 at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
 at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-at feedbackspagetesting.TestingOfFeedbackPage.templateCreation(TestingOfFeedbackPage.java:43)
+at goalpagetesting.TestingOfGoalpage.userCanSetUpFollowupForGoal(TestingOfGoalpage.java:298)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -60,36 +60,8 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           </exception> <!-- org.openqa.selenium.TimeoutException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- templateCreation -->
-        <test-method signature="userCanAskForFeedbackByExternalLink()[pri:0, instance:feedbackspagetesting.TestingOfFeedbackPage@d9345cd]" started-at="2024-06-07T11:51:44 IST" name="userCanAskForFeedbackByExternalLink" finished-at="2024-06-07T11:52:37 IST" duration-ms="53394" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- userCanAskForFeedbackByExternalLink -->
-        <test-method signature="userCanAskForFeedbackFromSpecificTeamMember()[pri:0, instance:feedbackspagetesting.TestingOfFeedbackPage@d9345cd]" started-at="2024-06-07T11:52:37 IST" name="userCanAskForFeedbackFromSpecificTeamMember" finished-at="2024-06-07T11:53:51 IST" duration-ms="74266" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- userCanAskForFeedbackFromSpecificTeamMember -->
-        <test-method signature="userCanAskForFeedbackFromWholeTeam()[pri:0, instance:feedbackspagetesting.TestingOfFeedbackPage@d9345cd]" started-at="2024-06-07T11:53:51 IST" name="userCanAskForFeedbackFromWholeTeam" finished-at="2024-06-07T11:55:10 IST" duration-ms="78920" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- userCanAskForFeedbackFromWholeTeam -->
-        <test-method signature="userCanMaKEUseOfPreMadeFeedbackTemplate()[pri:0, instance:feedbackspagetesting.TestingOfFeedbackPage@d9345cd]" started-at="2024-06-07T11:55:10 IST" name="userCanMaKEUseOfPreMadeFeedbackTemplate" finished-at="2024-06-07T11:55:49 IST" duration-ms="39211" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- userCanMaKEUseOfPreMadeFeedbackTemplate -->
-        <test-method signature="userCanShortAndFilterFeedbackByAnswered()[pri:0, instance:feedbackspagetesting.TestingOfFeedbackPage@d9345cd]" started-at="2024-06-07T11:55:49 IST" name="userCanShortAndFilterFeedbackByAnswered" finished-at="2024-06-07T11:56:23 IST" duration-ms="33701" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- userCanShortAndFilterFeedbackByAnswered -->
-        <test-method signature="userCanShortAndFilterFeedbackByPending()[pri:0, instance:feedbackspagetesting.TestingOfFeedbackPage@d9345cd]" started-at="2024-06-07T11:56:23 IST" name="userCanShortAndFilterFeedbackByPending" finished-at="2024-06-07T11:57:11 IST" duration-ms="48397" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- userCanShortAndFilterFeedbackByPending -->
-        <test-method signature="usersCanSeeAllTheFeedbackTheyHaveReceived()[pri:0, instance:feedbackspagetesting.TestingOfFeedbackPage@d9345cd]" started-at="2024-06-07T11:57:11 IST" name="usersCanSeeAllTheFeedbackTheyHaveReceived" finished-at="2024-06-07T11:58:04 IST" duration-ms="52174" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- usersCanSeeAllTheFeedbackTheyHaveReceived -->
-      </class> <!-- feedbackspagetesting.TestingOfFeedbackPage -->
+        </test-method> <!-- userCanSetUpFollowupForGoal -->
+      </class> <!-- goalpagetesting.TestingOfGoalpage -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

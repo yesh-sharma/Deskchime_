@@ -1,24 +1,66 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite parallel="tests" name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" parallel="tests" name="signuppagetesting(failed)">
-    <classes>
-      <class name="signuppagetesting.Signuppagetesting">
-        <methods>
-          <include name="invalidemailformat"/>
-        </methods>
-      </class> <!-- signuppagetesting.Signuppagetesting -->
-    </classes>
-  </test> <!-- signuppagetesting(failed) -->
   <test thread-count="5" parallel="tests" name="applaudpagetesting(failed)">
     <classes>
       <class name="applaudpagetesting.Applaud">
         <methods>
           <include name="seeReceivedApplauds"/>
           <include name="sendApplaud"/>
+          <include name="seeSentApplauds"/>
           <include name="useMonthFilter"/>
         </methods>
       </class> <!-- applaudpagetesting.Applaud -->
     </classes>
   </test> <!-- applaudpagetesting(failed) -->
+  <test thread-count="5" parallel="tests" name="settingpagetesting(failed)">
+    <classes>
+      <class name="settingpagetesting.Settingpage">
+        <methods>
+          <include name="userCreatedAndDeletedSuccessfully"/>
+        </methods>
+      </class> <!-- settingpagetesting.Settingpage -->
+    </classes>
+  </test> <!-- settingpagetesting(failed) -->
+  <test thread-count="5" parallel="tests" name="goalpagetesting(failed)">
+    <classes>
+      <class name="goalpagetesting.TestingOfGoalpage">
+        <methods>
+          <include name="usersCanSeeCompletedGoals"/>
+          <include name="usersCanSeeDelayedGoals"/>
+          <include name="goalpage"/>
+          <include name="usersCanSeeOnTrackGoals"/>
+          <include name="usersCanUpdateStatus"/>
+          <include name="usersCanSeeAbandonedGoals"/>
+          <include name="usersCanSeeArchivedGoals"/>
+        </methods>
+      </class> <!-- goalpagetesting.TestingOfGoalpage -->
+    </classes>
+  </test> <!-- goalpagetesting(failed) -->
+  <test thread-count="5" parallel="tests" name="feedbackspagetesting(failed)">
+    <classes>
+      <class name="feedbackspagetesting.TestingOfFeedbackPage">
+        <methods>
+          <include name="userCanShortAndFilterFeedbackByPending"/>
+          <include name="usersCanSeeAllTheFeedbackTheyHaveReceived"/>
+          <include name="userCanAskForFeedbackByExternalLink"/>
+          <include name="templateCreation"/>
+          <include name="userCanAskForFeedbackFromWholeTeam"/>
+          <include name="userCanAskForFeedbackFromSpecificTeamMember"/>
+          <include name="userCanMaKEUseOfPreMadeFeedbackTemplate"/>
+          <include name="userCanShortAndFilterFeedbackByAnswered"/>
+        </methods>
+      </class> <!-- feedbackspagetesting.TestingOfFeedbackPage -->
+    </classes>
+  </test> <!-- feedbackspagetesting(failed) -->
+  <test thread-count="5" parallel="tests" name="loginpagetesting(failed)">
+    <classes>
+      <class name="loginpagetesting.Testingofloginpage">
+        <methods>
+          <include name="userlogout"/>
+          <include name="validcredendetials"/>
+        </methods>
+      </class> <!-- loginpagetesting.Testingofloginpage -->
+    </classes>
+  </test> <!-- loginpagetesting(failed) -->
 </suite> <!-- Failed suite [Suite] -->

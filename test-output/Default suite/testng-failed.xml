@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="feedbackspagetesting.TestingOfFeedbackPage">
+      <class name="goalpagetesting.TestingOfGoalpage">
         <methods>
-          <include name="templateCreation"/>
+          <include name="userCanSetUpFollowupForGoal"/>
         </methods>
-      </class> <!-- feedbackspagetesting.TestingOfFeedbackPage -->
+      </class> <!-- goalpagetesting.TestingOfGoalpage -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

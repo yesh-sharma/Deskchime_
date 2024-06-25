@@ -222,7 +222,7 @@ public class TestingOfFeedbackPage {
 	}
 
 	public void userCanAskForFeedbackFromWholeTeam() throws InterruptedException {
-		WebDriver driver = new ChromeDriver();
+		WebDriver driver = new ChromeDriver(ChromeOptionsConfig.getChromeOptions());
 
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
 		driver.manage().window().maximize();
@@ -384,7 +384,7 @@ public class TestingOfFeedbackPage {
 
 	
 	public void userCanAskForFeedbackByExternalLink() throws InterruptedException {
-		WebDriver driver = new ChromeDriver();
+		WebDriver driver = new ChromeDriver(ChromeOptionsConfig.getChromeOptions());
 
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
 		driver.manage().window().maximize();
