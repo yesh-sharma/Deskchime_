@@ -233,11 +233,11 @@ public class TestingOfGoalpage {
 		element6.click();
 		driver.close();
 	}
-
-	@Test
+@Test
+	
 	public void userCanSetUpFollowupForGoal() throws InterruptedException, IOException {
 
-		WebDriver driver = new ChromeDriver();
+		WebDriver driver = new ChromeDriver(ChromeOptionsConfig.getChromeOptions());
 
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
 		driver.manage().window().maximize();
@@ -306,7 +306,7 @@ public class TestingOfGoalpage {
 			WebElement element12 = wait
 					.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".ant-picker-today-btn")));
 			element12.click();
-			Thread.sleep(2000);
+			Thread.sleep(3000);
 			// Get the current local time
 
 			LocalTime currentTime = LocalTime.now();
@@ -316,10 +316,11 @@ public class TestingOfGoalpage {
 			System.out.println(hour);
 			System.out.println(minute);
 			// Print the hour and minute
+		
 
 			if (hour == 10 && minute >= 1 && minute <= 29) {
 
-				driver.findElement(By.xpath("//div[text()='11:00 M']")).click();
+				driver.findElement(By.xpath("//div[text()='11:00 PM']")).click();
 
 			} else if (hour == 10 && minute >= 30 && minute <= 59) {
 				driver.findElement(By.xpath("//div[text()='11:30 PM']")).click();
@@ -374,7 +375,7 @@ public class TestingOfGoalpage {
 
 			driver.findElement(By.cssSelector("button[type='submit'] div[class='flex items-center gap-2 justify-center']"))
 					.click();
-			Thread.sleep(2000);
+	
 
 			WebElement element13 = wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(
 					"div[class='relative space-y-2'] button[type='button'] div[class='flex items-center gap-2 justify-center']")));

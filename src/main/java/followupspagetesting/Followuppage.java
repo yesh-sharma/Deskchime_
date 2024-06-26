@@ -16,9 +16,9 @@ import org.testng.annotations.Test;
 import loginpagetesting.ChromeOptionsConfig;
 import loginpagetesting.Login;
 
-@Test
-public class Followuppage {
 
+public class Followuppage {
+@Test
 	public void followuppage() throws InterruptedException {
 
 		WebDriver driver = new ChromeDriver(ChromeOptionsConfig.getChromeOptions());
@@ -80,7 +80,7 @@ public class Followuppage {
 
 		if (hour == 10 && minute >= 1 && minute <= 29) {
 
-			driver.findElement(By.xpath("//div[text()='11:00 M']")).click();
+			driver.findElement(By.xpath("//div[text()='11:00 PM']")).click();
 
 		} else if (hour == 10 && minute >= 30 && minute <= 59) {
 			driver.findElement(By.xpath("//div[text()='11:30 PM']")).click();
@@ -147,7 +147,10 @@ public class Followuppage {
 				"button[class='rounded-lg w-fit tracking-[0.5px] font-medium flex items-center gap-2 justify-center transition-all duration-200 ease-in-out disabled:cursor-default bg-teal-500 text-white hover:bg-teal-400 active:bg-teal-300 disabled:bg-zinc-400 h-10 px-3 py-2 text-sm relative'] div[class='flex items-center gap-2 justify-center']")));
 		element10.click();
 
-		driver.close();
+		WebElement element11 = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id(
+				"meeting-save")));
+		element11.click();
+		
 	}
 
 	public void meetingWithoutSpecifyDateAndTime() throws InterruptedException {
