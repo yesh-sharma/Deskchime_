@@ -20,10 +20,10 @@ import org.testng.annotations.Test;
 
 import loginpagetesting.ChromeOptionsConfig;
 import loginpagetesting.Login;
-
+@Test
 public class TestingOfGoalpage {
 
-	public void goalpage() throws InterruptedException {
+	public void userCanCreateGoalForselfDevelopment() throws InterruptedException {
 
 		WebDriver driver = new ChromeDriver(ChromeOptionsConfig.getChromeOptions());
 
@@ -60,6 +60,57 @@ public class TestingOfGoalpage {
 		element5.click();
 		driver.close();
 	}
+	
+	public void userCanCreateGoalForTeam() throws InterruptedException {
+
+		WebDriver driver = new ChromeDriver(ChromeOptionsConfig.getChromeOptions());
+
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
+		driver.manage().window().maximize();
+
+		Login login = new Login(driver);
+		login.Goto();
+
+		login.loginApplication("yesh@zasyasolutions.com", "Yesh255198@");
+
+		login.avoidFeedbackpopup();
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+
+		WebElement element = wait
+				.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[text()='Goals']")));
+		element.click();
+		WebElement element1 = wait.until(
+				ExpectedConditions.visibilityOfElementLocated(By.cssSelector("a[data-testid='goal-create-btn']")));
+		element1.click();
+		WebElement element2 = wait
+				.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("div[data-testid='goal-team']")));
+		element2.click();
+
+		WebElement element3 = wait
+				.until(ExpectedConditions.visibilityOfElementLocated(By.id("goals_goals_headers_0_goal_title")));
+		element3.sendKeys("user can create a goal for team");
+
+		WebElement element4 = wait.until(
+				ExpectedConditions.visibilityOfElementLocated(By.xpath("//p[@class='is-empty is-editor-empty']")));
+		element4.sendKeys("test case for team");
+
+		Actions action = new Actions(driver);
+		for (int i = 0; i < 3; i++) {
+
+			action.sendKeys(Keys.PAGE_DOWN).perform();
+			Thread.sleep(2000);
+		}
+
+		WebElement element5 = wait
+				.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[contains(text(),'yash')]")));
+		element5.click();
+
+		WebElement element6 = wait.until(
+				ExpectedConditions.visibilityOfElementLocated(By.cssSelector("button[data-testid='goal-submit-btn']")));
+		element6.click();
+
+	}
+	
 
 	public void usersCanSeeOnTrackGoals() throws InterruptedException {
 
@@ -233,7 +284,7 @@ public class TestingOfGoalpage {
 		element6.click();
 		driver.close();
 	}
-@Test
+
 	
 	public void userCanSetUpFollowupForGoal() throws InterruptedException, IOException {
 

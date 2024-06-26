@@ -10,4 +10,32 @@
       </class> <!-- settingpagetesting.Settingpage -->
     </classes>
   </test> <!-- settingpagetesting(failed) -->
+  <test thread-count="5" parallel="tests" name="followupspagetesting(failed)">
+    <classes>
+      <class name="followupspagetesting.Followup1on1">
+        <methods>
+          <include name="create1on1WithoutSpecifyDateandtime"/>
+          <include name="create1on1"/>
+        </methods>
+      </class> <!-- followupspagetesting.Followup1on1 -->
+    </classes>
+  </test> <!-- followupspagetesting(failed) -->
+  <test thread-count="5" parallel="tests" name="feedbackspagetesting(failed)">
+    <classes>
+      <class name="feedbackspagetesting.TestingOfFeedbackPage">
+        <methods>
+          <include name="userCanAskForFeedbackFromWholeTeam"/>
+        </methods>
+      </class> <!-- feedbackspagetesting.TestingOfFeedbackPage -->
+    </classes>
+  </test> <!-- feedbackspagetesting(failed) -->
+  <test thread-count="5" parallel="tests" name="goalpagetesting(failed)">
+    <classes>
+      <class name="goalpagetesting.TestingOfGoalpage">
+        <methods>
+          <include name="userCanSetUpFollowupForGoal"/>
+        </methods>
+      </class> <!-- goalpagetesting.TestingOfGoalpage -->
+    </classes>
+  </test> <!-- goalpagetesting(failed) -->
 </suite> <!-- Failed suite [Suite] -->

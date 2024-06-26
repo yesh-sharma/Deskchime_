@@ -30,7 +30,7 @@ public class TestingOfFeedbackPage {
 
 		Login login = new Login(driver);
 		login.Goto();
-		login.loginApplication("yeshsharma516032@gmail.com", "Yesh12345");
+		login.loginApplication("yesh@zasyasolutions.com", "Yesh255198@");
 
 		login.avoidFeedbackpopup();
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
@@ -90,7 +90,7 @@ public class TestingOfFeedbackPage {
 
 		Login login = new Login(driver);
 		login.Goto();
-		login.loginApplication("yeshsharma516032@gmail.com", "Yesh12345");
+		login.loginApplication("yesh@zasyasolutions.com", "Yesh255198@");
 
 		login.avoidFeedbackpopup();
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
@@ -156,7 +156,7 @@ public class TestingOfFeedbackPage {
 
 		Login login = new Login(driver);
 		login.Goto();
-		login.loginApplication("yeshsharma516032@gmail.com", "Yesh12345");
+		login.loginApplication("yesh@zasyasolutions.com", "Yesh255198@");
 
 		login.avoidFeedbackpopup();
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
@@ -229,7 +229,7 @@ public class TestingOfFeedbackPage {
 
 		Login login = new Login(driver);
 		login.Goto();
-		login.loginApplication("yeshsharma516032@gmail.com", "Yesh12345");
+		login.loginApplication("yesh@zasyasolutions.com", "Yesh255198@");
 
 		login.avoidFeedbackpopup();
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
@@ -307,7 +307,7 @@ public class TestingOfFeedbackPage {
 
 		Login login = new Login(driver);
 		login.Goto();
-		login.loginApplication("yeshsharma516032@gmail.com", "Yesh12345");
+		login.loginApplication("yesh@zasyasolutions.com", "Yesh255198@");
 
 		login.avoidFeedbackpopup();
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
@@ -330,7 +330,7 @@ public class TestingOfFeedbackPage {
 
 		Login login = new Login(driver);
 		login.Goto();
-		login.loginApplication("yeshsharma516032@gmail.com", "Yesh12345");
+		login.loginApplication("yesh@zasyasolutions.com", "Yesh255198@");
 
 		login.avoidFeedbackpopup();
 
@@ -359,7 +359,7 @@ public class TestingOfFeedbackPage {
 
 		Login login = new Login(driver);
 		login.Goto();
-		login.loginApplication("yeshsharma516032@gmail.com", "Yesh12345");
+		login.loginApplication("yesh@zasyasolutions.com", "Yesh255198@");
 
 		login.avoidFeedbackpopup();
 
@@ -391,7 +391,7 @@ public class TestingOfFeedbackPage {
 
 		Login login = new Login(driver);
 		login.Goto();
-		login.loginApplication("yeshsharma516032@gmail.com", "Yesh12345");
+		login.loginApplication("yesh@zasyasolutions.com", "Yesh255198@");
 
 		login.avoidFeedbackpopup();
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));

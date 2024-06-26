@@ -16,9 +16,9 @@ import org.testng.annotations.Test;
 import loginpagetesting.ChromeOptionsConfig;
 import loginpagetesting.Login;
 
-
-public class Followuppage {
 @Test
+public class Followuppage {
+
 	public void followuppage() throws InterruptedException {
 
 		WebDriver driver = new ChromeDriver(ChromeOptionsConfig.getChromeOptions());
@@ -29,7 +29,7 @@ public class Followuppage {
 		Login login = new Login(driver);
 		login.Goto();
 
-		login.loginApplication("yeshsharma516032@gmail.com", "Yesh12345");
+		login.loginApplication("yesh@zasyasolutions.com", "Yesh255198@");
 
 		login.avoidFeedbackpopup();
 
@@ -163,7 +163,7 @@ public class Followuppage {
 		Login login = new Login(driver);
 		login.Goto();
 
-		login.loginApplication("yeshsharma516032@gmail.com", "Yesh12345");
+		login.loginApplication("yesh@zasyasolutions.com", "Yesh255198@");
 
 		login.avoidFeedbackpopup();
 

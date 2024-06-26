@@ -1,17 +1,369 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="37" passed="33" failed="4" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-06-26T12:03:10 IST" name="Default suite" finished-at="2024-06-26T12:03:36 IST" duration-ms="25231">
+  <suite started-at="2024-06-26T16:33:48 IST" name="Suite" finished-at="2024-06-26T16:38:03 IST" duration-ms="255445">
     <groups>
     </groups>
-    <test started-at="2024-06-26T12:03:10 IST" name="Default test" finished-at="2024-06-26T12:03:36 IST" duration-ms="25231">
-      <class name="followupspagetesting.Followuppage">
-        <test-method signature="followuppage()[pri:0, instance:followupspagetesting.Followuppage@27f981c6]" started-at="2024-06-26T12:03:10 IST" name="followuppage" finished-at="2024-06-26T12:03:36 IST" duration-ms="25211" status="PASS">
+    <test started-at="2024-06-26T16:33:48 IST" name="signuppagetesting" finished-at="2024-06-26T16:34:33 IST" duration-ms="45229">
+      <class name="signuppagetesting.Signuppagetesting">
+        <test-method signature="emptyfields()[pri:0, instance:signuppagetesting.Signuppagetesting@7ef82753]" started-at="2024-06-26T16:33:48 IST" name="emptyfields" finished-at="2024-06-26T16:33:56 IST" duration-ms="8386" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- followuppage -->
-      </class> <!-- followupspagetesting.Followuppage -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+        </test-method> <!-- emptyfields -->
+        <test-method signature="existingemailaddress()[pri:0, instance:signuppagetesting.Signuppagetesting@7ef82753]" started-at="2024-06-26T16:33:56 IST" name="existingemailaddress" finished-at="2024-06-26T16:34:04 IST" duration-ms="7959" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- existingemailaddress -->
+        <test-method signature="invalidemailformat()[pri:0, instance:signuppagetesting.Signuppagetesting@7ef82753]" started-at="2024-06-26T16:34:04 IST" name="invalidemailformat" finished-at="2024-06-26T16:34:12 IST" duration-ms="8202" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- invalidemailformat -->
+        <test-method signature="passwordconfirmation()[pri:0, instance:signuppagetesting.Signuppagetesting@7ef82753]" started-at="2024-06-26T16:34:12 IST" name="passwordconfirmation" finished-at="2024-06-26T16:34:19 IST" duration-ms="6908" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- passwordconfirmation -->
+        <test-method signature="passwordstrength()[pri:0, instance:signuppagetesting.Signuppagetesting@7ef82753]" started-at="2024-06-26T16:34:19 IST" name="passwordstrength" finished-at="2024-06-26T16:34:28 IST" duration-ms="8245" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- passwordstrength -->
+        <test-method signature="successfulregistration()[pri:0, instance:signuppagetesting.Signuppagetesting@7ef82753]" started-at="2024-06-26T16:34:28 IST" name="successfulregistration" finished-at="2024-06-26T16:34:33 IST" duration-ms="5500" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- successfulregistration -->
+      </class> <!-- signuppagetesting.Signuppagetesting -->
+    </test> <!-- signuppagetesting -->
+    <test started-at="2024-06-26T16:33:48 IST" name="loginpagetesting" finished-at="2024-06-26T16:34:44 IST" duration-ms="56460">
+      <class name="loginpagetesting.Testingofloginpage">
+        <test-method signature="emptypasswordfield()[pri:0, instance:loginpagetesting.Testingofloginpage@4b0d79fc]" started-at="2024-06-26T16:33:48 IST" name="emptypasswordfield" finished-at="2024-06-26T16:33:52 IST" duration-ms="4152" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- emptypasswordfield -->
+        <test-method signature="emptyusernamefield()[pri:0, instance:loginpagetesting.Testingofloginpage@4b0d79fc]" started-at="2024-06-26T16:33:52 IST" name="emptyusernamefield" finished-at="2024-06-26T16:33:57 IST" duration-ms="4620" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- emptyusernamefield -->
+        <test-method signature="invalidcredentials1()[pri:0, instance:loginpagetesting.Testingofloginpage@4b0d79fc]" started-at="2024-06-26T16:33:57 IST" name="invalidcredentials1" finished-at="2024-06-26T16:34:01 IST" duration-ms="4040" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- invalidcredentials1 -->
+        <test-method signature="invalidcredentials2()[pri:0, instance:loginpagetesting.Testingofloginpage@4b0d79fc]" started-at="2024-06-26T16:34:01 IST" name="invalidcredentials2" finished-at="2024-06-26T16:34:07 IST" duration-ms="6742" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- invalidcredentials2 -->
+        <test-method signature="passwordresetlink()[pri:0, instance:loginpagetesting.Testingofloginpage@4b0d79fc]" started-at="2024-06-26T16:34:07 IST" name="passwordresetlink" finished-at="2024-06-26T16:34:18 IST" duration-ms="10346" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- passwordresetlink -->
+        <test-method signature="userlogout()[pri:0, instance:loginpagetesting.Testingofloginpage@4b0d79fc]" started-at="2024-06-26T16:34:18 IST" name="userlogout" finished-at="2024-06-26T16:34:41 IST" duration-ms="23301" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- userlogout -->
+        <test-method signature="validcredendetials()[pri:0, instance:loginpagetesting.Testingofloginpage@4b0d79fc]" started-at="2024-06-26T16:34:41 IST" name="validcredendetials" finished-at="2024-06-26T16:34:44 IST" duration-ms="3231" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validcredendetials -->
+      </class> <!-- loginpagetesting.Testingofloginpage -->
+    </test> <!-- loginpagetesting -->
+    <test started-at="2024-06-26T16:34:33 IST" name="settingpagetesting" finished-at="2024-06-26T16:35:17 IST" duration-ms="44127">
+      <class name="settingpagetesting.Settingpage">
+        <test-method signature="userCreatedAndDeletedSuccessfully()[pri:0, instance:settingpagetesting.Settingpage@5f049ea1]" started-at="2024-06-26T16:34:33 IST" name="userCreatedAndDeletedSuccessfully" finished-at="2024-06-26T16:35:17 IST" duration-ms="44124" status="FAIL">
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for visibility of element located by By.cssSelector: button[id='click-to-copy'] (tried for 15 second(s) with 500 milliseconds interval)
+Build info: version: '4.21.0', revision: '79ed462ef4'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '14.5', java.version: '17.0.11'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome-headless-shell, browserVersion: 126.0.6478.116, chrome: {chromedriverVersion: 126.0.6478.126 (d36ace6122e..., userDataDir: /var/folders/x9/xxt7kvhx1v7...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58966}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:58966/devtoo..., se:cdpVersion: 126.0.6478.116, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 7ede32fed80ba03f008b513d37fc0caf]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.cssSelector: button[id='click-to-copy'] (tried for 15 second(s) with 500 milliseconds interval)
+Build info: version: '4.21.0', revision: '79ed462ef4'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '14.5', java.version: '17.0.11'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome-headless-shell, browserVersion: 126.0.6478.116, chrome: {chromedriverVersion: 126.0.6478.126 (d36ace6122e..., userDataDir: /var/folders/x9/xxt7kvhx1v7...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58966}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:58966/devtoo..., se:cdpVersion: 126.0.6478.116, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 7ede32fed80ba03f008b513d37fc0caf
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+at settingpagetesting.Settingpage.userCreatedAndDeletedSuccessfully(Settingpage.java:58)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.access$000(SuiteRunner.java:28)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:418)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+at java.base/java.lang.Thread.run(Thread.java:840)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- userCreatedAndDeletedSuccessfully -->
+      </class> <!-- settingpagetesting.Settingpage -->
+    </test> <!-- settingpagetesting -->
+    <test started-at="2024-06-26T16:33:48 IST" name="applaudpagetesting" finished-at="2024-06-26T16:35:25 IST" duration-ms="96878">
+      <class name="applaudpagetesting.Applaud">
+        <test-method signature="seeReceivedApplauds()[pri:0, instance:applaudpagetesting.Applaud@7f485fda]" started-at="2024-06-26T16:33:48 IST" name="seeReceivedApplauds" finished-at="2024-06-26T16:34:13 IST" duration-ms="25597" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- seeReceivedApplauds -->
+        <test-method signature="seeSentApplauds()[pri:0, instance:applaudpagetesting.Applaud@7f485fda]" started-at="2024-06-26T16:34:13 IST" name="seeSentApplauds" finished-at="2024-06-26T16:34:37 IST" duration-ms="23199" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- seeSentApplauds -->
+        <test-method signature="sendApplaud()[pri:0, instance:applaudpagetesting.Applaud@7f485fda]" started-at="2024-06-26T16:34:37 IST" name="sendApplaud" finished-at="2024-06-26T16:35:01 IST" duration-ms="24193" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- sendApplaud -->
+        <test-method signature="useMonthFilter()[pri:0, instance:applaudpagetesting.Applaud@7f485fda]" started-at="2024-06-26T16:35:01 IST" name="useMonthFilter" finished-at="2024-06-26T16:35:25 IST" duration-ms="23865" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- useMonthFilter -->
+      </class> <!-- applaudpagetesting.Applaud -->
+    </test> <!-- applaudpagetesting -->
+    <test started-at="2024-06-26T16:34:44 IST" name="followupspagetesting" finished-at="2024-06-26T16:36:15 IST" duration-ms="90858">
+      <class name="followupspagetesting.Followup1on1">
+        <test-method is-config="true" signature="create1on1()[pri:0, instance:followupspagetesting.Followup1on1@1750fbeb]" started-at="2024-06-26T16:34:44 IST" name="create1on1" finished-at="2024-06-26T16:35:06 IST" duration-ms="21225" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- create1on1 -->
+        <test-method signature="create1on1WithoutSpecifyDateandtime()[pri:0, instance:followupspagetesting.Followup1on1@1750fbeb]" started-at="2024-06-26T16:35:06 IST" name="create1on1WithoutSpecifyDateandtime" finished-at="2024-06-26T16:35:55 IST" duration-ms="49183" status="FAIL">
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for visibility of element located by By.xpath: //div[contains(text(),'yash')] (tried for 25 second(s) with 500 milliseconds interval)
+Build info: version: '4.21.0', revision: '79ed462ef4'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '14.5', java.version: '17.0.11'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome-headless-shell, browserVersion: 126.0.6478.116, chrome: {chromedriverVersion: 126.0.6478.126 (d36ace6122e..., userDataDir: /var/folders/x9/xxt7kvhx1v7...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59185}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:59185/devtoo..., se:cdpVersion: 126.0.6478.116, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 2abe974fdc1dc629ccbdc41d802dabe7]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //div[contains(text(),'yash')] (tried for 25 second(s) with 500 milliseconds interval)
+Build info: version: '4.21.0', revision: '79ed462ef4'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '14.5', java.version: '17.0.11'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome-headless-shell, browserVersion: 126.0.6478.116, chrome: {chromedriverVersion: 126.0.6478.126 (d36ace6122e..., userDataDir: /var/folders/x9/xxt7kvhx1v7...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59185}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:59185/devtoo..., se:cdpVersion: 126.0.6478.116, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 2abe974fdc1dc629ccbdc41d802dabe7
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+at followupspagetesting.Followup1on1.create1on1WithoutSpecifyDateandtime(Followup1on1.java:209)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.access$000(SuiteRunner.java:28)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:418)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+at java.base/java.lang.Thread.run(Thread.java:840)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- create1on1WithoutSpecifyDateandtime -->
+        <test-method signature="userCanDelete1on1Meeting()[pri:0, instance:followupspagetesting.Followup1on1@1750fbeb]" started-at="2024-06-26T16:35:55 IST" name="userCanDelete1on1Meeting" finished-at="2024-06-26T16:36:15 IST" duration-ms="20447" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- userCanDelete1on1Meeting -->
+      </class> <!-- followupspagetesting.Followup1on1 -->
+    </test> <!-- followupspagetesting -->
+    <test started-at="2024-06-26T16:33:48 IST" name="feedbackspagetesting" finished-at="2024-06-26T16:37:08 IST" duration-ms="200419">
+      <class name="feedbackspagetesting.TestingOfFeedbackPage">
+        <test-method signature="templateCreation()[pri:0, instance:feedbackspagetesting.TestingOfFeedbackPage@795509d9]" started-at="2024-06-26T16:33:48 IST" name="templateCreation" finished-at="2024-06-26T16:34:14 IST" duration-ms="25652" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- templateCreation -->
+        <test-method signature="userCanAskForFeedbackByExternalLink()[pri:0, instance:feedbackspagetesting.TestingOfFeedbackPage@795509d9]" started-at="2024-06-26T16:34:14 IST" name="userCanAskForFeedbackByExternalLink" finished-at="2024-06-26T16:34:36 IST" duration-ms="22483" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- userCanAskForFeedbackByExternalLink -->
+        <test-method signature="userCanAskForFeedbackFromSpecificTeamMember()[pri:0, instance:feedbackspagetesting.TestingOfFeedbackPage@795509d9]" started-at="2024-06-26T16:34:36 IST" name="userCanAskForFeedbackFromSpecificTeamMember" finished-at="2024-06-26T16:34:57 IST" duration-ms="21219" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- userCanAskForFeedbackFromSpecificTeamMember -->
+        <test-method signature="userCanAskForFeedbackFromWholeTeam()[pri:0, instance:feedbackspagetesting.TestingOfFeedbackPage@795509d9]" started-at="2024-06-26T16:34:57 IST" name="userCanAskForFeedbackFromWholeTeam" finished-at="2024-06-26T16:35:49 IST" duration-ms="52146" status="FAIL">
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for visibility of element located by By.cssSelector: div[data-testid='memberList-1'] (tried for 20 second(s) with 500 milliseconds interval)
+Build info: version: '4.21.0', revision: '79ed462ef4'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '14.5', java.version: '17.0.11'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome-headless-shell, browserVersion: 126.0.6478.116, chrome: {chromedriverVersion: 126.0.6478.126 (d36ace6122e..., userDataDir: /var/folders/x9/xxt7kvhx1v7...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59131}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:59131/devtoo..., se:cdpVersion: 126.0.6478.116, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: b8f42f6060c0b7d15c7af4be7371cc74]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.cssSelector: div[data-testid='memberList-1'] (tried for 20 second(s) with 500 milliseconds interval)
+Build info: version: '4.21.0', revision: '79ed462ef4'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '14.5', java.version: '17.0.11'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome-headless-shell, browserVersion: 126.0.6478.116, chrome: {chromedriverVersion: 126.0.6478.126 (d36ace6122e..., userDataDir: /var/folders/x9/xxt7kvhx1v7...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59131}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:59131/devtoo..., se:cdpVersion: 126.0.6478.116, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: b8f42f6060c0b7d15c7af4be7371cc74
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+at feedbackspagetesting.TestingOfFeedbackPage.userCanAskForFeedbackFromWholeTeam(TestingOfFeedbackPage.java:282)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.access$000(SuiteRunner.java:28)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:418)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+at java.base/java.lang.Thread.run(Thread.java:840)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- userCanAskForFeedbackFromWholeTeam -->
+        <test-method signature="userCanMaKEUseOfPreMadeFeedbackTemplate()[pri:0, instance:feedbackspagetesting.TestingOfFeedbackPage@795509d9]" started-at="2024-06-26T16:35:49 IST" name="userCanMaKEUseOfPreMadeFeedbackTemplate" finished-at="2024-06-26T16:36:13 IST" duration-ms="23148" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- userCanMaKEUseOfPreMadeFeedbackTemplate -->
+        <test-method signature="userCanShortAndFilterFeedbackByAnswered()[pri:0, instance:feedbackspagetesting.TestingOfFeedbackPage@795509d9]" started-at="2024-06-26T16:36:13 IST" name="userCanShortAndFilterFeedbackByAnswered" finished-at="2024-06-26T16:36:31 IST" duration-ms="18573" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- userCanShortAndFilterFeedbackByAnswered -->
+        <test-method signature="userCanShortAndFilterFeedbackByPending()[pri:0, instance:feedbackspagetesting.TestingOfFeedbackPage@795509d9]" started-at="2024-06-26T16:36:31 IST" name="userCanShortAndFilterFeedbackByPending" finished-at="2024-06-26T16:36:50 IST" duration-ms="18903" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- userCanShortAndFilterFeedbackByPending -->
+        <test-method signature="usersCanSeeAllTheFeedbackTheyHaveReceived()[pri:0, instance:feedbackspagetesting.TestingOfFeedbackPage@795509d9]" started-at="2024-06-26T16:36:50 IST" name="usersCanSeeAllTheFeedbackTheyHaveReceived" finished-at="2024-06-26T16:37:08 IST" duration-ms="18268" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- usersCanSeeAllTheFeedbackTheyHaveReceived -->
+      </class> <!-- feedbackspagetesting.TestingOfFeedbackPage -->
+    </test> <!-- feedbackspagetesting -->
+    <test started-at="2024-06-26T16:33:48 IST" name="goalpagetesting" finished-at="2024-06-26T16:38:03 IST" duration-ms="255444">
+      <class name="goalpagetesting.TestingOfGoalpage">
+        <test-method signature="userCanCreateGoalForTeam()[pri:0, instance:goalpagetesting.TestingOfGoalpage@350aac89]" started-at="2024-06-26T16:33:48 IST" name="userCanCreateGoalForTeam" finished-at="2024-06-26T16:34:19 IST" duration-ms="30682" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- userCanCreateGoalForTeam -->
+        <test-method signature="userCanCreateGoalForselfDevelopment()[pri:0, instance:goalpagetesting.TestingOfGoalpage@350aac89]" started-at="2024-06-26T16:34:19 IST" name="userCanCreateGoalForselfDevelopment" finished-at="2024-06-26T16:34:43 IST" duration-ms="24833" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- userCanCreateGoalForselfDevelopment -->
+        <test-method signature="userCanSetUpFollowupForGoal()[pri:0, instance:goalpagetesting.TestingOfGoalpage@350aac89]" started-at="2024-06-26T16:34:43 IST" name="userCanSetUpFollowupForGoal" finished-at="2024-06-26T16:35:41 IST" duration-ms="57710" status="FAIL">
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for visibility of element located by By.cssSelector: div[class='relative space-y-2'] button[type='button'] div[class='flex items-center gap-2 justify-center'] (tried for 20 second(s) with 500 milliseconds interval)
+Build info: version: '4.21.0', revision: '79ed462ef4'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '14.5', java.version: '17.0.11'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome-headless-shell, browserVersion: 126.0.6478.116, chrome: {chromedriverVersion: 126.0.6478.126 (d36ace6122e..., userDataDir: /var/folders/x9/xxt7kvhx1v7...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59051}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:59051/devtoo..., se:cdpVersion: 126.0.6478.116, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 00cefc182ef9aa9fccb419d6b5c1992b]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.cssSelector: div[class='relative space-y-2'] button[type='button'] div[class='flex items-center gap-2 justify-center'] (tried for 20 second(s) with 500 milliseconds interval)
+Build info: version: '4.21.0', revision: '79ed462ef4'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '14.5', java.version: '17.0.11'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome-headless-shell, browserVersion: 126.0.6478.116, chrome: {chromedriverVersion: 126.0.6478.126 (d36ace6122e..., userDataDir: /var/folders/x9/xxt7kvhx1v7...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59051}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:59051/devtoo..., se:cdpVersion: 126.0.6478.116, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 00cefc182ef9aa9fccb419d6b5c1992b
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+at goalpagetesting.TestingOfGoalpage.userCanSetUpFollowupForGoal(TestingOfGoalpage.java:431)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.access$000(SuiteRunner.java:28)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:418)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+at java.base/java.lang.Thread.run(Thread.java:840)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- userCanSetUpFollowupForGoal -->
+        <test-method signature="usersCanSeeAbandonedGoals()[pri:0, instance:goalpagetesting.TestingOfGoalpage@350aac89]" started-at="2024-06-26T16:35:41 IST" name="usersCanSeeAbandonedGoals" finished-at="2024-06-26T16:36:04 IST" duration-ms="23269" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- usersCanSeeAbandonedGoals -->
+        <test-method signature="usersCanSeeArchivedGoals()[pri:0, instance:goalpagetesting.TestingOfGoalpage@350aac89]" started-at="2024-06-26T16:36:04 IST" name="usersCanSeeArchivedGoals" finished-at="2024-06-26T16:36:28 IST" duration-ms="23281" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- usersCanSeeArchivedGoals -->
+        <test-method signature="usersCanSeeCompletedGoals()[pri:0, instance:goalpagetesting.TestingOfGoalpage@350aac89]" started-at="2024-06-26T16:36:28 IST" name="usersCanSeeCompletedGoals" finished-at="2024-06-26T16:36:51 IST" duration-ms="23146" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- usersCanSeeCompletedGoals -->
+        <test-method signature="usersCanSeeDelayedGoals()[pri:0, instance:goalpagetesting.TestingOfGoalpage@350aac89]" started-at="2024-06-26T16:36:51 IST" name="usersCanSeeDelayedGoals" finished-at="2024-06-26T16:37:14 IST" duration-ms="23491" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- usersCanSeeDelayedGoals -->
+        <test-method signature="usersCanSeeOnTrackGoals()[pri:0, instance:goalpagetesting.TestingOfGoalpage@350aac89]" started-at="2024-06-26T16:37:14 IST" name="usersCanSeeOnTrackGoals" finished-at="2024-06-26T16:37:38 IST" duration-ms="23655" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- usersCanSeeOnTrackGoals -->
+        <test-method signature="usersCanUpdateStatus()[pri:0, instance:goalpagetesting.TestingOfGoalpage@350aac89]" started-at="2024-06-26T16:37:38 IST" name="usersCanUpdateStatus" finished-at="2024-06-26T16:38:03 IST" duration-ms="25352" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- usersCanUpdateStatus -->
+      </class> <!-- goalpagetesting.TestingOfGoalpage -->
+    </test> <!-- goalpagetesting -->
+  </suite> <!-- Suite -->
 </testng-results>

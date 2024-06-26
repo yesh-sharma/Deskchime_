@@ -1,48 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite parallel= "tests" name="Suite">
+<suite parallel="tests" name="Suite">
 	<test thread-count="5" name="loginpagetesting">
 		<classes>
 			<class name="loginpagetesting.Testingofloginpage" />
-			
+
 		</classes>
 	</test> <!--Test -->
 	<test thread-count="5" name="signuppagetesting">
 		<classes>
-			
+
 			<class name="signuppagetesting.Signuppagetesting" />
-			
+
 		</classes>
 	</test> <!--Test -->
-	
-<test thread-count="5" name="feedbackspagetesting">
-		<classes>  
-			
-			
-			<class name="feedbackspagetesting.TestingOfFeedbackPage" />
-			
-		</classes>
-	</test> <!--Test -->
-<test thread-count="5" name="goalpagetesting">
+
+	<test thread-count="5" name="feedbackspagetesting">
 		<classes>
-		
+
+
+			<class name="feedbackspagetesting.TestingOfFeedbackPage" />
+
+		</classes>
+	</test> <!--Test -->
+	<test thread-count="5" name="goalpagetesting">
+		<classes>
+
 			<class name="goalpagetesting.TestingOfGoalpage" />
-		
+
 		</classes>
 	</test> <!--Test -->
 	<test thread-count="5" name="applaudpagetesting">
 		<classes>
-		
+
 			<class name="applaudpagetesting.Applaud" />
 		</classes>
 	</test> <!--Test -->
 
-<test thread-count="5" name="settingpagetesting">
+	<test thread-count="5" name="settingpagetesting">
 		<classes>
-		
+
 			<class name="settingpagetesting.Settingpage" />
 		</classes>
 	</test> <!--Test -->
+
+	<test thread-count="5" name="followupspagetesting">
+		<classes>
+
+			<class name="followupspagetesting.Followup1on1" />
+
+			<class name="followupspagetesting.Followuppage" />
+		</classes>
+	</test> <!--Test -->
+
+
 </suite> <!--Suite -->
 
  
