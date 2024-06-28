@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>feedbackspagetesting</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>7/1/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>6/2/0</td>
 </tr><tr>
-<td>Started on:</td><td>Wed Jun 26 16:33:48 IST 2024</td>
+<td>Started on:</td><td>Thu Jun 27 16:17:34 IST 2024</td>
 </tr>
-<tr><td>Total time:</td><td>200 seconds (200419 ms)</td>
+<tr><td>Total time:</td><td>430 seconds (430024 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,13 +75,65 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='feedbackspagetesting.TestingOfFeedbackPage.userCanAskForFeedbackFromWholeTeam()'><b>userCanAskForFeedbackFromWholeTeam</b><br>Test class: feedbackspagetesting.TestingOfFeedbackPage</td>
-<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.cssSelector: div[data-testid=&apos;memberList-1&apos;] (tried for 20 second(s) with 500 milliseconds interval)
-Build info: version: &apos;4.21.0&apos;, revision: &apos;79ed462ef4&apos;
+<td title='feedbackspagetesting.TestingOfFeedbackPage.userCanAskForFeedbackByExternalLink()'><b>userCanAskForFeedbackByExternalLink</b><br>Test class: feedbackspagetesting.TestingOfFeedbackPage</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //span[text()=&apos;Feedbacks&apos;] (tried for 20 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.22.0&apos;, revision: &apos;c5f3146703*&apos;
 System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;aarch64&apos;, os.version: &apos;14.5&apos;, java.version: &apos;17.0.11&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome-headless-shell, browserVersion: 126.0.6478.116, chrome: {chromedriverVersion: 126.0.6478.126 (d36ace6122e..., userDataDir: /var/folders/x9/xxt7kvhx1v7...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59131}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:59131/devtoo..., se:cdpVersion: 126.0.6478.116, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: b8f42f6060c0b7d15c7af4be7371cc74
+Capabilities {acceptInsecureCerts: false, browserName: chrome-headless-shell, browserVersion: 126.0.6478.127, chrome: {chromedriverVersion: 126.0.6478.126 (d36ace6122e..., userDataDir: /var/folders/x9/xxt7kvhx1v7...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51575}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:51575/devtoo..., se:cdpVersion: 126.0.6478.127, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: f3a4dc8f2cb1978ef9a1a4fae856ef35
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at feedbackspagetesting.TestingOfFeedbackPage.userCanAskForFeedbackByExternalLink(TestingOfFeedbackPage.java:399)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace906251364", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace906251364'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //span[text()=&apos;Feedbacks&apos;] (tried for 20 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.22.0&apos;, revision: &apos;c5f3146703*&apos;
+System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;aarch64&apos;, os.version: &apos;14.5&apos;, java.version: &apos;17.0.11&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome-headless-shell, browserVersion: 126.0.6478.127, chrome: {chromedriverVersion: 126.0.6478.126 (d36ace6122e..., userDataDir: /var/folders/x9/xxt7kvhx1v7...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51575}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:51575/devtoo..., se:cdpVersion: 126.0.6478.127, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: f3a4dc8f2cb1978ef9a1a4fae856ef35
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at feedbackspagetesting.TestingOfFeedbackPage.userCanAskForFeedbackByExternalLink(TestingOfFeedbackPage.java:399)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.access$000(SuiteRunner.java:28)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:418)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+</pre></div></td>
+<td>50</td>
+<td>feedbackspagetesting.TestingOfFeedbackPage@19e4653c</td></tr>
+<tr>
+<td title='feedbackspagetesting.TestingOfFeedbackPage.userCanAskForFeedbackFromWholeTeam()'><b>userCanAskForFeedbackFromWholeTeam</b><br>Test class: feedbackspagetesting.TestingOfFeedbackPage</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.cssSelector: div[data-testid=&apos;memberList-1&apos;] (tried for 20 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.22.0&apos;, revision: &apos;c5f3146703*&apos;
+System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;aarch64&apos;, os.version: &apos;14.5&apos;, java.version: &apos;17.0.11&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome-headless-shell, browserVersion: 126.0.6478.127, chrome: {chromedriverVersion: 126.0.6478.126 (d36ace6122e..., userDataDir: /var/folders/x9/xxt7kvhx1v7...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51671}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:51671/devtoo..., se:cdpVersion: 126.0.6478.127, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 025767c517422676c2acb77a416a1126
 	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
 	at feedbackspagetesting.TestingOfFeedbackPage.userCanAskForFeedbackFromWholeTeam(TestingOfFeedbackPage.java:282)
@@ -90,13 +142,13 @@ Session ID: b8f42f6060c0b7d15c7af4be7371cc74
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
 	at java.base/java.lang.Thread.run(Thread.java:840)
-... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace489357696", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace489357696'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.cssSelector: div[data-testid=&apos;memberList-1&apos;] (tried for 20 second(s) with 500 milliseconds interval)
-Build info: version: &apos;4.21.0&apos;, revision: &apos;79ed462ef4&apos;
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1620655433", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1620655433'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.cssSelector: div[data-testid=&apos;memberList-1&apos;] (tried for 20 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.22.0&apos;, revision: &apos;c5f3146703*&apos;
 System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;aarch64&apos;, os.version: &apos;14.5&apos;, java.version: &apos;17.0.11&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome-headless-shell, browserVersion: 126.0.6478.116, chrome: {chromedriverVersion: 126.0.6478.126 (d36ace6122e..., userDataDir: /var/folders/x9/xxt7kvhx1v7...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59131}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:59131/devtoo..., se:cdpVersion: 126.0.6478.116, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: b8f42f6060c0b7d15c7af4be7371cc74
+Capabilities {acceptInsecureCerts: false, browserName: chrome-headless-shell, browserVersion: 126.0.6478.127, chrome: {chromedriverVersion: 126.0.6478.126 (d36ace6122e..., userDataDir: /var/folders/x9/xxt7kvhx1v7...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51671}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:51671/devtoo..., se:cdpVersion: 126.0.6478.127, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 025767c517422676c2acb77a416a1126
 	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
 	at feedbackspagetesting.TestingOfFeedbackPage.userCanAskForFeedbackFromWholeTeam(TestingOfFeedbackPage.java:282)
@@ -124,8 +176,8 @@ Session ID: b8f42f6060c0b7d15c7af4be7371cc74
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
 	at java.base/java.lang.Thread.run(Thread.java:840)
 </pre></div></td>
-<td>52</td>
-<td>feedbackspagetesting.TestingOfFeedbackPage@795509d9</td></tr>
+<td>89</td>
+<td>feedbackspagetesting.TestingOfFeedbackPage@19e4653c</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
@@ -135,40 +187,35 @@ Session ID: b8f42f6060c0b7d15c7af4be7371cc74
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='feedbackspagetesting.TestingOfFeedbackPage.templateCreation()'><b>templateCreation</b><br>Test class: feedbackspagetesting.TestingOfFeedbackPage</td>
-<td></td>
-<td>25</td>
-<td>feedbackspagetesting.TestingOfFeedbackPage@795509d9</td></tr>
-<tr>
 <td title='feedbackspagetesting.TestingOfFeedbackPage.userCanShortAndFilterFeedbackByPending()'><b>userCanShortAndFilterFeedbackByPending</b><br>Test class: feedbackspagetesting.TestingOfFeedbackPage</td>
 <td></td>
-<td>18</td>
-<td>feedbackspagetesting.TestingOfFeedbackPage@795509d9</td></tr>
-<tr>
-<td title='feedbackspagetesting.TestingOfFeedbackPage.userCanAskForFeedbackFromSpecificTeamMember()'><b>userCanAskForFeedbackFromSpecificTeamMember</b><br>Test class: feedbackspagetesting.TestingOfFeedbackPage</td>
-<td></td>
-<td>21</td>
-<td>feedbackspagetesting.TestingOfFeedbackPage@795509d9</td></tr>
+<td>34</td>
+<td>feedbackspagetesting.TestingOfFeedbackPage@19e4653c</td></tr>
 <tr>
 <td title='feedbackspagetesting.TestingOfFeedbackPage.userCanMaKEUseOfPreMadeFeedbackTemplate()'><b>userCanMaKEUseOfPreMadeFeedbackTemplate</b><br>Test class: feedbackspagetesting.TestingOfFeedbackPage</td>
 <td></td>
-<td>23</td>
-<td>feedbackspagetesting.TestingOfFeedbackPage@795509d9</td></tr>
-<tr>
-<td title='feedbackspagetesting.TestingOfFeedbackPage.usersCanSeeAllTheFeedbackTheyHaveReceived()'><b>usersCanSeeAllTheFeedbackTheyHaveReceived</b><br>Test class: feedbackspagetesting.TestingOfFeedbackPage</td>
-<td></td>
-<td>18</td>
-<td>feedbackspagetesting.TestingOfFeedbackPage@795509d9</td></tr>
+<td>63</td>
+<td>feedbackspagetesting.TestingOfFeedbackPage@19e4653c</td></tr>
 <tr>
 <td title='feedbackspagetesting.TestingOfFeedbackPage.userCanShortAndFilterFeedbackByAnswered()'><b>userCanShortAndFilterFeedbackByAnswered</b><br>Test class: feedbackspagetesting.TestingOfFeedbackPage</td>
 <td></td>
-<td>18</td>
-<td>feedbackspagetesting.TestingOfFeedbackPage@795509d9</td></tr>
+<td>49</td>
+<td>feedbackspagetesting.TestingOfFeedbackPage@19e4653c</td></tr>
 <tr>
-<td title='feedbackspagetesting.TestingOfFeedbackPage.userCanAskForFeedbackByExternalLink()'><b>userCanAskForFeedbackByExternalLink</b><br>Test class: feedbackspagetesting.TestingOfFeedbackPage</td>
+<td title='feedbackspagetesting.TestingOfFeedbackPage.templateCreation()'><b>templateCreation</b><br>Test class: feedbackspagetesting.TestingOfFeedbackPage</td>
 <td></td>
-<td>22</td>
-<td>feedbackspagetesting.TestingOfFeedbackPage@795509d9</td></tr>
+<td>64</td>
+<td>feedbackspagetesting.TestingOfFeedbackPage@19e4653c</td></tr>
+<tr>
+<td title='feedbackspagetesting.TestingOfFeedbackPage.userCanAskForFeedbackFromSpecificTeamMember()'><b>userCanAskForFeedbackFromSpecificTeamMember</b><br>Test class: feedbackspagetesting.TestingOfFeedbackPage</td>
+<td></td>
+<td>48</td>
+<td>feedbackspagetesting.TestingOfFeedbackPage@19e4653c</td></tr>
+<tr>
+<td title='feedbackspagetesting.TestingOfFeedbackPage.usersCanSeeAllTheFeedbackTheyHaveReceived()'><b>usersCanSeeAllTheFeedbackTheyHaveReceived</b><br>Test class: feedbackspagetesting.TestingOfFeedbackPage</td>
+<td></td>
+<td>30</td>
+<td>feedbackspagetesting.TestingOfFeedbackPage@19e4653c</td></tr>
 </table><p>
 </body>
 </html>

@@ -9,14 +9,15 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import loginpagetesting.ChromeOptionsConfig;
 import loginpagetesting.Login;
-@Test
+
 public class Followup1on1 {
-@BeforeTest
+
 	public void create1on1() throws InterruptedException {
 
 		WebDriver driver = new ChromeDriver(ChromeOptionsConfig.getChromeOptions());
@@ -141,7 +142,7 @@ public class Followup1on1 {
 
 	}
 
-
+	@Test
 	public void userCanDelete1on1Meeting() throws InterruptedException {
 
 		WebDriver driver = new ChromeDriver(ChromeOptionsConfig.getChromeOptions());
