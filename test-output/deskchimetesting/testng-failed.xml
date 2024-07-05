@@ -5,10 +5,8 @@
     <classes>
       <class name="applaudpagetesting.Applaud">
         <methods>
-          <include name="seeReceivedApplauds"/>
           <include name="sendApplaud"/>
           <include name="seeSentApplauds"/>
-          <include name="useMonthFilter"/>
         </methods>
       </class> <!-- applaudpagetesting.Applaud -->
     </classes>
