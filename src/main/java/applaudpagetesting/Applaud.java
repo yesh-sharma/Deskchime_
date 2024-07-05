@@ -39,7 +39,7 @@ public class Applaud {
 
 		element.click();
 
-		// click on create
+	
 		WebElement element2 = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(
 				"//button[@class='rounded-lg w-fit tracking-[0.5px] font-medium flex items-center gap-2 justify-center transition-all duration-200 ease-in-out disabled:cursor-default bg-teal-500 text-white hover:bg-teal-400 active:bg-teal-300 disabled:bg-zinc-400 h-10 px-3 py-2 text-sm relative']")));
 		element2.click();
