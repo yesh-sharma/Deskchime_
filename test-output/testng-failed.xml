@@ -1,44 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite parallel="tests" name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" parallel="tests" name="settingpagetesting(failed)">
+<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="settingpagetesting.Settingpage">
+      <class name="applaudpagetesting.Applaud">
         <methods>
-          <include name="userCreatedAndDeletedSuccessfully"/>
+          <include name="sendApplaud"/>
         </methods>
-      </class> <!-- settingpagetesting.Settingpage -->
+      </class> <!-- applaudpagetesting.Applaud -->
     </classes>
-  </test> <!-- settingpagetesting(failed) -->
-  <test thread-count="5" parallel="tests" name="feedbackspagetesting(failed)">
-    <classes>
-      <class name="feedbackspagetesting.TestingOfFeedbackPage">
-        <methods>
-          <include name="userCanAskForFeedbackFromWholeTeam"/>
-        </methods>
-      </class> <!-- feedbackspagetesting.TestingOfFeedbackPage -->
-    </classes>
-  </test> <!-- feedbackspagetesting(failed) -->
-  <test thread-count="5" parallel="tests" name="followupspagetesting(failed)">
-    <classes>
-      <class name="followupspagetesting.Followup1on1">
-        <methods>
-          <include name="userCanDelete1on1Meeting"/>
-          <include name="create1on1"/>
-          <include name="create1on1WithoutSpecifyDateandtime"/>
-        </methods>
-      </class> <!-- followupspagetesting.Followup1on1 -->
-    </classes>
-  </test> <!-- followupspagetesting(failed) -->
-  <test thread-count="5" parallel="tests" name="goalpagetesting(failed)">
-    <classes>
-      <class name="goalpagetesting.TestingOfGoalpage">
-        <methods>
-          <include name="userCanCreateGoalForTeam"/>
-          <include name="userCanSetUpFollowupForGoal"/>
-          <include name="usersCanUpdateStatus"/>
-        </methods>
-      </class> <!-- goalpagetesting.TestingOfGoalpage -->
-    </classes>
-  </test> <!-- goalpagetesting(failed) -->
-</suite> <!-- Failed suite [Suite] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

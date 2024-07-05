@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="followupspagetesting.Followup1on1">
+      <class name="applaudpagetesting.Applaud">
         <methods>
-          <include name="create1on1WithoutSpecifyDateandtime"/>
+          <include name="sendApplaud"/>
         </methods>
-      </class> <!-- followupspagetesting.Followup1on1 -->
+      </class> <!-- applaudpagetesting.Applaud -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
