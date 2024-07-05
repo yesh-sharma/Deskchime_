@@ -47,7 +47,7 @@ public class Applaud {
 
 		driver.findElement(By.id("user_id")).click();
 		driver.findElement(By.xpath("/html/body/div[2]/div/div/div[2]/div/div/div/div[2]/div")).click();
-		// enter category
+	
 		driver.findElement(By
 				.xpath("/html/body/div[1]/div/div/main/div/div/div/form/div/div[2]/div/div/div[2]/div/div/div/div/div"))
 				.click();
