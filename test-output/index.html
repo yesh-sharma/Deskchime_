@@ -26,7 +26,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+      <span class="top-banner-font-1">1 suite, 2 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -51,7 +51,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-deskchimetesting" class="navigator-link ">
-                    <span>applaud.xml</span>
+                    <span>goal.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -93,7 +93,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">6 methods, 1 failed,  2 skipped,  3 passed</span>
+                    <span class="method-stats">13 methods, 2 failed,  4 skipped,  7 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title failed">Failed methods</span>
@@ -104,7 +104,12 @@
                     <div class="method-list-content failed suite-deskchimetesting">
                       <span>
                         <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-deskchimetesting" title="applaudpagetesting.Applaud" class="method navigator-link" hash-for-method="seeSentApplauds">seeSentApplauds</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-deskchimetesting" title="goalpagetesting.TestingOfGoalpage" class="method navigator-link" hash-for-method="userCanCreateGoalForTeam">userCanCreateGoalForTeam</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-deskchimetesting" title="goalpagetesting.TestingOfGoalpage" class="method navigator-link" hash-for-method="userCanSetUpFollowupForGoal">userCanSetUpFollowupForGoal</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-deskchimetesting -->
@@ -118,12 +123,22 @@
                     <div class="method-list-content skipped suite-deskchimetesting">
                       <span>
                         <img src="skipped.png" width="3%"/>
-                        <a href="#" panel-name="suite-deskchimetesting" title="applaudpagetesting.Applaud" class="method navigator-link" hash-for-method="sendApplaud">sendApplaud</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-deskchimetesting" title="goalpagetesting.TestingOfGoalpage" class="method navigator-link" hash-for-method="userCanCreateGoalForTeam">userCanCreateGoalForTeam</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="skipped.png" width="3%"/>
-                        <a href="#" panel-name="suite-deskchimetesting" title="applaudpagetesting.Applaud" class="method navigator-link" hash-for-method="sendApplaud">sendApplaud</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-deskchimetesting" title="goalpagetesting.TestingOfGoalpage" class="method navigator-link" hash-for-method="userCanCreateGoalForTeam">userCanCreateGoalForTeam</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-deskchimetesting" title="goalpagetesting.TestingOfGoalpage" class="method navigator-link" hash-for-method="userCanSetUpFollowupForGoal">userCanSetUpFollowupForGoal</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-deskchimetesting" title="goalpagetesting.TestingOfGoalpage" class="method navigator-link" hash-for-method="userCanSetUpFollowupForGoal">userCanSetUpFollowupForGoal</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content skipped suite-deskchimetesting -->
@@ -137,17 +152,37 @@
                     <div class="method-list-content passed suite-deskchimetesting">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-deskchimetesting" title="applaudpagetesting.Applaud" class="method navigator-link" hash-for-method="seeReceivedApplauds">seeReceivedApplauds</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-deskchimetesting" title="goalpagetesting.TestingOfGoalpage" class="method navigator-link" hash-for-method="userCanCreateGoalForselfDevelopment">userCanCreateGoalForselfDevelopment</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-deskchimetesting" title="applaudpagetesting.Applaud" class="method navigator-link" hash-for-method="sendApplaud">sendApplaud</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-deskchimetesting" title="goalpagetesting.TestingOfGoalpage" class="method navigator-link" hash-for-method="usersCanSeeAbandonedGoals">usersCanSeeAbandonedGoals</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-deskchimetesting" title="applaudpagetesting.Applaud" class="method navigator-link" hash-for-method="useMonthFilter">useMonthFilter</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-deskchimetesting" title="goalpagetesting.TestingOfGoalpage" class="method navigator-link" hash-for-method="usersCanSeeArchivedGoals">usersCanSeeArchivedGoals</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-deskchimetesting" title="goalpagetesting.TestingOfGoalpage" class="method navigator-link" hash-for-method="usersCanSeeCompletedGoals">usersCanSeeCompletedGoals</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-deskchimetesting" title="goalpagetesting.TestingOfGoalpage" class="method navigator-link" hash-for-method="usersCanSeeDelayedGoals">usersCanSeeDelayedGoals</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-deskchimetesting" title="goalpagetesting.TestingOfGoalpage" class="method navigator-link" hash-for-method="usersCanSeeOnTrackGoals">usersCanSeeOnTrackGoals</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-deskchimetesting" title="goalpagetesting.TestingOfGoalpage" class="method navigator-link" hash-for-method="usersCanUpdateStatus">usersCanUpdateStatus</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-deskchimetesting -->
@@ -165,23 +200,42 @@
           <div class="suite-deskchimetesting-class-failed">
             <div class="main-panel-header rounded-window-top">
               <img src="failed.png"/>
-              <span class="class-name">applaudpagetesting.Applaud</span>
+              <span class="class-name">goalpagetesting.TestingOfGoalpage</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="seeSentApplauds">
-                  </a> <!-- seeSentApplauds -->
-                  <span class="method-name">seeSentApplauds</span>
-                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //span[normalize-space()=&apos;Applaud&apos;] (tried for 15 second(s) with 500 milliseconds interval)
+                  <a name="userCanCreateGoalForTeam">
+                  </a> <!-- userCanCreateGoalForTeam -->
+                  <span class="method-name">userCanCreateGoalForTeam</span>
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //div[contains(text(),&apos;yash&apos;)] (tried for 20 second(s) with 500 milliseconds interval)
 Build info: version: &apos;4.22.0&apos;, revision: &apos;c5f3146703*&apos;
 System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;aarch64&apos;, os.version: &apos;14.5&apos;, java.version: &apos;17.0.11&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome-headless-shell, browserVersion: 126.0.6478.127, chrome: {chromedriverVersion: 126.0.6478.126 (d36ace6122e..., userDataDir: /var/folders/x9/xxt7kvhx1v7...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52925}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:52925/devtoo..., se:cdpVersion: 126.0.6478.127, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 1fa106d70409cadf372141fbe99743cd
+Capabilities {acceptInsecureCerts: false, browserName: chrome-headless-shell, browserVersion: 126.0.6478.127, chrome: {chromedriverVersion: 126.0.6478.126 (d36ace6122e..., userDataDir: /var/folders/x9/xxt7kvhx1v7...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53369}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:53369/devtoo..., se:cdpVersion: 126.0.6478.127, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 6a3381a9c40ab61247b721a03e2e7bf9
 	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-	at applaudpagetesting.Applaud.seeSentApplauds(Applaud.java:130)
+	at goalpagetesting.TestingOfGoalpage.userCanCreateGoalForTeam(TestingOfGoalpage.java:106)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 27 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="userCanSetUpFollowupForGoal">
+                  </a> <!-- userCanSetUpFollowupForGoal -->
+                  <span class="method-name">userCanSetUpFollowupForGoal</span>
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //div[contains(text(),&apos;yash&apos;)] (tried for 20 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.22.0&apos;, revision: &apos;c5f3146703*&apos;
+System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;aarch64&apos;, os.version: &apos;14.5&apos;, java.version: &apos;17.0.11&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome-headless-shell, browserVersion: 126.0.6478.127, chrome: {chromedriverVersion: 126.0.6478.126 (d36ace6122e..., userDataDir: /var/folders/x9/xxt7kvhx1v7...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53641}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:53641/devtoo..., se:cdpVersion: 126.0.6478.127, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 45521a0fba3171a8d01e072f7403995c
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at goalpagetesting.TestingOfGoalpage.userCanSetUpFollowupForGoal(TestingOfGoalpage.java:331)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 ... Removed 27 stack frames
 </div> <!-- stack-trace -->
@@ -192,66 +246,82 @@ Session ID: 1fa106d70409cadf372141fbe99743cd
           <div class="suite-deskchimetesting-class-skipped">
             <div class="main-panel-header rounded-window-top">
               <img src="skipped.png"/>
-              <span class="class-name">applaudpagetesting.Applaud</span>
+              <span class="class-name">goalpagetesting.TestingOfGoalpage</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="sendApplaud">
-                  </a> <!-- sendApplaud -->
-                  <span class="method-name">sendApplaud</span>
-                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;#user_id&quot;}
-  (Session info: chrome-headless-shell=126.0.6478.127)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+                  <a name="userCanCreateGoalForTeam">
+                  </a> <!-- userCanCreateGoalForTeam -->
+                  <span class="method-name">userCanCreateGoalForTeam</span>
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //div[contains(text(),&apos;yash&apos;)] (tried for 20 second(s) with 500 milliseconds interval)
 Build info: version: &apos;4.22.0&apos;, revision: &apos;c5f3146703*&apos;
 System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;aarch64&apos;, os.version: &apos;14.5&apos;, java.version: &apos;17.0.11&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [f879f1d790928753759fe063cdb94649, findElement {value=user_id, using=id}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome-headless-shell, browserVersion: 126.0.6478.127, chrome: {chromedriverVersion: 126.0.6478.126 (d36ace6122e..., userDataDir: /var/folders/x9/xxt7kvhx1v7...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52939}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:52939/devtoo..., se:cdpVersion: 126.0.6478.127, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: f879f1d790928753759fe063cdb94649
-	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:66)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
-	at applaudpagetesting.Applaud.sendApplaud(Applaud.java:48)
+Capabilities {acceptInsecureCerts: false, browserName: chrome-headless-shell, browserVersion: 126.0.6478.127, chrome: {chromedriverVersion: 126.0.6478.126 (d36ace6122e..., userDataDir: /var/folders/x9/xxt7kvhx1v7...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53274}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:53274/devtoo..., se:cdpVersion: 126.0.6478.127, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 90d84a9c04b7fe145d2db214912fec25
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at goalpagetesting.TestingOfGoalpage.userCanCreateGoalForTeam(TestingOfGoalpage.java:106)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 32 stack frames
+... Removed 27 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="sendApplaud">
-                  </a> <!-- sendApplaud -->
-                  <span class="method-name">sendApplaud</span>
-                  <div class="stack-trace">org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;span title=&quot;The one who links, restates, concludes, and summarizes.&quot;&gt;...&lt;/span&gt; is not clickable at point (732, 330). Other element would receive the click: &lt;div class=&quot;ant-select-item ant-select-item-group&quot; title=&quot;...&quot;&gt;Task-oriented Roles&lt;/div&gt;
-  (Session info: chrome-headless-shell=126.0.6478.127)
+                  <a name="userCanCreateGoalForTeam">
+                  </a> <!-- userCanCreateGoalForTeam -->
+                  <span class="method-name">userCanCreateGoalForTeam</span>
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //div[contains(text(),&apos;yash&apos;)] (tried for 20 second(s) with 500 milliseconds interval)
 Build info: version: &apos;4.22.0&apos;, revision: &apos;c5f3146703*&apos;
 System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;aarch64&apos;, os.version: &apos;14.5&apos;, java.version: &apos;17.0.11&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [199a69fe165fbd50dbb127f562b043b0, clickElement {id=f.14F959CD72D1561CCC20A0A9668DD8CF.d.FFDEC90B206ACD606F397F96057DECB6.e.86}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome-headless-shell, browserVersion: 126.0.6478.127, chrome: {chromedriverVersion: 126.0.6478.126 (d36ace6122e..., userDataDir: /var/folders/x9/xxt7kvhx1v7...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52951}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:52951/devtoo..., se:cdpVersion: 126.0.6478.127, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome-headless-shell on mac (199a69fe165fbd50dbb127f562b043b0)] -&gt; xpath: /html/body/div[3]/div/div/div[2]/div[1]/div/div/div[5]/div/span]
-Session ID: 199a69fe165fbd50dbb127f562b043b0
-	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
-	at applaudpagetesting.Applaud.sendApplaud(Applaud.java:54)
+Capabilities {acceptInsecureCerts: false, browserName: chrome-headless-shell, browserVersion: 126.0.6478.127, chrome: {chromedriverVersion: 126.0.6478.126 (d36ace6122e..., userDataDir: /var/folders/x9/xxt7kvhx1v7...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53245}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:53245/devtoo..., se:cdpVersion: 126.0.6478.127, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 3437e1af9a7b2608445a42e6fa5f187d
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at goalpagetesting.TestingOfGoalpage.userCanCreateGoalForTeam(TestingOfGoalpage.java:106)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 32 stack frames
+... Removed 27 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="userCanSetUpFollowupForGoal">
+                  </a> <!-- userCanSetUpFollowupForGoal -->
+                  <span class="method-name">userCanSetUpFollowupForGoal</span>
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //div[contains(text(),&apos;yash&apos;)] (tried for 20 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.22.0&apos;, revision: &apos;c5f3146703*&apos;
+System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;aarch64&apos;, os.version: &apos;14.5&apos;, java.version: &apos;17.0.11&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome-headless-shell, browserVersion: 126.0.6478.127, chrome: {chromedriverVersion: 126.0.6478.126 (d36ace6122e..., userDataDir: /var/folders/x9/xxt7kvhx1v7...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53568}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:53568/devtoo..., se:cdpVersion: 126.0.6478.127, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: a14a3e98b0d337dc0a1eccb887616afa
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at goalpagetesting.TestingOfGoalpage.userCanSetUpFollowupForGoal(TestingOfGoalpage.java:331)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 27 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="userCanSetUpFollowupForGoal">
+                  </a> <!-- userCanSetUpFollowupForGoal -->
+                  <span class="method-name">userCanSetUpFollowupForGoal</span>
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //div[contains(text(),&apos;yash&apos;)] (tried for 20 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.22.0&apos;, revision: &apos;c5f3146703*&apos;
+System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;aarch64&apos;, os.version: &apos;14.5&apos;, java.version: &apos;17.0.11&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome-headless-shell, browserVersion: 126.0.6478.127, chrome: {chromedriverVersion: 126.0.6478.126 (d36ace6122e..., userDataDir: /var/folders/x9/xxt7kvhx1v7...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53514}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:53514/devtoo..., se:cdpVersion: 126.0.6478.127, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 19b6361248e6ad3d35eb0747cfd505d9
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at goalpagetesting.TestingOfGoalpage.userCanSetUpFollowupForGoal(TestingOfGoalpage.java:331)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 27 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
@@ -260,28 +330,56 @@ Session ID: 199a69fe165fbd50dbb127f562b043b0
           <div class="suite-deskchimetesting-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">applaudpagetesting.Applaud</span>
+              <span class="class-name">goalpagetesting.TestingOfGoalpage</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="seeReceivedApplauds">
-                  </a> <!-- seeReceivedApplauds -->
-                  <span class="method-name">seeReceivedApplauds</span>
+                  <a name="userCanCreateGoalForselfDevelopment">
+                  </a> <!-- userCanCreateGoalForselfDevelopment -->
+                  <span class="method-name">userCanCreateGoalForselfDevelopment</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="sendApplaud">
-                  </a> <!-- sendApplaud -->
-                  <span class="method-name">sendApplaud</span>
+                  <a name="usersCanSeeAbandonedGoals">
+                  </a> <!-- usersCanSeeAbandonedGoals -->
+                  <span class="method-name">usersCanSeeAbandonedGoals</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="useMonthFilter">
-                  </a> <!-- useMonthFilter -->
-                  <span class="method-name">useMonthFilter</span>
+                  <a name="usersCanSeeArchivedGoals">
+                  </a> <!-- usersCanSeeArchivedGoals -->
+                  <span class="method-name">usersCanSeeArchivedGoals</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="usersCanSeeCompletedGoals">
+                  </a> <!-- usersCanSeeCompletedGoals -->
+                  <span class="method-name">usersCanSeeCompletedGoals</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="usersCanSeeDelayedGoals">
+                  </a> <!-- usersCanSeeDelayedGoals -->
+                  <span class="method-name">usersCanSeeDelayedGoals</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="usersCanSeeOnTrackGoals">
+                  </a> <!-- usersCanSeeOnTrackGoals -->
+                  <span class="method-name">usersCanSeeOnTrackGoals</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="usersCanUpdateStatus">
+                  </a> <!-- usersCanUpdateStatus -->
+                  <span class="method-name">usersCanUpdateStatus</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -289,18 +387,18 @@ Session ID: 199a69fe165fbd50dbb127f562b043b0
         </div> <!-- panel deskchimetesting -->
         <div panel-name="test-xml-deskchimetesting" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">/Users/yeshsharma/Downloads/Deskchime_-Yesh/testsuites/applaud.xml</span>
+            <span class="header-content">/Users/yeshsharma/Downloads/Deskchime_-Yesh/testsuites/goal.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite name=&quot;deskchimetesting&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
-  &lt;test thread-count=&quot;5&quot; name=&quot;applaudtesting&quot;&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;goalpagetesting&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;applaudpagetesting.Applaud&quot;/&gt;
+      &lt;class name=&quot;goalpagetesting.TestingOfGoalpage&quot;/&gt;
     &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- applaudtesting --&gt;
+  &lt;/test&gt; &lt;!-- goalpagetesting --&gt;
 &lt;/suite&gt; &lt;!-- deskchimetesting --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -312,7 +410,7 @@ Session ID: 199a69fe165fbd50dbb127f562b043b0
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">applaudtesting (1 class)</span>
+                <span class="test-name">goalpagetesting (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -338,36 +436,64 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(6);
+data.addRows(13);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'sendApplaud')
-data.setCell(0, 2, 'applaudpagetesting.Applaud')
-data.setCell(0, 3, 53943);
+data.setCell(0, 1, 'userCanCreateGoalForTeam')
+data.setCell(0, 2, 'goalpagetesting.TestingOfGoalpage')
+data.setCell(0, 3, 51764);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'seeSentApplauds')
-data.setCell(1, 2, 'applaudpagetesting.Applaud')
-data.setCell(1, 3, 45868);
+data.setCell(1, 1, 'userCanSetUpFollowupForGoal')
+data.setCell(1, 2, 'goalpagetesting.TestingOfGoalpage')
+data.setCell(1, 3, 51711);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'sendApplaud')
-data.setCell(2, 2, 'applaudpagetesting.Applaud')
-data.setCell(2, 3, 26532);
+data.setCell(2, 1, 'userCanSetUpFollowupForGoal')
+data.setCell(2, 2, 'goalpagetesting.TestingOfGoalpage')
+data.setCell(2, 3, 51266);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'seeReceivedApplauds')
-data.setCell(3, 2, 'applaudpagetesting.Applaud')
-data.setCell(3, 3, 26237);
+data.setCell(3, 1, 'userCanCreateGoalForTeam')
+data.setCell(3, 2, 'goalpagetesting.TestingOfGoalpage')
+data.setCell(3, 3, 50505);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'sendApplaud')
-data.setCell(4, 2, 'applaudpagetesting.Applaud')
-data.setCell(4, 3, 25156);
+data.setCell(4, 1, 'userCanSetUpFollowupForGoal')
+data.setCell(4, 2, 'goalpagetesting.TestingOfGoalpage')
+data.setCell(4, 3, 50241);
 data.setCell(5, 0, 5)
-data.setCell(5, 1, 'useMonthFilter')
-data.setCell(5, 2, 'applaudpagetesting.Applaud')
-data.setCell(5, 3, 25001);
+data.setCell(5, 1, 'userCanCreateGoalForTeam')
+data.setCell(5, 2, 'goalpagetesting.TestingOfGoalpage')
+data.setCell(5, 3, 49977);
+data.setCell(6, 0, 6)
+data.setCell(6, 1, 'usersCanUpdateStatus')
+data.setCell(6, 2, 'goalpagetesting.TestingOfGoalpage')
+data.setCell(6, 3, 25916);
+data.setCell(7, 0, 7)
+data.setCell(7, 1, 'userCanCreateGoalForselfDevelopment')
+data.setCell(7, 2, 'goalpagetesting.TestingOfGoalpage')
+data.setCell(7, 3, 24503);
+data.setCell(8, 0, 8)
+data.setCell(8, 1, 'usersCanSeeCompletedGoals')
+data.setCell(8, 2, 'goalpagetesting.TestingOfGoalpage')
+data.setCell(8, 3, 24028);
+data.setCell(9, 0, 9)
+data.setCell(9, 1, 'usersCanSeeOnTrackGoals')
+data.setCell(9, 2, 'goalpagetesting.TestingOfGoalpage')
+data.setCell(9, 3, 23985);
+data.setCell(10, 0, 10)
+data.setCell(10, 1, 'usersCanSeeArchivedGoals')
+data.setCell(10, 2, 'goalpagetesting.TestingOfGoalpage')
+data.setCell(10, 3, 23953);
+data.setCell(11, 0, 11)
+data.setCell(11, 1, 'usersCanSeeDelayedGoals')
+data.setCell(11, 2, 'goalpagetesting.TestingOfGoalpage')
+data.setCell(11, 3, 23909);
+data.setCell(12, 0, 12)
+data.setCell(12, 1, 'usersCanSeeAbandonedGoals')
+data.setCell(12, 2, 'goalpagetesting.TestingOfGoalpage')
+data.setCell(12, 3, 23744);
 window.suiteTableData['deskchimetesting']= { tableData: data, tableDiv: 'times-div-deskchimetesting'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 3 minutes</span>
+              <span class="suite-total-time">Total running time: 7 minutes</span>
               <div id="times-div-deskchimetesting">
               </div> <!-- times-div-deskchimetesting -->
             </div> <!-- times-div -->
@@ -393,32 +519,62 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">applaudpagetesting.Applaud</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">goalpagetesting.TestingOfGoalpage</div> <!-- chronological-class-name -->
               <div class="test-method">
-                <span class="method-name">seeReceivedApplauds</span>
+                <span class="method-name">userCanCreateGoalForTeam</span>
                 <span class="method-start">0 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">userCanCreateGoalForTeam</span>
+                <span class="method-start">50511 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">seeSentApplauds</span>
-                <span class="method-start">26239 ms</span>
+                <span class="method-name">userCanCreateGoalForTeam</span>
+                <span class="method-start">100492 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">sendApplaud</span>
-                <span class="method-start">72110 ms</span>
+                <span class="method-name">userCanCreateGoalForselfDevelopment</span>
+                <span class="method-start">152262 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">sendApplaud</span>
-                <span class="method-start">126056 ms</span>
+                <span class="method-name">userCanSetUpFollowupForGoal</span>
+                <span class="method-start">176766 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">sendApplaud</span>
-                <span class="method-start">152592 ms</span>
+                <span class="method-name">userCanSetUpFollowupForGoal</span>
+                <span class="method-start">227010 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">useMonthFilter</span>
-                <span class="method-start">177749 ms</span>
+                <img src="failed.png">
+                </img>
+                <span class="method-name">userCanSetUpFollowupForGoal</span>
+                <span class="method-start">278279 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">usersCanSeeAbandonedGoals</span>
+                <span class="method-start">329995 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">usersCanSeeArchivedGoals</span>
+                <span class="method-start">353740 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">usersCanSeeCompletedGoals</span>
+                <span class="method-start">377694 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">usersCanSeeDelayedGoals</span>
+                <span class="method-start">401723 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">usersCanSeeOnTrackGoals</span>
+                <span class="method-start">425634 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">usersCanUpdateStatus</span>
+                <span class="method-start">449620 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

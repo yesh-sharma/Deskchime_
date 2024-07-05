@@ -4,6 +4,7 @@
 	<test thread-count="5" name="followuptesting">
 		<classes>
 			<class name="followupspagetesting.Followuppage" />
+				<class name="followupspagetesting.Followup1on1" />
 		</classes>
 	</test> <!--
 	Test -->
