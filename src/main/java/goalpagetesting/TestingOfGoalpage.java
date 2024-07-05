@@ -20,7 +20,8 @@ import org.testng.annotations.Test;
 
 import loginpagetesting.ChromeOptionsConfig;
 import loginpagetesting.Login;
-@Test
+import retryanalyzer.RetryAnalyzer;
+@Test(retryAnalyzer = RetryAnalyzer.class)
 public class TestingOfGoalpage {
 
 	public void userCanCreateGoalForselfDevelopment() throws InterruptedException {

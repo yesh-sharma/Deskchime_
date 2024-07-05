@@ -16,9 +16,11 @@ import org.testng.annotations.Test;
 
 import loginpagetesting.ChromeOptionsConfig;
 import loginpagetesting.Login;
+import retryanalyzer.RetryAnalyzer;
+
 import org.openqa.selenium.Keys;
 
-@Test
+@Test(retryAnalyzer = RetryAnalyzer.class)
 public class TestingOfFeedbackPage {
 
 	public void templateCreation() throws InterruptedException {

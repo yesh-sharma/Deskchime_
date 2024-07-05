@@ -15,8 +15,9 @@ import org.testng.annotations.Test;
 
 import loginpagetesting.ChromeOptionsConfig;
 import loginpagetesting.Login;
+import retryanalyzer.RetryAnalyzer;
 
-@Test
+@Test(retryAnalyzer = RetryAnalyzer.class)
 public class Followuppage {
 
 	public void followuppage() throws InterruptedException {

@@ -13,11 +13,11 @@ import org.testng.annotations.Test;
 
 import loginpagetesting.ChromeOptionsConfig;
 import loginpagetesting.Login;
+import retryanalyzer.RetryAnalyzer;
 
 @Test
-
 public class Applaud {
-
+	@Test(retryAnalyzer = RetryAnalyzer.class)
 	public void sendApplaud() throws InterruptedException {
 
 		WebDriver driver = new ChromeDriver(ChromeOptionsConfig.getChromeOptions());

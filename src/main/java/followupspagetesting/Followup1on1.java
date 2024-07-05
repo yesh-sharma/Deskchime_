@@ -9,13 +9,14 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeTest;
+
 import org.testng.annotations.Test;
 
 import loginpagetesting.ChromeOptionsConfig;
 import loginpagetesting.Login;
+import retryanalyzer.RetryAnalyzer;
 
+@Test(retryAnalyzer = RetryAnalyzer.class)
 public class Followup1on1 {
 
 	public void create1on1() throws InterruptedException {
@@ -142,7 +143,7 @@ public class Followup1on1 {
 
 	}
 
-	@Test
+	
 	public void userCanDelete1on1Meeting() throws InterruptedException {
 
 		WebDriver driver = new ChromeDriver(ChromeOptionsConfig.getChromeOptions());
@@ -182,6 +183,7 @@ public class Followup1on1 {
 
 	}
 	
+
 	
 	public void create1on1WithoutSpecifyDateandtime() throws InterruptedException {
 
@@ -216,10 +218,10 @@ public class Followup1on1 {
 
 		element3.click();
 
+
 		WebElement element4 = wait
 				.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".ant-picker-today-btn")));
 		element4.click();
-
 		
 		WebElement element5 = wait
 				.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[contains(text(),'Next')]")));

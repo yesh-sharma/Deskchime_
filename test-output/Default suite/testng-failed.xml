@@ -5,7 +5,7 @@
     <classes>
       <class name="followupspagetesting.Followup1on1">
         <methods>
-          <include name="userCanDelete1on1Meeting"/>
+          <include name="create1on1WithoutSpecifyDateandtime"/>
         </methods>
       </class> <!-- followupspagetesting.Followup1on1 -->
     </classes>

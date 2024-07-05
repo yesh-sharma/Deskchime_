@@ -17,12 +17,13 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import org.testng.annotations.Test;
 
-import ch.qos.logback.core.joran.action.Action;
+
 import loginpagetesting.ChromeOptionsConfig;
 import loginpagetesting.Login;
-
+import retryanalyzer.RetryAnalyzer;
+@Test(retryAnalyzer = RetryAnalyzer.class)
 public class Settingpage {
-	@Test
+	
 	public void userCreatedAndDeletedSuccessfully() throws InterruptedException {
 		WebDriver driver = new ChromeDriver(ChromeOptionsConfig.getChromeOptions());
 

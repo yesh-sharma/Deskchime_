@@ -10,26 +10,22 @@
       </class> <!-- settingpagetesting.Settingpage -->
     </classes>
   </test> <!-- settingpagetesting(failed) -->
-  <test thread-count="5" parallel="tests" name="applaudpagetesting(failed)">
+  <test thread-count="5" parallel="tests" name="feedbackspagetesting(failed)">
     <classes>
-      <class name="applaudpagetesting.Applaud">
+      <class name="feedbackspagetesting.TestingOfFeedbackPage">
         <methods>
-          <include name="sendApplaud"/>
+          <include name="userCanAskForFeedbackFromWholeTeam"/>
         </methods>
-      </class> <!-- applaudpagetesting.Applaud -->
+      </class> <!-- feedbackspagetesting.TestingOfFeedbackPage -->
     </classes>
-  </test> <!-- applaudpagetesting(failed) -->
+  </test> <!-- feedbackspagetesting(failed) -->
   <test thread-count="5" parallel="tests" name="followupspagetesting(failed)">
     <classes>
-      <class name="followupspagetesting.Followuppage">
-        <methods>
-          <include name="followuppage"/>
-        </methods>
-      </class> <!-- followupspagetesting.Followuppage -->
       <class name="followupspagetesting.Followup1on1">
         <methods>
           <include name="userCanDelete1on1Meeting"/>
           <include name="create1on1"/>
+          <include name="create1on1WithoutSpecifyDateandtime"/>
         </methods>
       </class> <!-- followupspagetesting.Followup1on1 -->
     </classes>
@@ -38,20 +34,11 @@
     <classes>
       <class name="goalpagetesting.TestingOfGoalpage">
         <methods>
+          <include name="userCanCreateGoalForTeam"/>
           <include name="userCanSetUpFollowupForGoal"/>
           <include name="usersCanUpdateStatus"/>
         </methods>
       </class> <!-- goalpagetesting.TestingOfGoalpage -->
     </classes>
   </test> <!-- goalpagetesting(failed) -->
-  <test thread-count="5" parallel="tests" name="feedbackspagetesting(failed)">
-    <classes>
-      <class name="feedbackspagetesting.TestingOfFeedbackPage">
-        <methods>
-          <include name="userCanAskForFeedbackByExternalLink"/>
-          <include name="userCanAskForFeedbackFromWholeTeam"/>
-        </methods>
-      </class> <!-- feedbackspagetesting.TestingOfFeedbackPage -->
-    </classes>
-  </test> <!-- feedbackspagetesting(failed) -->
 </suite> <!-- Failed suite [Suite] -->
