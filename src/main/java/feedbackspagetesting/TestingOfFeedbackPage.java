@@ -12,6 +12,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import loginpagetesting.ChromeOptionsConfig;
@@ -22,13 +24,30 @@ import org.openqa.selenium.Keys;
 
 @Test(retryAnalyzer = RetryAnalyzer.class)
 public class TestingOfFeedbackPage {
+	
+	 private ThreadLocal<WebDriver> driver = new ThreadLocal<>();
+
+	    @BeforeMethod
+	    public void setUp() {
+	        driver.set(new ChromeDriver(ChromeOptionsConfig.getChromeOptions()));
+	        getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
+	        getDriver().manage().window().maximize();
+	    }
+
+	    @AfterMethod
+	    public void tearDown() {
+	        getDriver().quit();
+	        driver.remove();
+	    }
+
+	    private WebDriver getDriver() {
+	        return driver.get();
+	    }
+	
 
 	public void templateCreation() throws InterruptedException {
 
-		WebDriver driver = new ChromeDriver(ChromeOptionsConfig.getChromeOptions());
-
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
-		driver.manage().window().maximize();
+		 WebDriver driver = getDriver();
 
 		Login login = new Login(driver);
 		login.Goto();
@@ -80,16 +99,12 @@ public class TestingOfFeedbackPage {
 				.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[normalize-space()='Submit']")));
 		element5.click();
 
-		driver.close();
+		
 
 	}
 
 	public void userCanMaKEUseOfPreMadeFeedbackTemplate() throws InterruptedException {
-		WebDriver driver = new ChromeDriver(ChromeOptionsConfig.getChromeOptions());
-
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
-		driver.manage().window().maximize();
-
+		 WebDriver driver = getDriver();
 		Login login = new Login(driver);
 		login.Goto();
 		login.loginApplication("yesh@zasyasolutions.com", "Yesh255198@");
@@ -147,15 +162,11 @@ public class TestingOfFeedbackPage {
 		actions1.moveToElement(element5);
 		actions1.perform();
 		element5.click();
-		driver.close();
+	
 	}
 
 	public void userCanAskForFeedbackFromSpecificTeamMember() throws InterruptedException {
-		WebDriver driver = new ChromeDriver(ChromeOptionsConfig.getChromeOptions());
-
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
-		driver.manage().window().maximize();
-
+		 WebDriver driver = getDriver();
 		Login login = new Login(driver);
 		login.Goto();
 		login.loginApplication("yesh@zasyasolutions.com", "Yesh255198@");
@@ -219,16 +230,12 @@ public class TestingOfFeedbackPage {
 		actions1.perform();
 		element6.click();
 
-		driver.close();
+		
 
 	}
 
 	public void userCanAskForFeedbackFromWholeTeam() throws InterruptedException {
-		WebDriver driver = new ChromeDriver(ChromeOptionsConfig.getChromeOptions());
-
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
-		driver.manage().window().maximize();
-
+		 WebDriver driver = getDriver();
 		Login login = new Login(driver);
 		login.Goto();
 		login.loginApplication("yesh@zasyasolutions.com", "Yesh255198@");
@@ -281,9 +288,9 @@ public class TestingOfFeedbackPage {
 				ExpectedConditions.visibilityOfElementLocated(By.cssSelector("div[data-testid='memberList-0']")));
 		element4.click();
 
-		WebElement element44 = wait.until(
-				ExpectedConditions.visibilityOfElementLocated(By.cssSelector("div[data-testid='memberList-1']")));
-		element44.click();
+		//WebElement element44 = wait.until(
+		//		ExpectedConditions.visibilityOfElementLocated(By.cssSelector("div[data-testid='memberList-1']")));
+		//element44.click();
 
 		WebElement element5 = wait.until(ExpectedConditions
 				.visibilityOfElementLocated(By.cssSelector("button[data-testid='feedback-permission-next-btn']")));
@@ -297,16 +304,12 @@ public class TestingOfFeedbackPage {
 		actions1.perform();
 		element6.click();
 
-		driver.close();
+	
 
 	}
 
 	public void usersCanSeeAllTheFeedbackTheyHaveReceived() throws InterruptedException {
-		WebDriver driver = new ChromeDriver(ChromeOptionsConfig.getChromeOptions());
-
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
-		driver.manage().window().maximize();
-
+		 WebDriver driver = getDriver();
 		Login login = new Login(driver);
 		login.Goto();
 		login.loginApplication("yesh@zasyasolutions.com", "Yesh255198@");
@@ -319,17 +322,13 @@ public class TestingOfFeedbackPage {
 		WebElement element1 = wait
 				.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[text()='Received']")));
 		element1.click();
-		driver.close();
+		
 
 	}
 
 	public void userCanShortAndFilterFeedbackByPending() throws InterruptedException {
 
-		WebDriver driver = new ChromeDriver(ChromeOptionsConfig.getChromeOptions());
-
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
-		driver.manage().window().maximize();
-
+		 WebDriver driver = getDriver();
 		Login login = new Login(driver);
 		login.Goto();
 		login.loginApplication("yesh@zasyasolutions.com", "Yesh255198@");
@@ -349,15 +348,12 @@ public class TestingOfFeedbackPage {
 		WebElement element4 = wait.until(ExpectedConditions.visibilityOfElementLocated(
 				By.cssSelector("div[title='Pending'] div[class='ant-select-item-option-content']")));
 		element4.click();
-		driver.close();
+	
 
 	}
 
 	public void userCanShortAndFilterFeedbackByAnswered() throws InterruptedException {
-		WebDriver driver = new ChromeDriver(ChromeOptionsConfig.getChromeOptions());
-
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
-		driver.manage().window().maximize();
+		 WebDriver driver = getDriver();
 
 		Login login = new Login(driver);
 		login.Goto();
@@ -380,17 +376,13 @@ public class TestingOfFeedbackPage {
 				By.cssSelector("div[title='Answered'] div[class='ant-select-item-option-content']")));
 		element4.click();
 
-		driver.close();
+		
 
 	}
 
 	
 	public void userCanAskForFeedbackByExternalLink() throws InterruptedException {
-		WebDriver driver = new ChromeDriver(ChromeOptionsConfig.getChromeOptions());
-
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
-		driver.manage().window().maximize();
-
+		 WebDriver driver = getDriver();
 		Login login = new Login(driver);
 		login.Goto();
 		login.loginApplication("yesh@zasyasolutions.com", "Yesh255198@");

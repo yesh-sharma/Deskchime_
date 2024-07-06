@@ -16,6 +16,8 @@ import org.openqa.selenium.interactions.Actions;
 
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import loginpagetesting.ChromeOptionsConfig;
@@ -23,14 +25,31 @@ import loginpagetesting.Login;
 import retryanalyzer.RetryAnalyzer;
 @Test(retryAnalyzer = RetryAnalyzer.class)
 public class TestingOfGoalpage {
+	
+	private ThreadLocal<WebDriver> driver = new ThreadLocal<>();
+
+    @BeforeMethod
+    public void setUp() {
+        driver.set(new ChromeDriver(ChromeOptionsConfig.getChromeOptions()));
+        getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
+        getDriver().manage().window().maximize();
+    }
+
+    @AfterMethod
+    public void tearDown() {
+        getDriver().quit();
+        driver.remove();
+    }
+
+    private WebDriver getDriver() {
+        return driver.get();
+    }
+	
+	
 
 	public void userCanCreateGoalForselfDevelopment() throws InterruptedException {
-
-		WebDriver driver = new ChromeDriver(ChromeOptionsConfig.getChromeOptions());
-
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
-		driver.manage().window().maximize();
-
+		
+		WebDriver driver = getDriver();
 		Login login = new Login(driver);
 		login.Goto();
 
@@ -64,10 +83,7 @@ public class TestingOfGoalpage {
 	
 	public void userCanCreateGoalForTeam() throws InterruptedException {
 
-		WebDriver driver = new ChromeDriver(ChromeOptionsConfig.getChromeOptions());
-
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
-		driver.manage().window().maximize();
+		WebDriver driver = getDriver();
 
 		Login login = new Login(driver);
 		login.Goto();
@@ -115,11 +131,7 @@ public class TestingOfGoalpage {
 
 	public void usersCanSeeOnTrackGoals() throws InterruptedException {
 
-		WebDriver driver = new ChromeDriver(ChromeOptionsConfig.getChromeOptions());
-
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
-		driver.manage().window().maximize();
-
+		WebDriver driver = getDriver();
 		Login login = new Login(driver);
 		login.Goto();
 
@@ -140,11 +152,7 @@ public class TestingOfGoalpage {
 
 	public void usersCanSeeCompletedGoals() throws InterruptedException {
 
-		WebDriver driver = new ChromeDriver(ChromeOptionsConfig.getChromeOptions());
-
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
-		driver.manage().window().maximize();
-
+		WebDriver driver = getDriver();
 		Login login = new Login(driver);
 		login.Goto();
 
@@ -166,10 +174,7 @@ public class TestingOfGoalpage {
 
 	public void usersCanSeeDelayedGoals() throws InterruptedException {
 
-		WebDriver driver = new ChromeDriver(ChromeOptionsConfig.getChromeOptions());
-
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
-		driver.manage().window().maximize();
+		WebDriver driver = getDriver();
 
 		Login login = new Login(driver);
 		login.Goto();
@@ -192,11 +197,7 @@ public class TestingOfGoalpage {
 	}
 
 	public void usersCanSeeAbandonedGoals() throws InterruptedException {
-
-		WebDriver driver = new ChromeDriver(ChromeOptionsConfig.getChromeOptions());
-
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
-		driver.manage().window().maximize();
+		WebDriver driver = getDriver();
 
 		Login login = new Login(driver);
 		login.Goto();
@@ -220,10 +221,7 @@ public class TestingOfGoalpage {
 
 	public void usersCanSeeArchivedGoals() throws InterruptedException {
 
-		WebDriver driver = new ChromeDriver(ChromeOptionsConfig.getChromeOptions());
-
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
-		driver.manage().window().maximize();
+		WebDriver driver = getDriver();
 
 		Login login = new Login(driver);
 		login.Goto();
@@ -246,10 +244,7 @@ public class TestingOfGoalpage {
 
 	public void usersCanUpdateStatus() throws InterruptedException {
 
-		WebDriver driver = new ChromeDriver(ChromeOptionsConfig.getChromeOptions());
-
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
-		driver.manage().window().maximize();
+		WebDriver driver = getDriver();
 
 		Login login = new Login(driver);
 		login.Goto();
@@ -288,12 +283,7 @@ public class TestingOfGoalpage {
 
 	
 	public void userCanSetUpFollowupForGoal() throws InterruptedException, IOException {
-
-		WebDriver driver = new ChromeDriver(ChromeOptionsConfig.getChromeOptions());
-
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
-		driver.manage().window().maximize();
-
+		WebDriver driver = getDriver();
 		Login login = new Login(driver);
 		login.Goto();
 

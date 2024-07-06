@@ -9,7 +9,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import loginpagetesting.ChromeOptionsConfig;
@@ -18,15 +19,31 @@ import retryanalyzer.RetryAnalyzer;
 
 @Test(retryAnalyzer = RetryAnalyzer.class)
 public class Followup1on1 {
+	
+	 private ThreadLocal<WebDriver> driver = new ThreadLocal<>();
 
+	    @BeforeMethod
+	    public void setUp() {
+	        driver.set(new ChromeDriver(ChromeOptionsConfig.getChromeOptions()));
+	        getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
+	        getDriver().manage().window().maximize();
+	    }
+
+	    @AfterMethod
+	    public void tearDown() {
+	        getDriver().quit();
+	        driver.remove();
+	    }
+
+	    private WebDriver getDriver() {
+	        return driver.get();
+	    }
+	    
+@Test
 	public void create1on1() throws InterruptedException {
-
-		WebDriver driver = new ChromeDriver(ChromeOptionsConfig.getChromeOptions());
-
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
-		driver.manage().window().maximize();
-
-		Login login = new Login(driver);
+		 WebDriver driver = getDriver();
+	        Login login = new Login(driver);
+	
 		login.Goto();
 
 		login.loginApplication("yesh@zasyasolutions.com", "Yesh255198@");
@@ -139,21 +156,17 @@ public class Followup1on1 {
 		element8.click();
 		System.out.println("1 on 1 meetings created sucessfully");
 
-		driver.close();
+	
 
 	}
 
-	
+	@Test
 	public void userCanDelete1on1Meeting() throws InterruptedException {
 
-		WebDriver driver = new ChromeDriver(ChromeOptionsConfig.getChromeOptions());
-
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
-		driver.manage().window().maximize();
-
-		Login login = new Login(driver);
-		login.Goto();
-
+		 WebDriver driver = getDriver();
+	        Login login = new Login(driver);
+	        login.Goto();
+	
 		login.loginApplication("yesh@zasyasolutions.com", "Yesh255198@");
 
 		login.avoidFeedbackpopup();
@@ -178,22 +191,19 @@ public class Followup1on1 {
 
 		element3.click();
 
-		driver.close();
+	
 		
 
 	}
 	
-
+@Test
 	
 	public void create1on1WithoutSpecifyDateandtime() throws InterruptedException {
 
-		WebDriver driver = new ChromeDriver(ChromeOptionsConfig.getChromeOptions());
-
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
-		driver.manage().window().maximize();
-
-		Login login = new Login(driver);
-		login.Goto();
+		 WebDriver driver = getDriver();
+	        Login login = new Login(driver);
+	        login.Goto();
+	
 
 		login.loginApplication("yesh@zasyasolutions.com", "Yesh255198@");
 
@@ -209,7 +219,7 @@ public class Followup1on1 {
 
 		element1.click();
 		WebElement element2 = wait
-				.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[contains(text(),'yash')]")));
+				.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[contains(text(),'sharma')]")));
 
 		element2.click();
 
@@ -228,7 +238,7 @@ public class Followup1on1 {
 
 		element5.click();
 	
-	    driver.close();
+	 
 	
 }
 }

@@ -14,7 +14,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 
@@ -24,12 +25,29 @@ import retryanalyzer.RetryAnalyzer;
 @Test(retryAnalyzer = RetryAnalyzer.class)
 public class Settingpage {
 	
+	
+	private ThreadLocal<WebDriver> driver = new ThreadLocal<>();
+
+    @BeforeMethod
+    public void setUp() {
+        driver.set(new ChromeDriver(ChromeOptionsConfig.getChromeOptions()));
+        getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
+        getDriver().manage().window().maximize();
+    }
+
+    @AfterMethod
+    public void tearDown() {
+        getDriver().quit();
+        driver.remove();
+    }
+
+    private WebDriver getDriver() {
+        return driver.get();
+    }
+	
+	
 	public void userCreatedAndDeletedSuccessfully() throws InterruptedException {
-		WebDriver driver = new ChromeDriver(ChromeOptionsConfig.getChromeOptions());
-
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
-		driver.manage().window().maximize();
-
+		WebDriver driver = getDriver();
 		Login login = new Login(driver);
 		login.Goto();
 		login.loginApplication("yeshsharma516032@gmail.com", "Yesh12345");
@@ -114,11 +132,7 @@ public class Settingpage {
 	}
 
 	public void testingOfSettingPage() throws InterruptedException {
-		WebDriver driver = new ChromeDriver(ChromeOptionsConfig.getChromeOptions());
-
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
-		driver.manage().window().maximize();
-
+		WebDriver driver = getDriver();
 		Login login = new Login(driver);
 		login.Goto();
 		login.loginApplication("yeshsharma516032@gmail.com", "Yesh12345");
