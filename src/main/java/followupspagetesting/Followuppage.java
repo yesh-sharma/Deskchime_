@@ -20,7 +20,7 @@ import loginpagetesting.ChromeOptionsConfig;
 import loginpagetesting.Login;
 import retryanalyzer.RetryAnalyzer;
 
-//@Test(retryAnalyzer = RetryAnalyzer.class)
+@Test(retryAnalyzer = RetryAnalyzer.class)
 public class Followuppage {
 
 	private ThreadLocal<WebDriver> driver = new ThreadLocal<>();
@@ -98,7 +98,7 @@ public class Followuppage {
 		int minute = currentTime.getMinute();
 		System.out.println(hour);
 		System.out.println(minute);
-		// Print the hour and minute
+	
 
 		if (hour == 10 && minute >= 1 && minute <= 29) {
 
