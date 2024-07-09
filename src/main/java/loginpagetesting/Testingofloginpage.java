@@ -15,7 +15,9 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-@Test
+import retryanalyzer.RetryAnalyzer;
+
+@Test(retryAnalyzer = RetryAnalyzer.class)
 public class Testingofloginpage {
 
 	@FindBy(css = "input[placeholder='Email address']")

@@ -15,9 +15,9 @@ import loginpagetesting.ChromeOptionsConfig;
 import loginpagetesting.Login;
 import retryanalyzer.RetryAnalyzer;
 
-@Test
+@Test(retryAnalyzer = RetryAnalyzer.class)
 public class Applaud {
-	@Test(retryAnalyzer = RetryAnalyzer.class)
+
 	public void sendApplaud() throws InterruptedException {
 
 		WebDriver driver = new ChromeDriver(ChromeOptionsConfig.getChromeOptions());
@@ -39,15 +39,13 @@ public class Applaud {
 
 		element.click();
 
-	
 		WebElement element2 = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(
 				"//button[@class='rounded-lg w-fit tracking-[0.5px] font-medium flex items-center gap-2 justify-center transition-all duration-200 ease-in-out disabled:cursor-default bg-teal-500 text-white hover:bg-teal-400 active:bg-teal-300 disabled:bg-zinc-400 h-10 px-3 py-2 text-sm relative']")));
 		element2.click();
 
-
 		driver.findElement(By.id("user_id")).click();
 		driver.findElement(By.xpath("/html/body/div[2]/div/div/div[2]/div/div/div/div[2]/div")).click();
-	
+
 		driver.findElement(By
 				.xpath("/html/body/div[1]/div/div/main/div/div/div/form/div/div[2]/div/div/div[2]/div/div/div/div/div"))
 				.click();

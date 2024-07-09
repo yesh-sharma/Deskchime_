@@ -1,42 +1,68 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite parallel="tests" name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" parallel="tests" name="applaudpagetesting(failed)">
+    <classes>
+      <class name="applaudpagetesting.Applaud">
+        <methods>
+          <include name="sendApplaud"/>
+        </methods>
+      </class> <!-- applaudpagetesting.Applaud -->
+    </classes>
+  </test> <!-- applaudpagetesting(failed) -->
   <test thread-count="5" parallel="tests" name="settingpagetesting(failed)">
     <classes>
       <class name="settingpagetesting.Settingpage">
         <methods>
+          <include name="tearDown"/>
+          <include name="setUp"/>
           <include name="userCreatedAndDeletedSuccessfully"/>
         </methods>
       </class> <!-- settingpagetesting.Settingpage -->
     </classes>
   </test> <!-- settingpagetesting(failed) -->
-  <test thread-count="5" parallel="tests" name="feedbackspagetesting(failed)">
-    <classes>
-      <class name="feedbackspagetesting.TestingOfFeedbackPage">
-        <methods>
-          <include name="userCanAskForFeedbackFromWholeTeam"/>
-        </methods>
-      </class> <!-- feedbackspagetesting.TestingOfFeedbackPage -->
-    </classes>
-  </test> <!-- feedbackspagetesting(failed) -->
   <test thread-count="5" parallel="tests" name="followupspagetesting(failed)">
     <classes>
+      <class name="followupspagetesting.Followuppage">
+        <methods>
+          <include name="followupCreatedAndDeleted"/>
+          <include name="followupCreatedAndDeleted1"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="meetingWithoutSpecifyDateAndTime"/>
+        </methods>
+      </class> <!-- followupspagetesting.Followuppage -->
       <class name="followupspagetesting.Followup1on1">
         <methods>
+          <include name="tearDown"/>
+          <include name="setUp"/>
           <include name="userCanDelete1on1Meeting"/>
           <include name="create1on1"/>
-          <include name="create1on1WithoutSpecifyDateandtime"/>
         </methods>
       </class> <!-- followupspagetesting.Followup1on1 -->
     </classes>
   </test> <!-- followupspagetesting(failed) -->
+  <test thread-count="5" parallel="tests" name="feedbackspagetesting(failed)">
+    <classes>
+      <class name="feedbackspagetesting.TestingOfFeedbackPage">
+        <methods>
+          <include name="templateCreation"/>
+          <include name="setUp"/>
+          <include name="userCanShortAndFilterFeedbackByAnswered"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- feedbackspagetesting.TestingOfFeedbackPage -->
+    </classes>
+  </test> <!-- feedbackspagetesting(failed) -->
   <test thread-count="5" parallel="tests" name="goalpagetesting(failed)">
     <classes>
       <class name="goalpagetesting.TestingOfGoalpage">
         <methods>
-          <include name="userCanCreateGoalForTeam"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
           <include name="userCanSetUpFollowupForGoal"/>
           <include name="usersCanUpdateStatus"/>
+          <include name="usersCanSeeAbandonedGoals"/>
         </methods>
       </class> <!-- goalpagetesting.TestingOfGoalpage -->
     </classes>

@@ -2,35 +2,35 @@
 <testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-07-06T15:59:14 IST" name="Default suite" finished-at="2024-07-06T16:00:54 IST" duration-ms="100307">
+  <suite started-at="2024-07-09T17:29:47 IST" name="Default suite" finished-at="2024-07-09T17:30:45 IST" duration-ms="57367">
     <groups>
     </groups>
-    <test started-at="2024-07-06T15:59:14 IST" name="Default test" finished-at="2024-07-06T16:00:54 IST" duration-ms="100307">
-      <class name="followupspagetesting.Followuppage">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:followupspagetesting.Followuppage@506ae4d4]" started-at="2024-07-06T15:59:14 IST" name="setUp" finished-at="2024-07-06T15:59:15 IST" duration-ms="1076" status="PASS">
+    <test started-at="2024-07-09T17:29:47 IST" name="Default test" finished-at="2024-07-09T17:30:45 IST" duration-ms="57367">
+      <class name="feedbackspagetesting.TestingOfFeedbackPage">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:feedbackspagetesting.TestingOfFeedbackPage@52b1beb6]" started-at="2024-07-09T17:29:47 IST" name="setUp" finished-at="2024-07-09T17:29:48 IST" duration-ms="1072" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="followupCreatedAndDeleted1()[pri:0, instance:followupspagetesting.Followuppage@506ae4d4]" started-at="2024-07-06T15:59:15 IST" name="followupCreatedAndDeleted1" finished-at="2024-07-06T16:00:54 IST" duration-ms="99082" status="FAIL">
+        <test-method signature="templateCreation()[pri:0, instance:feedbackspagetesting.TestingOfFeedbackPage@52b1beb6]" started-at="2024-07-09T17:29:48 IST" name="templateCreation" finished-at="2024-07-09T17:30:45 IST" duration-ms="56177" status="FAIL">
           <exception class="org.openqa.selenium.TimeoutException">
             <message>
-              <![CDATA[Expected condition failed: waiting for visibility of element located by By.cssSelector: div[data-testid='memberList-0'] (tried for 25 second(s) with 500 milliseconds interval)
+              <![CDATA[Expected condition failed: waiting for visibility of element located by By.xpath: //span[text()='Feedbacks'] (tried for 20 second(s) with 500 milliseconds interval)
 Build info: version: '4.22.0', revision: 'c5f3146703*'
 System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '14.5', java.version: '17.0.11'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 126.0.6478.127, chrome: {chromedriverVersion: 126.0.6478.126 (d36ace6122e..., userDataDir: /var/folders/x9/xxt7kvhx1v7...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:65483}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:65483/devtoo..., se:cdpVersion: 126.0.6478.127, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 54a076f40180c17e230a002b6a56d5e9]]>
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 126.0.6478.127, chrome: {chromedriverVersion: 126.0.6478.126 (d36ace6122e..., userDataDir: /var/folders/x9/xxt7kvhx1v7...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64657}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:64657/devtoo..., se:cdpVersion: 126.0.6478.127, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 3ca84c0e621c53cf744113eb7eb9d698]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.cssSelector: div[data-testid='memberList-0'] (tried for 25 second(s) with 500 milliseconds interval)
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //span[text()='Feedbacks'] (tried for 20 second(s) with 500 milliseconds interval)
 Build info: version: '4.22.0', revision: 'c5f3146703*'
 System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '14.5', java.version: '17.0.11'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 126.0.6478.127, chrome: {chromedriverVersion: 126.0.6478.126 (d36ace6122e..., userDataDir: /var/folders/x9/xxt7kvhx1v7...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:65483}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:65483/devtoo..., se:cdpVersion: 126.0.6478.127, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 54a076f40180c17e230a002b6a56d5e9
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 126.0.6478.127, chrome: {chromedriverVersion: 126.0.6478.126 (d36ace6122e..., userDataDir: /var/folders/x9/xxt7kvhx1v7...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64657}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:64657/devtoo..., se:cdpVersion: 126.0.6478.127, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 3ca84c0e621c53cf744113eb7eb9d698
 at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
 at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-at followupspagetesting.Followuppage.followupCreatedAndDeleted1(Followuppage.java:322)
+at feedbackspagetesting.TestingOfFeedbackPage.templateCreation(TestingOfFeedbackPage.java:60)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -64,12 +64,12 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           </exception> <!-- org.openqa.selenium.TimeoutException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- followupCreatedAndDeleted1 -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:followupspagetesting.Followuppage@506ae4d4]" started-at="2024-07-06T16:00:54 IST" name="tearDown" finished-at="2024-07-06T16:00:54 IST" duration-ms="133" status="PASS">
+        </test-method> <!-- templateCreation -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:feedbackspagetesting.TestingOfFeedbackPage@52b1beb6]" started-at="2024-07-09T17:30:45 IST" name="tearDown" finished-at="2024-07-09T17:30:45 IST" duration-ms="103" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- followupspagetesting.Followuppage -->
+      </class> <!-- feedbackspagetesting.TestingOfFeedbackPage -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

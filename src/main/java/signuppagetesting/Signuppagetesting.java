@@ -11,8 +11,9 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
 
 import loginpagetesting.ChromeOptionsConfig;
+import retryanalyzer.RetryAnalyzer;
 
-@Test
+@Test(retryAnalyzer = RetryAnalyzer.class)
 public class Signuppagetesting {
 
 	public void successfulregistration() throws InterruptedException {

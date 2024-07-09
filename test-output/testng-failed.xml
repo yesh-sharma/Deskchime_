@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="followupspagetesting.Followuppage">
+      <class name="feedbackspagetesting.TestingOfFeedbackPage">
         <methods>
-          <include name="followupCreatedAndDeleted1"/>
+          <include name="templateCreation"/>
           <include name="setUp"/>
           <include name="tearDown"/>
         </methods>
-      </class> <!-- followupspagetesting.Followuppage -->
+      </class> <!-- feedbackspagetesting.TestingOfFeedbackPage -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
