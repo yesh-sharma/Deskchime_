@@ -22,7 +22,7 @@ import retryanalyzer.RetryAnalyzer;
 
 import org.openqa.selenium.Keys;
 
-//@Test(retryAnalyzer = RetryAnalyzer.class)
+@Test(retryAnalyzer = RetryAnalyzer.class)
 public class TestingOfFeedbackPage {
 	
 	 private ThreadLocal<WebDriver> driver = new ThreadLocal<>();
