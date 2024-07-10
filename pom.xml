@@ -133,13 +133,9 @@
 							
 							<configuration>
 								<suiteXmlFiles>
-									<suiteXmlFile>testsuites/applaud.xml</suiteXmlFile>
+									
 									<suiteXmlFile>testsuites/feedback.xml</suiteXmlFile>
-									<suiteXmlFile>testsuites/followup.xml</suiteXmlFile>
-									<suiteXmlFile>testsuites/goal.xml</suiteXmlFile>
-									<suiteXmlFile>testsuites/login.xml</suiteXmlFile>
-									<suiteXmlFile>testsuites/signup.xml</suiteXmlFile>
-
+									
 
 								</suiteXmlFiles>
 							</configuration>

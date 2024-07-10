@@ -1,5 +1,7 @@
 package feedbackspagetesting;
 
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.time.Duration;
 
 
@@ -10,6 +12,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterMethod;
@@ -28,12 +32,20 @@ public class TestingOfFeedbackPage {
 	 private ThreadLocal<WebDriver> driver = new ThreadLocal<>();
 
 	    @BeforeMethod
-	    public void setUp() {
-	        driver.set(new ChromeDriver(ChromeOptionsConfig.getChromeOptions()));
+	    public void setUp() throws MalformedURLException {
+	        // Set the desired capabilities for the browser you want to use
+	        DesiredCapabilities capabilities = new DesiredCapabilities();
+	        capabilities.setBrowserName("chrome");
+
+	        // URL of the remote Selenium server or Selenium Grid hub
+	        URL remoteUrl = new URL("http://localhost:4444/wd/hub");
+
+	        // Initialize the RemoteWebDriver with the remote URL and desired capabilities
+	        driver.set(new RemoteWebDriver(remoteUrl, capabilities));
+	        
 	        getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
 	        getDriver().manage().window().maximize();
 	    }
-
 	    @AfterMethod
 	    public void tearDown() {
 	        getDriver().quit();
@@ -43,6 +55,11 @@ public class TestingOfFeedbackPage {
 	    private WebDriver getDriver() {
 	        return driver.get();
 	    }
+	    
+	    
+	    
+	    
+	    
 	
 @Test
 	public void templateCreation() throws InterruptedException {
