@@ -38,7 +38,7 @@ public class TestingOfFeedbackPage {
 	        capabilities.setBrowserName("chrome");
 
 	        // URL of the remote Selenium server or Selenium Grid hub
-	        URL remoteUrl = new URL("http://localhost:4444/wd/hub");
+	        URL remoteUrl = new URL("http://192.168.29.48:5555");
 
 	        // Initialize the RemoteWebDriver with the remote URL and desired capabilities
 	        driver.set(new RemoteWebDriver(remoteUrl, capabilities));
