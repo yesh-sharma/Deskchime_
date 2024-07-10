@@ -9,6 +9,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import loginpagetesting.ChromeOptionsConfig;
@@ -18,12 +20,28 @@ import retryanalyzer.RetryAnalyzer;
 @Test(retryAnalyzer = RetryAnalyzer.class)
 public class Applaud {
 
+	private ThreadLocal<WebDriver> driver = new ThreadLocal<>();
+
+	@BeforeMethod
+	public void setUp() {
+		driver.set(new ChromeDriver(ChromeOptionsConfig.getChromeOptions()));
+		getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
+		getDriver().manage().window().maximize();
+	}
+
+	@AfterMethod
+	public void tearDown() {
+		getDriver().quit();
+		driver.remove();
+	}
+
+	private WebDriver getDriver() {
+		return driver.get();
+	}
+
 	public void sendApplaud() throws InterruptedException {
 
-		WebDriver driver = new ChromeDriver(ChromeOptionsConfig.getChromeOptions());
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
-
-		driver.manage().window().maximize();
+		WebDriver driver = getDriver();
 
 		Login login = new Login(driver);
 		login.Goto();
@@ -59,10 +77,7 @@ public class Applaud {
 	}
 
 	public void useMonthFilter() throws InterruptedException {
-		WebDriver driver = new ChromeDriver(ChromeOptionsConfig.getChromeOptions());
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
-
-		driver.manage().window().maximize();
+		WebDriver driver = getDriver();
 
 		Login login = new Login(driver);
 		login.Goto();
@@ -88,10 +103,7 @@ public class Applaud {
 	}
 
 	public void seeReceivedApplauds() throws InterruptedException {
-		WebDriver driver = new ChromeDriver(ChromeOptionsConfig.getChromeOptions());
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
-
-		driver.manage().window().maximize();
+		WebDriver driver = getDriver();
 
 		Login login = new Login(driver);
 		login.Goto();
@@ -111,10 +123,7 @@ public class Applaud {
 	}
 
 	public void seeSentApplauds() throws InterruptedException {
-		WebDriver driver = new ChromeDriver(ChromeOptionsConfig.getChromeOptions());
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
-
-		driver.manage().window().maximize();
+		WebDriver driver = getDriver();
 
 		Login login = new Login(driver);
 		login.Goto();
