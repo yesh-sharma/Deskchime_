@@ -2,6 +2,8 @@ package goalpagetesting;
 
 
 import java.io.IOException;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.time.Duration;
 import java.time.LocalTime;
 
@@ -13,7 +15,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
-
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterMethod;
@@ -29,12 +32,20 @@ public class TestingOfGoalpage {
 	private ThreadLocal<WebDriver> driver = new ThreadLocal<>();
 
     @BeforeMethod
-    public void setUp() {
-        driver.set(new ChromeDriver(ChromeOptionsConfig.getChromeOptions()));
+    public void setUp() throws MalformedURLException {
+        // Set the desired capabilities for the browser you want to use
+        DesiredCapabilities capabilities = new DesiredCapabilities();
+        capabilities.setBrowserName("chrome");
+
+        // URL of the remote Selenium server or Selenium Grid hub
+        URL remoteUrl = new URL("http://192.168.29.48:4444");
+
+        // Initialize the RemoteWebDriver with the remote URL and desired capabilities
+        driver.set(new RemoteWebDriver(remoteUrl, capabilities));
+        
         getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
         getDriver().manage().window().maximize();
     }
-
     @AfterMethod
     public void tearDown() {
         getDriver().quit();
@@ -44,7 +55,8 @@ public class TestingOfGoalpage {
     private WebDriver getDriver() {
         return driver.get();
     }
-	
+    
+    
 	
 
 	public void userCanCreateGoalForselfDevelopment() throws InterruptedException {

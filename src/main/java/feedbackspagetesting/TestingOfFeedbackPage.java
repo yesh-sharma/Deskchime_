@@ -1,17 +1,22 @@
 package feedbackspagetesting;
 
 import java.net.MalformedURLException;
+import java.net.URI;
+import java.net.URISyntaxException;
 import java.net.URL;
 import java.time.Duration;
 
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+
+
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
 
 import org.openqa.selenium.interactions.Actions;
+
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -20,105 +25,105 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import loginpagetesting.ChromeOptionsConfig;
 import loginpagetesting.Login;
 import retryanalyzer.RetryAnalyzer;
 
-import org.openqa.selenium.Keys;
+
 
 @Test(retryAnalyzer = RetryAnalyzer.class)
 public class TestingOfFeedbackPage {
 	
-	 private ThreadLocal<WebDriver> driver = new ThreadLocal<>();
+	private ThreadLocal<WebDriver> driver = new ThreadLocal<>();
 
-	    @BeforeMethod
-	    public void setUp() throws MalformedURLException {
-	        // Set the desired capabilities for the browser you want to use
-	        DesiredCapabilities capabilities = new DesiredCapabilities();
-	        capabilities.setBrowserName("chrome");
+    @BeforeMethod
+    public void setUp() throws MalformedURLException {
+        // Set the desired capabilities for the browser you want to use
+        DesiredCapabilities capabilities = new DesiredCapabilities();
+        capabilities.setBrowserName("chrome");
 
-	        // URL of the remote Selenium server or Selenium Grid hub
-	        URL remoteUrl = new URL("http://192.168.29.48:4444/wd/hub");
+        // URL of the remote Selenium server or Selenium Grid hub
+        URL remoteUrl = new URL("https://selenium.zasyasolutions.com/");
 
-	        // Initialize the RemoteWebDriver with the remote URL and desired capabilities
-	        driver.set(new RemoteWebDriver(remoteUrl, capabilities));
-	        
-	        getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
-	        getDriver().manage().window().maximize();
-	    }
-	    @AfterMethod
-	    public void tearDown() {
-	        getDriver().quit();
-	        driver.remove();
-	    }
+        // Initialize the RemoteWebDriver with the remote URL and desired capabilities
+        driver.set(new RemoteWebDriver(remoteUrl, capabilities));
+        
+        getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
+        getDriver().manage().window().maximize();
+    }
+    @AfterMethod
+    public void tearDown() {
+        getDriver().quit();
+        driver.remove();
+    }
 
-	    private WebDriver getDriver() {
-	        return driver.get();
-	    }
-	    
-	    
-	    
-	    
-	    
-	
+    private WebDriver getDriver() {
+        return driver.get();
+    }
+    
+    
+    
+    
+    
+
 @Test
-	public void templateCreation() throws InterruptedException {
+public void templateCreation() throws InterruptedException {
 
-		 WebDriver driver = getDriver();
+	 WebDriver driver = getDriver();
 
-		Login login = new Login(driver);
-		login.Goto();
-		login.loginApplication("yesh@zasyasolutions.com", "Yesh255198@");
+	Login login = new Login(driver);
+	login.Goto();
+	login.loginApplication("yesh@zasyasolutions.com", "Yesh255198@");
 
-		login.avoidFeedbackpopup();
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+	login.avoidFeedbackpopup();
+	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
 
-		WebElement element = wait
-				.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[text()='Feedbacks']")));
-		element.click();
+	WebElement element = wait
+			.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[text()='Feedbacks']")));
+	element.click();
 
-		// templates
-		WebElement element2 = wait.until(ExpectedConditions
-				.visibilityOfElementLocated(By.cssSelector("a[data-testid='feedback-templates-btn']")));
-		element2.click();
+	// templates
+	WebElement element2 = wait.until(ExpectedConditions
+			.visibilityOfElementLocated(By.cssSelector("a[data-testid='feedback-templates-btn']")));
+	element2.click();
 
-		// create from scratch
-		WebElement element3 = wait.until(
-				ExpectedConditions.visibilityOfElementLocated(By.cssSelector("button[data-testid='create-template']")));
-		element3.click();
+	// create from scratch
+	WebElement element3 = wait.until(
+			ExpectedConditions.visibilityOfElementLocated(By.cssSelector("button[data-testid='create-template']")));
+	element3.click();
 
-		// add title
+	// add title
 
-		WebElement element4 = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("template_name")));
-		element4.sendKeys("TEST");
-		// add description
-		driver.findElement(By.id("template_description")).sendKeys("test the feebacksection");
+	WebElement element4 = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("template_name")));
+	element4.sendKeys("TEST");
+	// add description
+	driver.findElement(By.id("template_description")).sendKeys("test the feebacksection");
 
-		// click
+	// click
 
-		driver.findElement(By.cssSelector(
-				"button[class='rounded-lg w-fit tracking-[0.5px] font-medium flex items-center gap-2 justify-center transition-all duration-200 ease-in-out disabled:cursor-default bg-teal-500 text-white hover:bg-teal-400 active:bg-teal-300 disabled:bg-zinc-400 h-10 px-3 py-2 text-sm relative']"))
-				.click();
-		// click on multiple choice
-		driver.findElement(By.cssSelector(
-				"span[class='ant-select-selection-item'] div[class='font-normal text-xs lg:text-sm leading-140 lg:leading-140 text-slate-600']"))
-				.click();
+	driver.findElement(By.cssSelector(
+			"button[class='rounded-lg w-fit tracking-[0.5px] font-medium flex items-center gap-2 justify-center transition-all duration-200 ease-in-out disabled:cursor-default bg-teal-500 text-white hover:bg-teal-400 active:bg-teal-300 disabled:bg-zinc-400 h-10 px-3 py-2 text-sm relative']"))
+			.click();
+	// click on multiple choice
+	driver.findElement(By.cssSelector(
+			"span[class='ant-select-selection-item'] div[class='font-normal text-xs lg:text-sm leading-140 lg:leading-140 text-slate-600']"))
+			.click();
 
-		driver.findElement(By.cssSelector("input[placeholder='E.g. What would you like to ask from a person.']"))
-				.sendKeys("anything");
+	driver.findElement(By.cssSelector("input[placeholder='E.g. What would you like to ask from a person.']"))
+			.sendKeys("anything");
 
-		driver.findElement(By.xpath("//input[@placeholder='E.g. Option 1']")).sendKeys("true");
-		driver.findElement(By.xpath("//input[@placeholder='E.g. Option 2']")).sendKeys("false");
-		driver.findElement(By.cssSelector(
-				"button[class='rounded-lg w-fit tracking-[0.5px] font-medium flex items-center gap-2 justify-center transition-all duration-200 ease-in-out disabled:cursor-default bg-teal-500 text-white hover:bg-teal-400 active:bg-teal-300 disabled:bg-zinc-400 h-10 px-3 py-2 text-sm relative'] div[class='flex items-center gap-2 justify-center']"))
-				.click();
-		WebElement element5 = wait
-				.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[normalize-space()='Submit']")));
-		element5.click();
+	driver.findElement(By.xpath("//input[@placeholder='E.g. Option 1']")).sendKeys("true");
+	driver.findElement(By.xpath("//input[@placeholder='E.g. Option 2']")).sendKeys("false");
+	driver.findElement(By.cssSelector(
+			"button[class='rounded-lg w-fit tracking-[0.5px] font-medium flex items-center gap-2 justify-center transition-all duration-200 ease-in-out disabled:cursor-default bg-teal-500 text-white hover:bg-teal-400 active:bg-teal-300 disabled:bg-zinc-400 h-10 px-3 py-2 text-sm relative'] div[class='flex items-center gap-2 justify-center']"))
+			.click();
+	WebElement element5 = wait
+			.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[normalize-space()='Submit']")));
+	element5.click();
 
-		
+	
 
-	}
+}
+
 
 	public void userCanMaKEUseOfPreMadeFeedbackTemplate() throws InterruptedException {
 		 WebDriver driver = getDriver();

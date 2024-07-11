@@ -6,7 +6,7 @@ package retryanalyzer;
 
 	public class RetryAnalyzer implements IRetryAnalyzer {
 	    private int retryCount = 0;
-	    private static final int MAX_RETRY_COUNT = 2; // Adjust as needed
+	    private static final int MAX_RETRY_COUNT = 3; // Adjust as needed
 
 	    @Override
 	    public boolean retry(ITestResult result) {

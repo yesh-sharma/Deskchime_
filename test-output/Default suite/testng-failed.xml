@@ -5,8 +5,11 @@
     <classes>
       <class name="feedbackspagetesting.TestingOfFeedbackPage">
         <methods>
-          <include name="templateCreation"/>
+          <include name="usersCanSeeAllTheFeedbackTheyHaveReceived"/>
+          <include name="userCanAskForFeedbackByExternalLink"/>
+          <include name="userCanAskForFeedbackFromWholeTeam"/>
           <include name="setUp"/>
+          <include name="userCanShortAndFilterFeedbackByAnswered"/>
           <include name="tearDown"/>
         </methods>
       </class> <!-- feedbackspagetesting.TestingOfFeedbackPage -->

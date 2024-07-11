@@ -1,5 +1,7 @@
 package signuppagetesting;
 
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.time.Duration;
 import org.openqa.selenium.Keys;
 
@@ -8,19 +10,63 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import loginpagetesting.ChromeOptionsConfig;
+import loginpagetesting.Login;
 import retryanalyzer.RetryAnalyzer;
 
 @Test(retryAnalyzer = RetryAnalyzer.class)
 public class Signuppagetesting {
 
+	private ThreadLocal<WebDriver> driver = new ThreadLocal<>();
+
+    @BeforeMethod
+    public void setUp() throws MalformedURLException {
+        // Set the desired capabilities for the browser you want to use
+        DesiredCapabilities capabilities = new DesiredCapabilities();
+        capabilities.setBrowserName("chrome");
+
+        // URL of the remote Selenium server or Selenium Grid hub
+        URL remoteUrl = new URL("http://192.168.29.48:4444");
+
+        // Initialize the RemoteWebDriver with the remote URL and desired capabilities
+        driver.set(new RemoteWebDriver(remoteUrl, capabilities));
+        
+        getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
+        getDriver().manage().window().maximize();
+    }
+    @AfterMethod
+    public void tearDown() {
+        getDriver().quit();
+        driver.remove();
+    }
+
+    private WebDriver getDriver() {
+        return driver.get();
+    }
+    
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	public void successfulregistration() throws InterruptedException {
 
-		WebDriver driver = new ChromeDriver(ChromeOptionsConfig.getChromeOptions());
+		
+		 WebDriver driver = getDriver();
 
-		driver.get("https://deskchime.com/");
+			Login login = new Login(driver);
+			login.Goto();
 		Thread.sleep(3000);
 		driver.findElement(By.id("email")).sendKeys("cuzofa@citmo.net");
 		driver.findElement(By.xpath("//*[@id=\"__next\"]/div/div[2]/div[1]/div[1]/form/button/div")).click();

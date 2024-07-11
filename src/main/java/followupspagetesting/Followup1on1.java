@@ -1,5 +1,7 @@
 package followupspagetesting;
 
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.time.Duration;
 import java.time.LocalTime;
 
@@ -7,6 +9,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterMethod;
@@ -20,25 +24,34 @@ import retryanalyzer.RetryAnalyzer;
 @Test(retryAnalyzer = RetryAnalyzer.class)
 public class Followup1on1 {
 	
-	 private ThreadLocal<WebDriver> driver = new ThreadLocal<>();
+	private ThreadLocal<WebDriver> driver = new ThreadLocal<>();
 
-	    @BeforeMethod
-	    public void setUp() {
-	        driver.set(new ChromeDriver(ChromeOptionsConfig.getChromeOptions()));
-	        getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
-	        getDriver().manage().window().maximize();
-	    }
+    @BeforeMethod
+    public void setUp() throws MalformedURLException {
+        // Set the desired capabilities for the browser you want to use
+        DesiredCapabilities capabilities = new DesiredCapabilities();
+        capabilities.setBrowserName("chrome");
 
-	    @AfterMethod
-	    public void tearDown() {
-	        getDriver().quit();
-	        driver.remove();
-	    }
+        // URL of the remote Selenium server or Selenium Grid hub
+        URL remoteUrl = new URL("http://192.168.29.48:4444");
 
-	    private WebDriver getDriver() {
-	        return driver.get();
-	    }
-	    
+        // Initialize the RemoteWebDriver with the remote URL and desired capabilities
+        driver.set(new RemoteWebDriver(remoteUrl, capabilities));
+        
+        getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
+        getDriver().manage().window().maximize();
+    }
+    @AfterMethod
+    public void tearDown() {
+        getDriver().quit();
+        driver.remove();
+    }
+
+    private WebDriver getDriver() {
+        return driver.get();
+    }
+    
+    
 @Test
 	public void create1on1() throws InterruptedException {
 		 WebDriver driver = getDriver();
