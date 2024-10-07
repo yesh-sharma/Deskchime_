@@ -1,67 +1,27 @@
 package loginpagetesting;
 
-import java.net.MalformedURLException;
-import java.net.URL;
 import java.time.Duration;
-import java.util.HashMap;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.remote.DesiredCapabilities;
-import org.openqa.selenium.remote.RemoteWebDriver;
+
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.DataProvider;
+
 import org.testng.annotations.Test;
 
+import basetest.BaseTest;
 import retryanalyzer.RetryAnalyzer;
 
-@Test(retryAnalyzer = RetryAnalyzer.class)
-public class Testingofloginpage {
 
-	@FindBy(css = "input[placeholder='Email address']")
-	WebElement useremail;
+public class Testingofloginpage extends BaseTest {
 
-	@FindBy(css = "input[placeholder='Password']")
-	WebElement passwordEle;
-
-	@FindBy(css = "button[type='submit']")
-	WebElement submit;
-
-	private ThreadLocal<WebDriver> driver = new ThreadLocal<>();
-
-	@BeforeMethod
-	public void setUp() throws MalformedURLException {
-		// Set the desired capabilities for the browser you want to use
-		DesiredCapabilities capabilities = new DesiredCapabilities();
-		capabilities.setBrowserName("chrome");
-
-		// URL of the remote Selenium server or Selenium Grid hub
-		URL remoteUrl = new URL("http://192.168.29.48:4444");
-
-		// Initialize the RemoteWebDriver with the remote URL and desired capabilities
-		driver.set(new RemoteWebDriver(remoteUrl, capabilities));
-
-		getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
-		getDriver().manage().window().maximize();
+	public Testingofloginpage() {
+		super(); // This will initialize the WebDriver in the BaseTest class
 	}
-
-	@AfterMethod
-	public void tearDown() {
-		getDriver().quit();
-		driver.remove();
-	}
-
-	private WebDriver getDriver() {
-		return driver.get();
-	}
-
 //	@Test(dataProvider = "getData")
 //	public void validcredendetials(HashMap<String, String> input) throws InterruptedException {
 //		WebDriver driver = new ChromeDriver(ChromeOptionsConfig.getChromeOptions());
@@ -95,25 +55,20 @@ public class Testingofloginpage {
 
 	public void validcredendetials() throws InterruptedException {
 
-		WebDriver driver = getDriver();
-		Login login = new Login(driver);
-		login.Goto();
-		login.loginApplication("yeshsharma516032@gmail.com", "Yesh12345");
+		Goto();
+		loginApplication();
 
-		driver.close();
+	
+	
+	
 
 	}
 
 	public void invalidcredentials1() throws InterruptedException {
-		WebDriver driver = getDriver();
-		Login login = new Login(driver);
-		login.Goto();
+		Goto();
+		loginApplication();
 
-		PageFactory.initElements(driver, this);
-		useremail.sendKeys("yesh@zasyasolution.com");
-		passwordEle.sendKeys("Yesh255198@");
-		submit.click();
-
+		
 		WebElement w1 = driver.findElement(By.cssSelector(".ant-notification-notice-message"));
 
 		if (w1.isDisplayed()) {
@@ -121,19 +76,15 @@ public class Testingofloginpage {
 			System.out.println("Popup message: " + dialogText);
 
 		}
-		
+
 	}
 
 	public void invalidcredentials2() throws InterruptedException {
 
-		WebDriver driver = getDriver();
-		Login login = new Login(driver);
-		login.Goto();
+		Goto();
+		loginApplication();
 
-		PageFactory.initElements(driver, this);
-		useremail.sendKeys("yesh@zasyasolutions.com");
-		passwordEle.sendKeys("Yesh2551981@");
-		submit.click();
+
 
 		WebElement w1 = driver.findElement(By.cssSelector(".ant-notification-notice-message"));
 
@@ -142,43 +93,54 @@ public class Testingofloginpage {
 			System.out.println("Popup message: " + dialogText);
 
 		}
-		
+
 	}
 
 	public void emptyusernamefield() throws InterruptedException {
+		Goto();
+		loginApplication();
 
-		WebDriver driver = getDriver();
-		Login login = new Login(driver);
-		login.Goto();
+	
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
 
-		PageFactory.initElements(driver, this);
-		useremail.sendKeys("yeshsharma516032@gmail.com");
+		WebElement email = wait
+				.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("input[placeholder='Email address']")));
 
-		submit.click();
+		email.sendKeys("yesh@zasyasolutions.com");
+		WebElement submitbutton = wait
+				.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("button[type='submit']")));
+
+		submitbutton.click();
+		
+
+	
 		System.out.println("popup message"
 				+ driver.findElement(By.xpath("//div[@class='ant-form-item-explain-error']")).getText());
-		
 
 	}
 
 	public void emptypasswordfield() throws InterruptedException {
 
-		WebDriver driver = getDriver();
-		Login login = new Login(driver);
-		login.Goto();
+	
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
+		WebElement email = wait
+				.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("input[placeholder='Email address']")));
 
-		PageFactory.initElements(driver, this);
+		email.sendKeys("yesh@zasyasolutions.com");
+		WebElement submitbutton = wait
+				.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("button[type='submit']")));
 
-		passwordEle.sendKeys("Yesh2551981@");
-		submit.click();
-		System.out.println(driver.findElement(By.xpath("//div[@class='ant-form-item-explain-error']")).getText());
+		submitbutton.click();
 		
+	
+		System.out.println(driver.findElement(By.xpath("//div[@class='ant-form-item-explain-error']")).getText());
+
 	}
 
 	public void passwordresetlink() throws InterruptedException {
-		WebDriver driver = getDriver();
-		Login login = new Login(driver);
-		login.Goto();
+		Goto();
+		loginApplication();
+
 
 		driver.findElement(By.xpath("//div[text()='Forgot password ?']")).click();
 		driver.findElement(By.cssSelector("input[data-testid='forgot-email-input']"))
@@ -191,20 +153,18 @@ public class Testingofloginpage {
 			System.out.println("Popup message: " + dialogText);
 
 		}
-		
+
 	}
 
 	public void userlogout() throws InterruptedException {
-		WebDriver driver = getDriver();
-		Login login = new Login(driver);
-		login.Goto();
-		login.loginApplication("yeshsharma516032@gmail.com", "Yesh12345");
-		login.avoidFeedbackpopup();
+		Goto();
+		loginApplication();
+
 
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
 		WebElement element = wait.until(
 				ExpectedConditions.visibilityOfElementLocated(By.cssSelector("button[data-testid='logout-btn']")));
 		element.click();
-		
+
 	}
 }

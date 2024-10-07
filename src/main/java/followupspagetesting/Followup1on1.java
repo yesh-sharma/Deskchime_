@@ -1,257 +1,219 @@
 package followupspagetesting;
 
-import java.net.MalformedURLException;
-import java.net.URL;
 import java.time.Duration;
 import java.time.LocalTime;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.remote.DesiredCapabilities;
-import org.openqa.selenium.remote.RemoteWebDriver;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
+
 import org.testng.annotations.Test;
 
-import loginpagetesting.ChromeOptionsConfig;
-import loginpagetesting.Login;
-import retryanalyzer.RetryAnalyzer;
-
-@Test(retryAnalyzer = RetryAnalyzer.class)
-public class Followup1on1 {
-	
-	private ThreadLocal<WebDriver> driver = new ThreadLocal<>();
-
-    @BeforeMethod
-    public void setUp() throws MalformedURLException {
-        // Set the desired capabilities for the browser you want to use
-        DesiredCapabilities capabilities = new DesiredCapabilities();
-        capabilities.setBrowserName("chrome");
-
-        // URL of the remote Selenium server or Selenium Grid hub
-        URL remoteUrl = new URL("http://192.168.29.48:4444");
-
-        // Initialize the RemoteWebDriver with the remote URL and desired capabilities
-        driver.set(new RemoteWebDriver(remoteUrl, capabilities));
-        
-        getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
-        getDriver().manage().window().maximize();
-    }
-    @AfterMethod
-    public void tearDown() {
-        getDriver().quit();
-        driver.remove();
-    }
-
-    private WebDriver getDriver() {
-        return driver.get();
-    }
-    
-    
+import basetest.BaseTest;
 @Test
+public class Followup1on1 extends BaseTest {
+
+	public Followup1on1() {
+		super(); // This will initialize the WebDriver in the BaseTest class
+	}
+
+
 	public void create1on1() throws InterruptedException {
-		 WebDriver driver = getDriver();
-	        Login login = new Login(driver);
-	
-		login.Goto();
 
-		login.loginApplication("yesh@zasyasolutions.com", "Yesh255198@");
-
-		login.avoidFeedbackpopup();
+		Goto();
+		loginApplication();
 
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(25));
 
-		WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("1-on-1s")));
+		WebElement button1on1 = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("1-on-1s")));
 
-		element.click();
-		WebElement element1 = wait.until(ExpectedConditions
+		button1on1.click();
+
+		WebElement createFollowUp = wait.until(ExpectedConditions
 				.visibilityOfElementLocated(By.cssSelector("a[data-testid='create-follow-up-button']")));
 
-		element1.click();
-		WebElement element2 = wait
-				.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[contains(text(),'yash')]")));
+		createFollowUp.click();
 
-		element2.click();
+		WebElement FrontendTeam = wait
+				.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[normalize-space()='frontend']")));
 
-		WebElement element3 = wait
+		FrontendTeam.click();
+
+		WebElement selectAnkit = wait.until(
+				ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[contains(text(),'Ankit Dhiman')]")));
+
+		selectAnkit.click();
+
+		WebElement selectDate = wait
 				.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@placeholder='Select date']")));
 
-		element3.click();
+		selectDate.click();
 
-		WebElement element4 = wait
+		WebElement TodayButton = wait
 				.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".ant-picker-today-btn")));
-		element4.click();
+		TodayButton.click();
 
-		WebElement element5 = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(
+		WebElement SelectTime = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(
 				"//div[@class='ant-select select-tag shrink-0 ant-select-single ant-select-show-arrow ant-select-show-search']//div[@class='ant-select-selector']")));
-		element5.click();
-
+		SelectTime.click();
 		LocalTime currentTime = LocalTime.now();
-		// Extract hour and minute components
 		int hour = currentTime.getHour();
 		int minute = currentTime.getMinute();
 		System.out.println(hour);
-		System.out.println(minute);
-		// Print the hour and minute
+		Thread.sleep(2000);
+		// Convert to 12-hour format
 
+		// Adjust your if-else statements based on the 12-hour format
 		if (hour == 10 && minute >= 1 && minute <= 29) {
-
-			driver.findElement(By.xpath("//div[text()='11:00 PM']")).click();
+			driver.findElement(By.xpath("//div[@title='11:00 AM']")).click();
 
 		} else if (hour == 10 && minute >= 30 && minute <= 59) {
-			driver.findElement(By.xpath("//div[text()='11:30 PM']")).click();
+			driver.findElement(By.xpath("//div[@title='11:30 AM']")).click();
 
-		} else if (hour == 11 && minute >= 1 && minute < 29) {
-			driver.findElement(By.xpath("//div[text()='12:00 PM']")).click();
+		} else if (hour == 11 && minute >= 1 && minute <= 29) {
+			driver.findElement(By.xpath("//div[@title='12:00 PM']")).click();
 
-		} else if (hour == 11 && minute >= 30 && minute < 59) {
+		} else if (hour == 11 && minute >= 30 && minute <= 59) {
+			driver.findElement(By.xpath("//div[@title='12:30 PM']")).click();
 
-			driver.findElement(By.xpath("//div[text()='12:30 PM']")).click();
+		} else if (hour == 12 && minute >= 1 && minute <= 29) {
+			driver.findElement(By.xpath("//div[@title='01:00 PM']")).click();
 
-		} else if (hour == 12 && minute >= 1 && minute < 29) {
+		} else if (hour == 12 && minute >= 30 && minute <= 59) {
+			driver.findElement(By.xpath("//div[@title='01:30 PM']")).click();
 
-			driver.findElement(By.xpath("//div[text()='01:00 PM']")).click();
-		} else if (hour == 12 && minute >= 30 && minute < 59) {
-			driver.findElement(By.xpath("//div[text()='01:30 PM']")).click();
-		} else if (hour == 13 && minute >= 1 && minute < 29) {
+		} else if (hour == 13 && minute >= 1 && minute <= 29) {
+			driver.findElement(By.xpath("//div[@title='02:00 PM']")).click();
 
-			driver.findElement(By.xpath("//div[text()='02:00 PM']")).click();
+		} else if (hour == 13 && minute >= 30 && minute <= 59) {
+			driver.findElement(By.xpath("//div[@title='02:30 PM']")).click();
 
-		} else if (hour == 13 && minute >= 30 && minute < 59) {
+		} else if (hour == 14 && minute >= 1 && minute <= 29) {
+			driver.findElement(By.xpath("//div[@title='03:00 PM']")).click();
 
-			driver.findElement(By.xpath("//div[text()='02:50 PM']")).click();
-		} else if (hour == 14 && minute >= 1 && minute < 29) {
-			driver.findElement(By.xpath("//div[text()='03:00 PM']")).click();
+		} else if (hour == 14 && minute >= 30 && minute <= 59) {
+			driver.findElement(By.xpath("//div[@title='03:30 PM']")).click();
 
-		} else if (hour == 14 && minute >= 30 && minute < 59) {
-			driver.findElement(By.xpath("//div[text()='03:30 PM']")).click();
+		} else if (hour == 15 && minute >= 1 && minute <= 29) {
+			driver.findElement(By.xpath("//div[@title='04:00 PM']")).click();
 
-		} else if (hour == 15 && minute >= 1 && minute < 29) {
-			driver.findElement(By.xpath("//div[text()='04:00 PM']")).click();
-		} else if (hour == 15 && minute >= 30 && minute < 59) {
-			driver.findElement(By.xpath("//div[text()='04:30 PM']")).click();
+		} else if (hour == 15 && minute >= 30 && minute <= 59) {
+			driver.findElement(By.xpath("//div[@title='04:30 PM']")).click();
 
-		} else if (hour == 16 && minute >= 1 && minute < 29) {
-			driver.findElement(By.xpath("//div[text()='05:00 PM']")).click();
+		} else if (hour == 16 && minute >= 1 && minute <= 29) {
+			driver.findElement(By.xpath("//div[@title='05:00 PM']")).click();
 
-		} else if (hour == 16 && minute >= 30 && minute < 59) {
+		} else if (hour == 16 && minute >= 30 && minute <= 59) {
+			driver.findElement(By.xpath("//div[@title='05:30 PM']")).click();
 
-			driver.findElement(By.xpath("//div[text()='05:30 PM']")).click();
-		} else if (hour == 17 && minute >= 1 && minute < 29) {
-			driver.findElement(By.xpath("//div[text()='06:00 PM']")).click();
-		} else if (hour == 17 && minute >= 30 && minute < 59) {
-			driver.findElement(By.xpath("//div[text()='06:30 PM']")).click();
-		} else if (hour == 18 && minute >= 1 && minute < 29) {
-			driver.findElement(By.xpath("//div[text()='07:00 PM']")).click();
+		} else if (hour == 17 && minute >= 1 && minute <= 29) {
+			driver.findElement(By.xpath("//div[@title='06:00 PM']")).click();
 
-		} else if (hour == 18 && minute >= 30 && minute < 59) {
-			driver.findElement(By.xpath("//div[text()='07:30 PM']")).click();
+		} else if (hour == 17 && minute >= 30 && minute <= 59) {
+			driver.findElement(By.xpath("//div[@title='06:30 PM']")).click();
+
+		} else if (hour == 18 && minute >= 1 && minute <= 29) {
+			driver.findElement(By.xpath("//div[@title='07:00 PM']")).click();
+
+		} else if (hour == 18 && minute >= 30 && minute <= 59) {
+			driver.findElement(By.xpath("//div[@title='07:30 PM']")).click();
 
 		}
 
-		WebElement element6 = wait.until(ExpectedConditions.visibilityOfElementLocated(
+		WebElement description = wait.until(ExpectedConditions.visibilityOfElementLocated(
 				By.xpath("//div[@class='tiptap ProseMirror text-sm min-h-[80px] p-3 max-h-80 overflow-y-auto']")));
 
-		element6.sendKeys("1 on 1 testing");
+		Actions action = new Actions(driver);
+		action.moveToElement(description);
+		description.sendKeys("Date: [3/09/2024]\n" + "\n" + "To: [ankit dhiman]\n"
+				+ "Subject: Warning Regarding Unnecessary Leave\n" + "\n" + "Dear [ankit dhiman],\n" + "\n"
+				+ "This is to formally address your recent absences on [specific dates]. It has been noted that these leaves were not supported by adequate documentation or justification.\n"
+				+ "\n"
+				+ "Please be reminded that frequent, unjustified absences can affect team productivity and are against company policy. We expect you to provide proper documentation for future absences and to adhere to our leave procedures.\n"
+				+ "\n"
+				+ "Continued failure to comply may result in further disciplinary action. If you have any concerns, please discuss them with [HR/Supervisor].\n"
+				+ "\n" + "Thank you for your attention to this matter.\n" + "\n" + "Sincerely,\n" + "[Your]\n"
+				+ "[Your Position]");
 
-		WebElement element7 = wait
-				.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[contains(text(),'Next')]")));
+		WebElement nextButton = driver.findElement(By.cssSelector(
+				"button[class='rounded-lg w-fit tracking-[0.5px] font-medium flex items-center gap-2 justify-center transition-all duration-200 ease-in-out disabled:cursor-default bg-teal-500 text-white hover:bg-teal-400 active:bg-teal-300 disabled:bg-zinc-400 h-10 px-3 py-2 text-sm relative']"));
+		Actions actions = new Actions(driver);
+		actions.moveToElement(nextButton).perform();
+		nextButton.click();
 
-		element7.click();
+//	
 
-		WebElement element8 = wait.until(
-				ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[contains(text(),'Save & Continue')]")));
+		WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(
+				"button[class='rounded-lg w-fit tracking-[0.5px] font-medium flex items-center gap-2 justify-center transition-all duration-200 ease-in-out disabled:cursor-default bg-teal-500 text-white hover:bg-teal-400 active:bg-teal-300 disabled:bg-zinc-400 h-10 px-3 py-2 text-sm relative']")));
+		wait.until(ExpectedConditions.elementToBeClickable(element)).click();
+		
 
-		element8.click();
-		System.out.println("1 on 1 meetings created sucessfully");
 
-	
+		WebElement deleteOptionsButton = wait
+				.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("svg[width='4']")));
 
-	}
+		deleteOptionsButton.click();
 
-	@Test
-	public void userCanDelete1on1Meeting() throws InterruptedException {
-
-		 WebDriver driver = getDriver();
-	        Login login = new Login(driver);
-	        login.Goto();
-	
-		login.loginApplication("yesh@zasyasolutions.com", "Yesh255198@");
-
-		login.avoidFeedbackpopup();
-
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(25));
-
-		WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("1-on-1s")));
-
-		element.click();
-
-		WebElement element1 = wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("svg[width='4']")));
-
-		element1.click();
-
-		WebElement element2 = wait
+		WebElement delete = wait
 				.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//p[@class='py-[5px] px-3']")));
 
-		element2.click();
-		
-		WebElement element3 = wait
+		delete.click();
+
+		WebElement confirmation = wait
 				.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[normalize-space()='Yes']")));
 
-		element3.click();
-
-	
-		
+		confirmation.click();
 
 	}
+
 	
 @Test
-	
 	public void create1on1WithoutSpecifyDateandtime() throws InterruptedException {
 
-		 WebDriver driver = getDriver();
-	        Login login = new Login(driver);
-	        login.Goto();
-	
-
-		login.loginApplication("yesh@zasyasolutions.com", "Yesh255198@");
-
-		login.avoidFeedbackpopup();
+		Goto();
+		loginApplication();
 
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(25));
+		WebElement button1on1 = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("1-on-1s")));
 
-		WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("1-on-1s")));
+		button1on1.click();
 
-		element.click();
-		WebElement element1 = wait.until(ExpectedConditions
+		WebElement createFollowUp = wait.until(ExpectedConditions
 				.visibilityOfElementLocated(By.cssSelector("a[data-testid='create-follow-up-button']")));
 
-		element1.click();
-		WebElement element2 = wait
-				.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[contains(text(),'sharma')]")));
+		createFollowUp.click();
 
-		element2.click();
+		WebElement FrontendTeam = wait
+				.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[normalize-space()='frontend']")));
 
-		WebElement element3 = wait
+		FrontendTeam.click();
+
+		WebElement selectAnkit = wait.until(
+				ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[contains(text(),'Ankit Dhiman')]")));
+
+		selectAnkit.click();
+
+		WebElement selectDate = wait
 				.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@placeholder='Select date']")));
 
-		element3.click();
+		selectDate.click();
 
-
-		WebElement element4 = wait
+		WebElement TodayButton = wait
 				.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".ant-picker-today-btn")));
-		element4.click();
-		
-		WebElement element5 = wait
-				.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[contains(text(),'Next')]")));
+		TodayButton.click();
 
-		element5.click();
-	
-	 
-	
-}
+
+		WebElement nextButton = driver.findElement(By.cssSelector(
+				"button[class='rounded-lg w-fit tracking-[0.5px] font-medium flex items-center gap-2 justify-center transition-all duration-200 ease-in-out disabled:cursor-default bg-teal-500 text-white hover:bg-teal-400 active:bg-teal-300 disabled:bg-zinc-400 h-10 px-3 py-2 text-sm relative']"));
+		Actions actions = new Actions(driver);
+		actions.moveToElement(nextButton).perform();
+		nextButton.click();
+
+	}
+
 }

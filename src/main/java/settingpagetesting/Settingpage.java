@@ -1,7 +1,5 @@
 package settingpagetesting;
 
-import java.net.MalformedURLException;
-import java.net.URL;
 import java.time.Duration;
 
 import java.util.Iterator;
@@ -9,62 +7,33 @@ import java.util.Set;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebDriver;
+
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.WindowType;
-import org.openqa.selenium.chrome.ChromeDriver;
+
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.remote.DesiredCapabilities;
-import org.openqa.selenium.remote.RemoteWebDriver;
+
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
+import basetest.BaseTest;
 
-import loginpagetesting.ChromeOptionsConfig;
-import loginpagetesting.Login;
-import retryanalyzer.RetryAnalyzer;
-@Test(retryAnalyzer = RetryAnalyzer.class)
-public class Settingpage {
+@Test
+public class Settingpage extends BaseTest {
 	
-	private ThreadLocal<WebDriver> driver = new ThreadLocal<>();
+	public Settingpage() {
+		super(); // This will initialize the WebDriver in the BaseTest class
+	}
 
-    @BeforeMethod
-    public void setUp() throws MalformedURLException {
-        // Set the desired capabilities for the browser you want to use
-        DesiredCapabilities capabilities = new DesiredCapabilities();
-        capabilities.setBrowserName("chrome");
-
-        // URL of the remote Selenium server or Selenium Grid hub
-        URL remoteUrl = new URL("http://192.168.29.48:4444");
-
-        // Initialize the RemoteWebDriver with the remote URL and desired capabilities
-        driver.set(new RemoteWebDriver(remoteUrl, capabilities));
-        
-        getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
-        getDriver().manage().window().maximize();
-    }
-    @AfterMethod
-    public void tearDown() {
-        getDriver().quit();
-        driver.remove();
-    }
-
-    private WebDriver getDriver() {
-        return driver.get();
-    }
-    
     
 	
 	public void userCreatedAndDeletedSuccessfully() throws InterruptedException {
-		WebDriver driver = getDriver();
-		Login login = new Login(driver);
-		login.Goto();
-		login.loginApplication("yeshsharma516032@gmail.com", "Yesh12345");
 
-		login.avoidFeedbackpopup();
+		Goto();
+		loginApplication();
+
+	
 
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
 
@@ -144,11 +113,11 @@ public class Settingpage {
 	}
 
 	public void testingOfSettingPage() throws InterruptedException {
-		WebDriver driver = getDriver();
-		Login login = new Login(driver);
-		login.Goto();
-		login.loginApplication("yeshsharma516032@gmail.com", "Yesh12345");
-		login.avoidFeedbackpopup();
+		Goto();
+		loginApplication();
+
+	
+
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
 		WebElement element = wait
 				.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[text()='Settings']")));

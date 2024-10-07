@@ -1,73 +1,37 @@
 package goalpagetesting;
 
-
 import java.io.IOException;
-import java.net.MalformedURLException;
-import java.net.URL;
+
 import java.time.Duration;
+import java.time.LocalDateTime;
 import java.time.LocalTime;
 
 import org.openqa.selenium.By;
 
 import org.openqa.selenium.Keys;
 
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
+
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.remote.DesiredCapabilities;
-import org.openqa.selenium.remote.RemoteWebDriver;
+
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import loginpagetesting.ChromeOptionsConfig;
-import loginpagetesting.Login;
-import retryanalyzer.RetryAnalyzer;
-@Test(retryAnalyzer = RetryAnalyzer.class)
-public class TestingOfGoalpage {
-	
-	private ThreadLocal<WebDriver> driver = new ThreadLocal<>();
+import basetest.BaseTest;
 
-    @BeforeMethod
-    public void setUp() throws MalformedURLException {
-        // Set the desired capabilities for the browser you want to use
-        DesiredCapabilities capabilities = new DesiredCapabilities();
-        capabilities.setBrowserName("chrome");
+public class TestingOfGoalpage extends BaseTest {
 
-        // URL of the remote Selenium server or Selenium Grid hub
-        URL remoteUrl = new URL("http://192.168.29.48:4444");
-
-        // Initialize the RemoteWebDriver with the remote URL and desired capabilities
-        driver.set(new RemoteWebDriver(remoteUrl, capabilities));
-        
-        getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
-        getDriver().manage().window().maximize();
-    }
-    @AfterMethod
-    public void tearDown() {
-        getDriver().quit();
-        driver.remove();
-    }
-
-    private WebDriver getDriver() {
-        return driver.get();
-    }
-    
-    
-	
+	public TestingOfGoalpage() {
+		super(); // This will initialize the WebDriver in the BaseTest class
+	}
 
 	public void userCanCreateGoalForselfDevelopment() throws InterruptedException {
-		
-		WebDriver driver = getDriver();
-		Login login = new Login(driver);
-		login.Goto();
+		Goto();
+		loginApplication();
 
-		login.loginApplication("yesh@zasyasolutions.com", "Yesh255198@");
+	
 
-		login.avoidFeedbackpopup();
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
 
 		WebElement element = wait
@@ -92,17 +56,15 @@ public class TestingOfGoalpage {
 		element5.click();
 		driver.close();
 	}
-	
+
+
 	public void userCanCreateGoalForTeam() throws InterruptedException {
 
-		WebDriver driver = getDriver();
+		Goto();
+		loginApplication();
 
-		Login login = new Login(driver);
-		login.Goto();
+		
 
-		login.loginApplication("yesh@zasyasolutions.com", "Yesh255198@");
-
-		login.avoidFeedbackpopup();
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
 
 		WebElement element = wait
@@ -130,26 +92,22 @@ public class TestingOfGoalpage {
 			Thread.sleep(2000);
 		}
 
-		WebElement element5 = wait
-				.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[contains(text(),'yash')]")));
+		WebElement element5 = wait.until(
+				ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[contains(text(),'Ankit Dhiman')]")));
 		element5.click();
-
+		Thread.sleep(2000);
 		WebElement element6 = wait.until(
 				ExpectedConditions.visibilityOfElementLocated(By.cssSelector("button[data-testid='goal-submit-btn']")));
 		element6.click();
 
 	}
-	
 
 	public void usersCanSeeOnTrackGoals() throws InterruptedException {
 
-		WebDriver driver = getDriver();
-		Login login = new Login(driver);
-		login.Goto();
+		Goto();
+		loginApplication();
 
-		login.loginApplication("yesh@zasyasolutions.com", "Yesh255198@");
-
-		login.avoidFeedbackpopup();
+	
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
 
 		WebElement element = wait
@@ -164,13 +122,10 @@ public class TestingOfGoalpage {
 
 	public void usersCanSeeCompletedGoals() throws InterruptedException {
 
-		WebDriver driver = getDriver();
-		Login login = new Login(driver);
-		login.Goto();
+		Goto();
+		loginApplication();
 
-		login.loginApplication("yesh@zasyasolutions.com", "Yesh255198@");
-
-		login.avoidFeedbackpopup();
+		
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
 
 		WebElement element = wait
@@ -186,14 +141,10 @@ public class TestingOfGoalpage {
 
 	public void usersCanSeeDelayedGoals() throws InterruptedException {
 
-		WebDriver driver = getDriver();
+		Goto();
+		loginApplication();
 
-		Login login = new Login(driver);
-		login.Goto();
-
-		login.loginApplication("yesh@zasyasolutions.com", "Yesh255198@");
-
-		login.avoidFeedbackpopup();
+	
 
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
 
@@ -209,14 +160,10 @@ public class TestingOfGoalpage {
 	}
 
 	public void usersCanSeeAbandonedGoals() throws InterruptedException {
-		WebDriver driver = getDriver();
+		Goto();
+		loginApplication();
 
-		Login login = new Login(driver);
-		login.Goto();
-
-		login.loginApplication("yesh@zasyasolutions.com", "Yesh255198@");
-
-		login.avoidFeedbackpopup();
+	
 
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
 
@@ -233,14 +180,10 @@ public class TestingOfGoalpage {
 
 	public void usersCanSeeArchivedGoals() throws InterruptedException {
 
-		WebDriver driver = getDriver();
+		Goto();
+		loginApplication();
 
-		Login login = new Login(driver);
-		login.Goto();
 
-		login.loginApplication("yesh@zasyasolutions.com", "Yesh255198@");
-
-		login.avoidFeedbackpopup();
 
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
 
@@ -253,17 +196,13 @@ public class TestingOfGoalpage {
 
 		driver.close();
 	}
-
+@Test
 	public void usersCanUpdateStatus() throws InterruptedException {
 
-		WebDriver driver = getDriver();
+		Goto();
+		loginApplication();
 
-		Login login = new Login(driver);
-		login.Goto();
 
-		login.loginApplication("yesh@zasyasolutions.com", "Yesh255198@");
-
-		login.avoidFeedbackpopup();
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
 
 		WebElement element = wait
@@ -277,7 +216,7 @@ public class TestingOfGoalpage {
 		element2.click();
 
 		WebElement element3 = wait
-				.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("span[title='On Track']")));
+				.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[@title='On Track']")));
 		element3.click();
 
 		WebElement element4 = wait.until(ExpectedConditions.visibilityOfElementLocated(
@@ -285,7 +224,7 @@ public class TestingOfGoalpage {
 		element4.click();
 
 		WebElement element5 = wait.until(ExpectedConditions
-				.visibilityOfElementLocated(By.cssSelector("p[data-placeholder='Comment about the status']")));
+				.visibilityOfElementLocated(By.xpath("//p[@data-placeholder='Comment about the status']")));
 		element5.sendKeys("Ok");
 		WebElement element6 = wait
 				.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[normalize-space()='Update']")));
@@ -293,15 +232,13 @@ public class TestingOfGoalpage {
 		driver.close();
 	}
 
-	
 	public void userCanSetUpFollowupForGoal() throws InterruptedException, IOException {
-		WebDriver driver = getDriver();
-		Login login = new Login(driver);
-		login.Goto();
 
-		login.loginApplication("yesh@zasyasolutions.com", "Yesh255198@");
+		Goto();
+		loginApplication();
 
-		login.avoidFeedbackpopup();
+		
+
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
 
 		WebElement element = wait
@@ -313,10 +250,11 @@ public class TestingOfGoalpage {
 		WebElement element2 = wait
 				.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("div[data-testid='goal-team']")));
 		element2.click();
-
+		LocalDateTime currentDateTime = LocalDateTime.now();
+		String Title = "testing of user can set up followup for goal"+ currentDateTime;
 		WebElement element3 = wait
 				.until(ExpectedConditions.visibilityOfElementLocated(By.id("goals_goals_headers_0_goal_title")));
-		element3.sendKeys("testing of user can set up followup for goal");
+		element3.sendKeys(Title);
 
 		WebElement element4 = wait.until(
 				ExpectedConditions.visibilityOfElementLocated(By.xpath("//p[@class='is-empty is-editor-empty']")));
@@ -329,120 +267,126 @@ public class TestingOfGoalpage {
 			Thread.sleep(2000);
 		}
 
-		WebElement element5 = wait
-				.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[contains(text(),'yash')]")));
-		element5.click();
+		WebElement selectTeam = wait.until(ExpectedConditions
+				.visibilityOfElementLocated(By.cssSelector("div[data-testid='tab-button-Select Team']")));
+
+		selectTeam.click();
+		WebElement FrontendTeam = wait
+				.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[normalize-space()='frontend']")));
+		FrontendTeam.click();
+
+		WebElement Firstmember = wait.until(
+				ExpectedConditions.visibilityOfElementLocated(By.cssSelector("div[data-testid='memberList-0']")));
+		Firstmember.click();
 
 		WebElement element6 = wait.until(
 				ExpectedConditions.visibilityOfElementLocated(By.cssSelector("button[data-testid='goal-submit-btn']")));
 		element6.click();
 
 		WebElement element7 = wait.until(ExpectedConditions.visibilityOfElementLocated(
-				By.xpath("//div[normalize-space()='testing of user can set up followup for goal']")));
+				By.xpath("//div[normalize-space()='"+Title+"']")));
+		Actions actions1 = new Actions(driver);
+		actions1.moveToElement(element7);
+		actions1.perform();
 		element7.click();
 
 		WebElement element8 = wait.until(
 				ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[contains(text(),'Add a Follow up')]")));
 		element8.click();
 
-	WebElement element9 = wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(
+		WebElement element9 = wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(
 				"button[class='rounded-lg w-fit tracking-[0.5px] font-medium flex items-center gap-2 justify-center transition-all duration-200 ease-in-out disabled:cursor-default bg-teal-500 text-white hover:bg-teal-400 active:bg-teal-300 disabled:bg-zinc-400 h-10 px-3 py-2 text-sm border-2 border-teal-500 disabled:border-gray-400 relative'] div[class='flex items-center gap-2 justify-center']")));
 		element9.click();
 
-		WebElement element10 = wait
-				.until(ExpectedConditions.visibilityOfElementLocated(By.id("agenda-next")));
-		 element10.click();
+		WebElement element10 = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("agenda-next")));
+		element10.click();
 
+		WebElement element11 = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("meeting_meeting_at")));
+		element11.click();
 
-			WebElement element11 = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("meeting_meeting_at")));
-			element11.click();
+		WebElement element12 = wait
+				.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".ant-picker-today-btn")));
+		element12.click();
+		Thread.sleep(3000);
+		// Get the current local time
 
-			WebElement element12 = wait
-					.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".ant-picker-today-btn")));
-			element12.click();
-			Thread.sleep(3000);
-			// Get the current local time
+		LocalTime currentTime = LocalTime.now();
+		// Extract hour and minute components
+		int hour = currentTime.getHour();
+		int minute = currentTime.getMinute();
+		System.out.println(hour);
+		System.out.println(minute);
+		// Print the hour and minute
 
-			LocalTime currentTime = LocalTime.now();
-			// Extract hour and minute components
-			int hour = currentTime.getHour();
-			int minute = currentTime.getMinute();
-			System.out.println(hour);
-			System.out.println(minute);
-			// Print the hour and minute
-		
+		if (hour == 10 && minute >= 1 && minute <= 29) {
 
-			if (hour == 10 && minute >= 1 && minute <= 29) {
+			driver.findElement(By.xpath("//div[text()='11:00 PM']")).click();
 
-				driver.findElement(By.xpath("//div[text()='11:00 PM']")).click();
+		} else if (hour == 10 && minute >= 30 && minute <= 59) {
+			driver.findElement(By.xpath("//div[text()='11:30 PM']")).click();
 
-			} else if (hour == 10 && minute >= 30 && minute <= 59) {
-				driver.findElement(By.xpath("//div[text()='11:30 PM']")).click();
+		} else if (hour == 11 && minute >= 1 && minute < 29) {
+			driver.findElement(By.xpath("//div[text()='12:00 PM']")).click();
 
-			} else if (hour == 11 && minute >= 1 && minute < 29) {
-				driver.findElement(By.xpath("//div[text()='12:00 PM']")).click();
+		} else if (hour == 11 && minute >= 30 && minute < 59) {
 
-			} else if (hour == 11 && minute >= 30 && minute < 59) {
+			driver.findElement(By.xpath("//div[text()='12:30 PM']")).click();
 
-				driver.findElement(By.xpath("//div[text()='12:30 PM']")).click();
+		} else if (hour == 12 && minute >= 1 && minute < 29) {
 
-			} else if (hour == 12 && minute >= 1 && minute < 29) {
+			driver.findElement(By.xpath("//div[text()='01:00 PM']")).click();
+		} else if (hour == 12 && minute >= 30 && minute < 59) {
+			driver.findElement(By.xpath("//div[text()='01:30 PM']")).click();
+		} else if (hour == 13 && minute >= 1 && minute < 29) {
 
-				driver.findElement(By.xpath("//div[text()='01:00 PM']")).click();
-			} else if (hour == 12 && minute >= 30 && minute < 59) {
-				driver.findElement(By.xpath("//div[text()='01:30 PM']")).click();
-			} else if (hour == 13 && minute >= 1 && minute < 29) {
+			driver.findElement(By.xpath("//div[text()='02:00 PM']")).click();
 
-				driver.findElement(By.xpath("//div[text()='02:00 PM']")).click();
+		} else if (hour == 13 && minute >= 30 && minute < 59) {
 
-			} else if (hour == 13 && minute >= 30 && minute < 59) {
+			driver.findElement(By.xpath("//div[text()='02:50 PM']")).click();
+		} else if (hour == 14 && minute >= 1 && minute < 29) {
+			driver.findElement(By.xpath("//div[text()='03:00 PM']")).click();
 
-				driver.findElement(By.xpath("//div[text()='02:50 PM']")).click();
-			} else if (hour == 14 && minute >= 1 && minute < 29) {
-				driver.findElement(By.xpath("//div[text()='03:00 PM']")).click();
+		} else if (hour == 14 && minute >= 30 && minute < 59) {
+			driver.findElement(By.xpath("//div[text()='03:30 PM']")).click();
 
-			} else if (hour == 14 && minute >= 30 && minute < 59) {
-				driver.findElement(By.xpath("//div[text()='03:30 PM']")).click();
+		} else if (hour == 15 && minute >= 1 && minute < 29) {
+			driver.findElement(By.xpath("//div[text()='04:00 PM']")).click();
+		} else if (hour == 15 && minute >= 30 && minute < 59) {
+			driver.findElement(By.xpath("//div[text()='04:30 PM']")).click();
 
-			} else if (hour == 15 && minute >= 1 && minute < 29) {
-				driver.findElement(By.xpath("//div[text()='04:00 PM']")).click();
-			} else if (hour == 15 && minute >= 30 && minute < 59) {
-				driver.findElement(By.xpath("//div[text()='04:30 PM']")).click();
+		} else if (hour == 16 && minute >= 1 && minute < 29) {
+			driver.findElement(By.xpath("//div[text()='05:00 PM']")).click();
 
-			} else if (hour == 16 && minute >= 1 && minute < 29) {
-				driver.findElement(By.xpath("//div[text()='05:00 PM']")).click();
+		} else if (hour == 16 && minute >= 30 && minute < 59) {
 
-			} else if (hour == 16 && minute >= 30 && minute < 59) {
+			driver.findElement(By.xpath("//div[text()='05:30 PM']")).click();
+		} else if (hour == 17 && minute >= 1 && minute < 29) {
+			driver.findElement(By.xpath("//div[text()='06:00 PM']")).click();
+		} else if (hour == 17 && minute >= 30 && minute < 59) {
+			driver.findElement(By.xpath("//div[text()='06:30 PM']")).click();
+		} else if (hour == 18 && minute >= 1 && minute < 29) {
+			driver.findElement(By.xpath("//div[text()='07:00 PM']")).click();
 
-				driver.findElement(By.xpath("//div[text()='05:30 PM']")).click();
-			} else if (hour == 17 && minute >= 1 && minute < 29) {
-				driver.findElement(By.xpath("//div[text()='06:00 PM']")).click();
-			} else if (hour == 17 && minute >= 30 && minute < 59) {
-				driver.findElement(By.xpath("//div[text()='06:30 PM']")).click();
-			} else if (hour == 18 && minute >= 1 && minute < 29) {
-				driver.findElement(By.xpath("//div[text()='07:00 PM']")).click();
+		} else if (hour == 18 && minute >= 30 && minute < 59) {
+			driver.findElement(By.xpath("//div[text()='07:30 PM']")).click();
 
-			} else if (hour == 18 && minute >= 30 && minute < 59) {
-				driver.findElement(By.xpath("//div[text()='07:30 PM']")).click();
+		}
 
-			}
+		driver.findElement(By.cssSelector("button[type='submit'] div[class='flex items-center gap-2 justify-center']"))
+				.click();
 
-			driver.findElement(By.cssSelector("button[type='submit'] div[class='flex items-center gap-2 justify-center']"))
-					.click();
-	
+		WebElement element13 = wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(
+				"div[class='relative space-y-2'] button[type='button'] div[class='flex items-center gap-2 justify-center']")));
+		element13.click();
 
-			WebElement element13 = wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(
-					"div[class='relative space-y-2'] button[type='button'] div[class='flex items-center gap-2 justify-center']")));
-			element13.click();
-			
-			WebElement element14 = wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(
-					"button[class='rounded-lg w-fit tracking-[0.5px] font-medium flex items-center gap-2 justify-center transition-all duration-200 ease-in-out disabled:cursor-default bg-teal-500 text-white hover:bg-teal-400 active:bg-teal-300 disabled:bg-zinc-400 h-10 px-3 py-2 text-sm relative'] div[class='flex items-center gap-2 justify-center']")));
-			element14.click();
+		WebElement element14 = wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(
+				"button[class='rounded-lg w-fit tracking-[0.5px] font-medium flex items-center gap-2 justify-center transition-all duration-200 ease-in-out disabled:cursor-default bg-teal-500 text-white hover:bg-teal-400 active:bg-teal-300 disabled:bg-zinc-400 h-10 px-3 py-2 text-sm relative'] div[class='flex items-center gap-2 justify-center']")));
+		element14.click();
 
-			WebElement element15 = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id(
-					"meeting-save")));
-			element15.click();
-			
+		WebElement element15 = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("meeting-save")));
+		element15.click();
+
 	}
 
 }
