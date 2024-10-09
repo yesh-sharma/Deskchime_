@@ -2,15 +2,13 @@ package signuppagetesting;
 
 
 import java.time.Duration;
-import org.openqa.selenium.Keys;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-
-
 import org.testng.annotations.Test;
 
 import loginpagetesting.ChromeOptionsConfig;
@@ -21,7 +19,7 @@ import loginpagetesting.ChromeOptionsConfig;
 public class Signuppagetesting {
 
 
-    
+
 	public void successfulregistration() throws InterruptedException {
 		WebDriver driver = new ChromeDriver(ChromeOptionsConfig.getChromeOptions());
 
@@ -30,7 +28,7 @@ public class Signuppagetesting {
 		driver.findElement(By.cssSelector("a[href='/auth/login']")).click();
 		driver.findElement(By.cssSelector("a[data-testid='login-sign-in-btn']")).click();
 		Thread.sleep(3000);
-		
+
 		driver.findElement(By.id("register-form_first_name")).sendKeys("sharma");
 		driver.findElement(By.id("register-form_company_name")).sendKeys("llo");
 		driver.findElement(By.id("register-form_company_slug")).sendKeys("lol");
@@ -49,7 +47,7 @@ public class Signuppagetesting {
 
 		driver.get("https://deskchime.com/");
 
-		
+
 		driver.findElement(By.cssSelector("a[href='/auth/login']")).click();
 		driver.findElement(By.cssSelector("a[data-testid='login-sign-in-btn']")).click();
 		Thread.sleep(3000);

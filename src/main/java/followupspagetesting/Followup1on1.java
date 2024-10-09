@@ -4,14 +4,10 @@ import java.time.Duration;
 import java.time.LocalTime;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
 import org.testng.annotations.Test;
 
 import basetest.BaseTest;
@@ -146,12 +142,12 @@ public class Followup1on1 extends BaseTest {
 		actions.moveToElement(nextButton).perform();
 		nextButton.click();
 
-//	
+//
 
 		WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(
 				"button[class='rounded-lg w-fit tracking-[0.5px] font-medium flex items-center gap-2 justify-center transition-all duration-200 ease-in-out disabled:cursor-default bg-teal-500 text-white hover:bg-teal-400 active:bg-teal-300 disabled:bg-zinc-400 h-10 px-3 py-2 text-sm relative']")));
 		wait.until(ExpectedConditions.elementToBeClickable(element)).click();
-		
+
 
 
 		WebElement deleteOptionsButton = wait
@@ -171,7 +167,7 @@ public class Followup1on1 extends BaseTest {
 
 	}
 
-	
+
 @Test
 	public void create1on1WithoutSpecifyDateandtime() throws InterruptedException {
 

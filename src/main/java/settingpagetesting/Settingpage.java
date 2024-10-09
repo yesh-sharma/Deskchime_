@@ -1,18 +1,14 @@
 package settingpagetesting;
 
 import java.time.Duration;
-
 import java.util.Iterator;
 import java.util.Set;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
-
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.WindowType;
-
 import org.openqa.selenium.interactions.Actions;
-
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
@@ -21,19 +17,19 @@ import basetest.BaseTest;
 
 @Test
 public class Settingpage extends BaseTest {
-	
+
 	public Settingpage() {
 		super(); // This will initialize the WebDriver in the BaseTest class
 	}
 
-    
-	
+
+
 	public void userCreatedAndDeletedSuccessfully() throws InterruptedException {
 
 		Goto();
 		loginApplication();
 
-	
+
 
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
 
@@ -66,7 +62,7 @@ public class Settingpage extends BaseTest {
 		WebElement element5 = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("first_name")));
 		element5.sendKeys("ankit joseph");
 
-	
+
 
 		Actions actions = new Actions(driver);
 		WebElement ele = driver.findElement(By.id("email"));
@@ -75,11 +71,11 @@ public class Settingpage extends BaseTest {
 		WebElement element6 = wait.until(ExpectedConditions
 				.visibilityOfElementLocated(By.xpath("//div[@class='ant-select-selection-overflow']")));
 		element6.click();
-		
+
 		WebElement element7 = wait
 				.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("div[title='qa']")));
 		element7.click();
-		
+
 		WebElement element8 = wait.until(ExpectedConditions
 				.visibilityOfElementLocated(By.xpath("//div[@class='ant-select-selection-overflow']")));
 		element8.click();
@@ -116,7 +112,7 @@ public class Settingpage extends BaseTest {
 		Goto();
 		loginApplication();
 
-	
+
 
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
 		WebElement element = wait

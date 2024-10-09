@@ -1,19 +1,14 @@
 package goalpagetesting;
 
 import java.io.IOException;
-
 import java.time.Duration;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
 
 import org.openqa.selenium.By;
-
 import org.openqa.selenium.Keys;
-
 import org.openqa.selenium.WebElement;
-
 import org.openqa.selenium.interactions.Actions;
-
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
@@ -30,7 +25,7 @@ public class TestingOfGoalpage extends BaseTest {
 		Goto();
 		loginApplication();
 
-	
+
 
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
 
@@ -63,7 +58,7 @@ public class TestingOfGoalpage extends BaseTest {
 		Goto();
 		loginApplication();
 
-		
+
 
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
 
@@ -107,7 +102,7 @@ public class TestingOfGoalpage extends BaseTest {
 		Goto();
 		loginApplication();
 
-	
+
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
 
 		WebElement element = wait
@@ -125,7 +120,7 @@ public class TestingOfGoalpage extends BaseTest {
 		Goto();
 		loginApplication();
 
-		
+
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
 
 		WebElement element = wait
@@ -144,7 +139,7 @@ public class TestingOfGoalpage extends BaseTest {
 		Goto();
 		loginApplication();
 
-	
+
 
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
 
@@ -163,7 +158,7 @@ public class TestingOfGoalpage extends BaseTest {
 		Goto();
 		loginApplication();
 
-	
+
 
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
 
@@ -237,7 +232,7 @@ public class TestingOfGoalpage extends BaseTest {
 		Goto();
 		loginApplication();
 
-		
+
 
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
 

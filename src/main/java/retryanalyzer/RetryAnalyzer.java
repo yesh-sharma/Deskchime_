@@ -2,7 +2,7 @@ package retryanalyzer;
 
 
 	import org.testng.IRetryAnalyzer;
-	import org.testng.ITestResult;
+import org.testng.ITestResult;
 
 	public class RetryAnalyzer implements IRetryAnalyzer {
 	    private int retryCount = 0;

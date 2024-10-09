@@ -3,18 +3,11 @@ package loginpagetesting;
 import java.time.Duration;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-
-import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import org.testng.annotations.Test;
-
 import basetest.BaseTest;
-import retryanalyzer.RetryAnalyzer;
 
 
 public class Testingofloginpage extends BaseTest {
@@ -37,7 +30,7 @@ public class Testingofloginpage extends BaseTest {
 //		WebElement element = wait
 //				.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("a[data-testid='login-btn']")));
 //		element.click();
-//		
+//
 //		log.loginApplication(input.get("email"), input.get("password"));
 //	}
 //
@@ -58,9 +51,9 @@ public class Testingofloginpage extends BaseTest {
 		Goto();
 		loginApplication();
 
-	
-	
-	
+
+
+
 
 	}
 
@@ -68,7 +61,7 @@ public class Testingofloginpage extends BaseTest {
 		Goto();
 		loginApplication();
 
-		
+
 		WebElement w1 = driver.findElement(By.cssSelector(".ant-notification-notice-message"));
 
 		if (w1.isDisplayed()) {
@@ -100,7 +93,7 @@ public class Testingofloginpage extends BaseTest {
 		Goto();
 		loginApplication();
 
-	
+
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
 
 		WebElement email = wait
@@ -111,9 +104,9 @@ public class Testingofloginpage extends BaseTest {
 				.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("button[type='submit']")));
 
 		submitbutton.click();
-		
 
-	
+
+
 		System.out.println("popup message"
 				+ driver.findElement(By.xpath("//div[@class='ant-form-item-explain-error']")).getText());
 
@@ -121,7 +114,7 @@ public class Testingofloginpage extends BaseTest {
 
 	public void emptypasswordfield() throws InterruptedException {
 
-	
+
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
 		WebElement email = wait
 				.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("input[placeholder='Email address']")));
@@ -131,8 +124,8 @@ public class Testingofloginpage extends BaseTest {
 				.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("button[type='submit']")));
 
 		submitbutton.click();
-		
-	
+
+
 		System.out.println(driver.findElement(By.xpath("//div[@class='ant-form-item-explain-error']")).getText());
 
 	}

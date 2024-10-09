@@ -16,13 +16,13 @@ public class Basetest {
 		 String browserName =prop.getProperty("browser");
 		 if(browserName.equals("Chrome")) {
 			 WebDriver driver= new ChromeDriver();
-			 
-			 
+
+
 		 }
 		 else if (browserName.equals("edge")){
 			 WebDriver driver=new EdgeDriver();
-			 
-		
+
+
 	}
 	}
 }

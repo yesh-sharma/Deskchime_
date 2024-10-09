@@ -4,9 +4,7 @@ package applaudpagetesting;
 import java.time.Duration;
 
 import org.openqa.selenium.By;
-
 import org.openqa.selenium.WebElement;
-
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
@@ -48,13 +46,13 @@ public class Applaud extends BaseTest {
 		WebElement memberName = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@title='Ankit Sharma']")));
 
 		memberName.click();
-		
-		
+
+
 
 		WebElement categoriesField= wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@class='ant-select-selection-overflow']")));
 		categoriesField.click();
-		
-		
+
+
 		WebElement summarizer= wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[@title='The one who links, restates, concludes, and summarizes.']")));
 		summarizer.click();
 		categoriesField.click();
@@ -62,8 +60,8 @@ public class Applaud extends BaseTest {
 		WebElement comment = wait
 				.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//textarea[@id='comment']")));
 		comment.sendKeys("ok");
-		
-		
+
+
 		WebElement submitButton = wait
 				.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[@type='submit']")));
 		submitButton.click();
@@ -76,7 +74,7 @@ public class Applaud extends BaseTest {
 
 		loginApplication();
 
-		
+
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(25));
 
 		WebElement applaudbutton = wait

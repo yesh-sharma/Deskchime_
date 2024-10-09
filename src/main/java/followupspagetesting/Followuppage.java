@@ -2,16 +2,12 @@ package followupspagetesting;
 
 
 import java.time.Duration;
-
 import java.time.LocalTime;
 
 import org.openqa.selenium.By;
-
 import org.openqa.selenium.WebElement;
-
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
 import org.testng.annotations.Test;
 
 import basetest.BaseTest;
@@ -28,7 +24,7 @@ public class Followuppage extends BaseTest {
 		Goto();
 		loginApplication();
 
-	
+
 
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(25));
 
@@ -162,13 +158,13 @@ public class Followuppage extends BaseTest {
 		System.out.println("meeting deleted sccessfully");
 	}
 
-	
+
 	public void meetingWithoutSpecifyDateAndTime() throws InterruptedException {
 
 		Goto();
 		loginApplication();
 
-	
+
 
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(25));
 
@@ -219,13 +215,13 @@ public class Followuppage extends BaseTest {
 
 	}
 
-	
+
 	public void followupCreatedAndDeleted1() throws InterruptedException {
 
 		Goto();
 		loginApplication();
 
-	
+
 
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(25));
 

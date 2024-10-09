@@ -2,18 +2,12 @@ package feedbackspagetesting;
 
 import java.time.Duration;
 
-
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
-
 import org.openqa.selenium.WebElement;
-
 import org.openqa.selenium.interactions.Actions;
-
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
 import org.testng.annotations.Test;
 
 import basetest.BaseTest;
@@ -391,7 +385,7 @@ public class TestingOfFeedbackPage extends BaseTest {
 		// Move the mouse to the specific coordinates and perform click
 		actions.moveByOffset(0, 500).click().perform();
 		externalFeedback.click();
-		
+
 
 		WebElement addEmail = wait.until(ExpectedConditions
 				.visibilityOfElementLocated(By.cssSelector("button[data-testid='feedback-emails-add-btn']")));

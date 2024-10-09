@@ -1,0 +1,22 @@
+name: Run Selenium Tests
+
+on:
+  push:
+    branches:
+      - macdeskchime  # or any branch you want to track
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Code
+      uses: actions/checkout@v2
+
+    - name: Set up Docker
+      uses: docker/setup-buildx-action@v1
+
+    - name: Build and Run Docker Container
+      run: |
+        docker build -t selenium-tests .
+        docker run selenium-tests
