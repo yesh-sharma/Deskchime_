@@ -2,6 +2,8 @@ package basetest;
 
 import java.io.File;
 import java.io.IOException;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.time.Duration;
 
 import org.apache.commons.io.FileUtils;
@@ -11,6 +13,7 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.interactions.Actions;
@@ -18,7 +21,8 @@ import org.openqa.selenium.safari.SafariDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.BeforeMethod;
-
+import org.openqa.selenium.remote.RemoteWebDriver; 
+import loginpagetesting.ChromeOptionsConfig;
 import utility.ConfigReader;
 
 public class BaseTest {
@@ -31,7 +35,7 @@ public class BaseTest {
 
 
     @BeforeMethod
-    public void setUp() {
+    public void setUp() throws MalformedURLException {
         // Get the browser value from the properties file
 
 
@@ -40,8 +44,10 @@ public class BaseTest {
 
         // Initialize the driver based on the browser value
         if (browser.equalsIgnoreCase("chrome")) {
-
-            driver = new ChromeDriver();
+        	 ChromeOptions options = ChromeOptionsConfig.getChromeOptions();
+        	 // driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), options);
+        	 driver = new ChromeDriver(options);
+          
         } else if (browser.equalsIgnoreCase("firefox")) {
 
             driver = new FirefoxDriver();
@@ -73,7 +79,7 @@ public class BaseTest {
 		WebElement email = wait
 				.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("input[placeholder='Email address']")));
 
-		email.sendKeys("yesh@zasyasolutions.com");
+		email.sendKeys("filife1974@abaot.com");
 
 		WebElement password = wait
 				.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("input[placeholder='Password']")));
@@ -85,15 +91,13 @@ public class BaseTest {
 		submitbutton.click();
 
 
-
-
 }
 
 
 
 	public void Goto() {
 		driver.manage().deleteAllCookies();
-		driver.get("https://deskchime.com/");
+		driver.get("https://staging.whitdeals.com.au/login");
 
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
 		WebElement loginbutton= wait

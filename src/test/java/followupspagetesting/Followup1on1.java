@@ -151,7 +151,7 @@ public class Followup1on1 extends BaseTest {
 
 
 		WebElement deleteOptionsButton = wait
-				.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("svg[width='4']")));
+				.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@data-testid='followupList']//div[2]//div[9]//button[2]")));
 
 		deleteOptionsButton.click();
 

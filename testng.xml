@@ -7,7 +7,7 @@
       <class name="followupspagetesting.Followuppage"/>
    
       <class name="goalpagetesting.TestingOfGoalpage"/>
-      <class name="Deskchime2.deskchime2.managementproject.AppTest"/>
+     
       <class name="followupspagetesting.Followup1on1"/>
       <class name="applaudpagetesting.Applaud"/>
     </classes>

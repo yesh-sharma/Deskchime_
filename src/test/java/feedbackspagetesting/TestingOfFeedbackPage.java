@@ -11,13 +11,13 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 
 import basetest.BaseTest;
-@Test
+
 public class TestingOfFeedbackPage extends BaseTest {
 
 	public TestingOfFeedbackPage() {
 		super(); // This will initialize the WebDriver in the BaseTest class
 	}
-
+@Test
 	public void templateCreation() throws InterruptedException {
 
 		Goto();

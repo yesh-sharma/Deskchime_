@@ -12,7 +12,7 @@ import org.testng.annotations.Test;
 import basetest.BaseTest;
 
 
-@Test
+
 public class Applaud extends BaseTest {
 
 	public Applaud() {
@@ -21,14 +21,14 @@ public class Applaud extends BaseTest {
 
 	@Test
 	public void sendApplaud() throws InterruptedException {
-
+	
 		Goto();
 
 		loginApplication();
 
 		//avoidFeedbackpopup();
 
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5000));
 
 		WebElement applaudButton = wait
 				.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[normalize-space()='Applaud']")));

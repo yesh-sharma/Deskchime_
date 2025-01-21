@@ -15,7 +15,7 @@ import loginpagetesting.ChromeOptionsConfig;
 
 
 
-
+@Test
 public class Signuppagetesting {
 
 

@@ -15,7 +15,7 @@ import org.testng.annotations.Test;
 
 import basetest.BaseTest;
 
-@Test
+
 public class Settingpage extends BaseTest {
 
 	public Settingpage() {
@@ -23,7 +23,7 @@ public class Settingpage extends BaseTest {
 	}
 
 
-
+@Test
 	public void userCreatedAndDeletedSuccessfully() throws InterruptedException {
 
 		Goto();
@@ -38,7 +38,7 @@ public class Settingpage extends BaseTest {
 		element.click();
 		Actions action1=new Actions(driver);
 		WebElement element1 = wait
-				.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[text()='Users']")));
+				.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[normalize-space()='My Profile']")));
 		action1.moveToElement(element1);
 		action1.perform();
 		element1.click();
@@ -120,7 +120,7 @@ public class Settingpage extends BaseTest {
 		element.click();
 		Actions action1=new Actions(driver);
 		WebElement element1 = wait
-				.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[text()='Users']")));
+				.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[normalize-space()='My Profile']")));
 		action1.moveToElement(element1);
 		action1.perform();
 		element1.click();

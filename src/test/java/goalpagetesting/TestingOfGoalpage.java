@@ -14,13 +14,13 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 
 import basetest.BaseTest;
-
+@Test
 public class TestingOfGoalpage extends BaseTest {
 
 	public TestingOfGoalpage() {
 		super(); // This will initialize the WebDriver in the BaseTest class
 	}
-
+@Test
 	public void userCanCreateGoalForselfDevelopment() throws InterruptedException {
 		Goto();
 		loginApplication();
@@ -191,7 +191,7 @@ public class TestingOfGoalpage extends BaseTest {
 
 		driver.close();
 	}
-@Test
+
 	public void usersCanUpdateStatus() throws InterruptedException {
 
 		Goto();
